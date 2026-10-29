@@ -442,6 +442,17 @@ body.tour-on{overflow:hidden}
 .search-intro a{color:var(--accent)}
 .search-intro p{max-width:90ch;margin:0 0 12px;line-height:1.7}
 .search-intro .search-intro-note{font-size:12.5px;color:var(--muted);margin-bottom:0}
+
+/* La sección de texto para buscadores queda como acordeón cerrado: los enlaces siguen en la página, pero no estorba. */
+.search-intro{padding-top:12px!important;padding-bottom:12px!important}
+.si-details{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.si-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;font:600 13.5px var(--f-body);color:var(--muted)}
+.si-details summary::-webkit-details-marker{display:none}
+.si-details summary::after{content:"";flex:none;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px}
+.si-details[open] summary::after{transform:rotate(-135deg);margin-top:3px}
+.si-details summary:hover{color:var(--ink)}
+.si-body{padding:4px 18px 18px;border-top:1px solid var(--line)}
+.si-body h2{font-size:clamp(17px,2.4vw,20px)!important;margin:14px 0 10px!important}
 </style>
 <meta name="description" content="Anatomía venosa del miembro inferior en 3D: explora las venas de la pierna, ecografía en modo B, evaluación y referencias. Instituto Mexicano de Flebología.">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -595,10 +606,14 @@ body.tour-on{overflow:hidden}
 </main>
 
 <section class="wrap search-intro" id="searchIntro" aria-labelledby="searchIntroTitle">
-  <h2 id="searchIntroTitle">Anatomía venosa del miembro inferior en 3D</h2>
+  <details class="si-details">
+    <summary>Acerca de esta herramienta</summary>
+    <div class="si-body">  <h2 id="searchIntroTitle">Anatomía venosa del miembro inferior en 3D</h2>
   <p>Recurso educativo del Instituto Mexicano de Flebología para estudiar las venas superficiales, profundas, perforantes y pélvicas del miembro inferior. Explora el modelo 3D, consulta el trayecto y drenaje de cada vena y relaciona la anatomía con la simulación de ecografía en modo B.</p>
   <p>La <a href="anatomia-venosa-miembros-inferiores/">guía de anatomía venosa de los miembros inferiores</a> reúne 27 estructuras con sus referencias bibliográficas. Puedes empezar por la <a href="venas/vena-safena-magna/">vena safena magna</a>, la <a href="venas/vena-safena-parva/">vena safena parva</a> o la <a href="venas/vena-femoral-comun/">vena femoral común</a>, y continuar con la ruta de aprendizaje y la evaluación de la herramienta.</p>
   <p class="search-intro-note">Material docente para profesionales de la salud. El modelo y la simulación ecográfica son didácticos y no sustituyen la práctica supervisada ni el juicio clínico.</p>
+    </div>
+  </details>
 </section>
 
 <footer class="site-foot"><div class="in">
