@@ -84,9 +84,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .top{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:2px solid var(--accent)}
 .top-in{max-width:1100px;margin:0 auto;min-height:64px;display:flex;align-items:center;gap:8px 22px;flex-wrap:wrap;padding:6px max(16px,env(safe-area-inset-right,0px)) 6px max(16px,env(safe-area-inset-left,0px))}
 .top img{display:block;height:44px;width:auto}
-.logo-w{display:none}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo-c{display:none}:root:not([data-theme="light"]) .logo-w{display:block}}
-:root[data-theme="dark"] .logo-c{display:none} :root[data-theme="dark"] .logo-w{display:block}
+.top .logo-w{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top .logo-c{display:none}:root:not([data-theme="light"]) .top .logo-w{display:block}}
+:root[data-theme="dark"] .top .logo-c{display:none} :root[data-theme="dark"] .top .logo-w{display:block}
 .top nav{margin-left:auto;display:flex;gap:6px 20px;flex-wrap:wrap;font:600 14.5px var(--f-body)}
 .top nav a{text-decoration:none;color:var(--ink);padding:8px 2px}
 .top nav a:hover{color:var(--accent)}
