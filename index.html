@@ -347,6 +347,22 @@ body.tour-on{overflow:hidden}
 @media (max-width:760px){.navpad{bottom:112px;right:10px;padding:8px}.navpad .pad{grid-template-columns:repeat(3,34px);grid-template-rows:repeat(3,34px)}.navpad button{width:34px;height:34px}}
 @media (max-width:1099px){.app>.stage:not(.tour){order:1;height:72dvh;height:72vh;min-height:460px}}
 @media (max-width:760px){.cap .hint{display:none}.cap{bottom:8px}.hud{font-size:9px}.stagebar{bottom:54px}}
+
+/* ---- Subpágina de referencias y barra lateral sin desplazamiento general ---- */
+.side{overflow:hidden}
+#structures{display:flex;flex-direction:column;min-height:0;flex:1}
+#index{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;margin-right:-8px;padding-right:8px}
+.layers .chip{padding:9px 2px}
+.acc-b button{padding-block:9px}
+.refs-top{margin-bottom:14px}
+.backbtn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);background:var(--surface);border-radius:8px;padding:9px 14px 9px 10px;font:600 14px var(--f-body);color:var(--ink);cursor:pointer}
+.backbtn svg{width:18px;height:18px}
+.backbtn:hover{border-color:var(--accent);color:var(--accent)}
+.about{margin-bottom:16px;padding:20px 22px}
+.about .lede{font-size:14.5px;color:var(--ink);max-width:80ch;margin-top:6px}
+.refs-page .refs-sec{margin-top:0}
+@media (max-width:1099px){#structures{flex:none}#index{overflow:visible;margin-right:0;padding-right:0}}
+.acc-t{min-height:44px}.acc-b button{padding-block:7px}.side{gap:16px}
 </style>
 
 <header class="top" id="top">
@@ -359,6 +375,7 @@ body.tour-on{overflow:hidden}
       <button data-t="eco" aria-pressed="false">Ecografía</button>
       <button data-t="tutor" aria-pressed="false">Tutor</button>
       <button data-t="quiz" aria-pressed="false">Evaluación</button>
+      <button id="refsNav" aria-pressed="false">Referencias</button>
     </div></nav>
     <button class="tourbtn" id="tourBtn" type="button" title="Reproducir animación para el paciente (pantalla completa)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><span>Animación<span class="tl-long"> para el paciente</span></span></button>
   </div>
@@ -376,10 +393,6 @@ body.tour-on{overflow:hidden}
       <div class="layers" id="layerChips"></div>
     </section>
     <div class="chips" id="sysChips" hidden></div>
-    <section class="help">
-      <p class="lede">Gira el modelo, selecciona una vena para ver su ficha y abre Ecografía para colocar el transductor: el corte en modo B se genera a partir del mismo modelo.</p>
-      <p class="brandtag"><b>Material docente</b>Flebología y ecografía vascular</p>
-    </section>
   </nav>
 
   <div class="stage" id="stage">
@@ -473,8 +486,9 @@ body.tour-on{overflow:hidden}
   </aside>
 </div>
 
-<div class="wrap">
-
+<main class="wrap refs-page" id="refsView" hidden>
+  <div class="refs-top"><button class="backbtn" id="refsBack" type="button"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>Volver al atlas</button></div>
+  <section class="card about"><h2>Cómo usar este atlas</h2><p class="lede">Gira el modelo, selecciona una vena para ver su ficha y abre Ecografía para colocar el transductor: el corte en modo B se genera a partir del mismo modelo.</p><p class="brandtag"><b>Material docente</b>Flebología y ecografía vascular</p></section>
   <section class="card refs-sec" id="referencias">
     <h2>Referencias</h2>
     <p class="intro">Cada ficha y cada corte ecográfico indican entre corchetes las fuentes que respaldan su contenido. La anatomía descriptiva general se basa en el tratado de referencia [19]; la nomenclatura, en los consensos internacionales [1–2]; los criterios ecográficos y clínicos, en los consensos UIP y las guías ESVS y SVS/AVF.</p>
@@ -482,9 +496,9 @@ body.tour-on{overflow:hidden}
   </section>
 
   <div class="notes">Contenido revisado contra la bibliografía citada (octubre de 2026). Huesos y músculos: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón [20], adaptados; las venas y su relación con estas estructuras son modelado propio del IMF, por lo que el modelo 3D se comparte bajo la misma licencia CC BY-SA. Modelo esquemático con proporciones aproximadas en centímetros, no a escala individual; existe variabilidad anatómica interindividual. Nomenclatura según el consenso internacional de anatomía venosa (UIP/IFAA): <i>vena femoral</i> en lugar de “femoral superficial”; <i>safena magna / parva</i> (mayor / menor). Los valores de corte de reflujo provienen de Labropoulos (2003) [5] y la definición de perforante patológica de la guía SVS/AVF 2011 [6]; “Mickey Mouse” es una denominación didáctica de uso común para el corte transversal de la unión safenofemoral. La simulación ecográfica es didáctica y no reemplaza la práctica supervisada.</div>
-</div>
+</main>
 
-<footer class="site-foot"><div class="in">
+<footer class="site-foot" hidden><div class="in">
   <img alt="Instituto Mexicano de Flebología" src="data:image/png;base64,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">
   <div class="r">
     <p><b>Instituto Mexicano de Flebología y Linfología, S.C.</b></p>
@@ -667,7 +681,8 @@ REFS.forEach(r=>{const li=document.createElement('li');
   refList.appendChild(li)});
 function refChips(arr){return arr&&arr.length?`<div class="refchips">${arr.slice().sort((a,b)=>a-b).map(n=>`<button class="rc" data-ref="${n}" title="Ver referencia ${n}">[${n}]</button>`).join('')}</div>`:''}
 document.addEventListener('click',e=>{const b=e.target.closest('.rc');if(!b)return;const li=document.getElementById('ref-'+b.dataset.ref);if(!li)return;
-  li.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});li.classList.add('flash');setTimeout(()=>li.classList.remove('flash'),1800)});
+  const go=()=>{li.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});li.classList.add('flash');setTimeout(()=>li.classList.remove('flash'),1800)};
+  if(view!=='refs'){setView('refs');setTimeout(go,80)}else go()});
 const ARTS=[
  {id:'aic',n:'Arteria ilíaca común',ab:'AIC',r:.5,pts:[[11.5,106.1,0.5],[8.0,100.47,0.8],[5.6,95.74,1.4]]},
  {id:'aie',n:'Arteria ilíaca externa',ab:'AIE',r:.42,pts:[[5.6,95.74,1.4],[4.4,92.58,3.4],[2.6,88.9,5.4]]},
@@ -837,7 +852,7 @@ const norm=t=>(t||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const BOOK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5.5c3-1.2 6-1 9.5 1v13c-3.5-2-6.5-2.2-9.5-1zM21.5 5.5c-3-1.2-6-1-9.5 1v13c3.5-2 6.5-2.2 9.5-1z"/></svg>';
 const CHEV='<svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.5 5.5 5.5-5.5 5.5"/></svg>';
 function select(id,{focus=false}={}){
-  S.sel=id;paint();const v=byId[id],s=SYS[v.sys];idxState.open.add(v.sys);
+  S.sel=id;paint();const v=byId[id],s=SYS[v.sys];idxState.open.clear();idxState.open.add(v.sys);
   const pane=(k,h)=>`<div class="fpane" data-p="${k}"${fsub.cur===k?'':' hidden'}>${h}</div>`;
   const tabs=[['anat','Anatomía'],['clin','Clínica'],['src','Fuentes']];
   panel.innerHTML=`<div class="f-sys" style="--c:var(${s.t})"><i></i>${v.sys==='perf'?'Venas perforantes':'Sistema '+s.n.toLowerCase()}</div>
@@ -852,7 +867,7 @@ function select(id,{focus=false}={}){
   panel.querySelector('.subtabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;fsub.cur=b.dataset.p;
     panel.querySelectorAll('.subtabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
     panel.querySelectorAll('.fpane').forEach(x=>x.hidden=x.dataset.p!==fsub.cur)};
-  document.getElementById('goRefs').onclick=()=>document.getElementById('referencias').scrollIntoView({behavior:'smooth',block:'start'});
+  document.getElementById('goRefs').onclick=()=>setView('refs');
   if(v.eco)document.getElementById('goEco').onclick=()=>{setTab('eco');applyPreset(v.eco,v.id)};
   renderIndex();
   if(focus){setRotate(false);const p=anchorOf(v);const dir=camera.position.clone().sub(controls.target).normalize();flyTo(p,p.clone().add(dir.multiplyScalar(110)))}
@@ -866,7 +881,7 @@ function renderIndex(){
     const g=document.createElement('div');g.className='acc'+(open?' open':'')+(on?'':' off');g.style.setProperty('--c',`var(${s.t})`);
     g.innerHTML=`<div class="acc-h"><button class="acc-dot" type="button" role="switch" aria-checked="${on}" title="${on?'Ocultar':'Mostrar'} el sistema ${s.n.toLowerCase()} en el modelo" aria-label="${on?'Ocultar':'Mostrar'} sistema ${s.n}"><i></i></button><button class="acc-t" type="button" aria-expanded="${open}"><span>${s.n}</span><em>${items.length}</em>${CHEV}</button></div><ul class="acc-b"></ul>`;
     g.querySelector('.acc-dot').onclick=()=>sc.children[si].click();
-    g.querySelector('.acc-t').onclick=()=>{if(q)return;if(idxState.open.has(k))idxState.open.delete(k);else idxState.open.add(k);renderIndex()};
+    g.querySelector('.acc-t').onclick=()=>{if(q)return;const was=idxState.open.has(k);idxState.open.clear();if(!was)idxState.open.add(k);renderIndex()};
     const ul=g.querySelector('.acc-b');
     items.forEach(v=>{const li=document.createElement('li'),b=document.createElement('button');b.type='button';b.textContent=v.n;
       if(v.id===S.sel)b.classList.add('on');
@@ -880,14 +895,15 @@ function onVein(id){if(S.tab==='quiz'){if(Q&&Q.type==='senala')answer(id)}else s
 
 /* ================= Pestañas ================= */
 const tabSeg=document.getElementById('tabSeg');
-function setTab(t){S.tab=t;document.getElementById('app').dataset.tab=t;tabSeg.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.t===t));
+let view='app';
+function setTab(t){if(view!=='app')setView('app',{push:true});S.tab=t;document.getElementById('app').dataset.tab=t;tabSeg.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.t===t));
   ['ficha','eco','tutor','quiz'].forEach(k=>document.getElementById('tab-'+k).hidden=k!==t);
   sliceGrp.visible=t==='eco';S.marks={};applyClip(t==='eco'&&!!S.cut);
   if(t==='quiz')startQuiz();else{Q=null;select(S.sel)}
   if(t==='eco'){resizeUS();updateSlice();}
   if(t==='tutor')tutorCtx();
   paint();}
-tabSeg.onclick=e=>{const b=e.target.closest('button');if(b)setTab(b.dataset.t)};
+tabSeg.onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='refsNav')setView('refs');else setTab(b.dataset.t)};
 
 /* ================= Ecografía ================= */
 const PRESETS=[
@@ -1278,6 +1294,7 @@ const tcap=tourUI.querySelector('.tcap'),tcT=tcap.querySelector('h2'),tcS=tcap.q
 function tourCaption(sc){tcap.classList.add('out');clearTimeout(tour.ct);tour.ct=setTimeout(()=>{tcT.textContent=sc[3];tcS.textContent=sc[4];tcap.classList.remove('out')},650)}
 function tourStart(){
   if(tour.on)return;
+  if(view!=='app')setView('app',{push:false});
   tour.saved={vis:{},act:new Set(S.active),sel:S.sel,rot:controls.autoRotate,slice:sliceGrp.visible};
   Object.keys(LAY).forEach(k=>tour.saved.vis[k]=LAY[k].visible);
   TLAYS.forEach(k=>tour.alpha[k]=LAY[k].visible?1:0);
@@ -1369,6 +1386,22 @@ function navTick(now){
   controls.target.set(Math.max(-70,Math.min(70,controls.target.x)),Math.max(0,Math.min(115,controls.target.y)),Math.max(-70,Math.min(70,controls.target.z)));
   camera.position.copy(controls.target).add(navOff);
 }
+
+/* ================= Subpágina: Referencias ================= */
+const appEl=document.getElementById('app'),refsView=document.getElementById('refsView'),footEl=document.querySelector('.site-foot'),refsNav=document.getElementById('refsNav');
+function setView(v,{push=true}={}){
+  if(tour.on)tourStop();
+  const r=v==='refs';if((view==='refs')===r)return;view=r?'refs':'app';
+  appEl.hidden=r;refsView.hidden=!r;footEl.hidden=!r;document.body.classList.toggle('view-refs',r);
+  tabSeg.querySelectorAll('button[data-t]').forEach(b=>b.setAttribute('aria-pressed',r?'false':String(b.dataset.t===S.tab)));
+  refsNav.setAttribute('aria-pressed',r);
+  if(push){try{history.pushState(null,'',r?'#referencias':location.pathname+location.search)}catch(_){}}
+  window.scrollTo(0,0);
+}
+document.getElementById('refsBack').onclick=()=>setView('app');
+const syncView=()=>{const r=location.hash==='#referencias';if(r!==(view==='refs'))setView(r?'refs':'app',{push:false})};
+addEventListener('popstate',syncView);addEventListener('hashchange',syncView);
+if(location.hash==='#referencias')setView('refs',{push:false});
 
 /* ================= Modo exploración: ocultar paneles / pantalla completa ================= */
 {const app=document.getElementById('app'),lp=document.getElementById('lpBtn'),rp=document.getElementById('rpBtn'),fb=document.getElementById('fsBtn');
