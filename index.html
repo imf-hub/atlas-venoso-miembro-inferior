@@ -239,16 +239,6 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .primary{font:inherit;font-size:14px;font-weight:600;border:0;border-radius:4px;background:var(--ink);color:var(--surface);padding:9px 16px;cursor:pointer;margin-top:12px}
 .big{font-family:var(--f-display);font-weight:800;font-size:54px;line-height:1;font-variant-numeric:tabular-nums}
 
-.refs-sec{margin-top:16px;padding:20px 22px}
-.refs-sec h2{font-family:var(--f-display);font-weight:800;font-size:20px;text-transform:uppercase;letter-spacing:.01em;margin:0 0 4px}
-.refs-sec .intro{color:var(--muted);font-size:13.5px;margin:0 0 14px;max-width:90ch}
-.refs-sec ol{margin:0;padding-left:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;counter-reset:r}
-@media (max-width:860px){.refs-sec ol{grid-template-columns:1fr}}
-.refs-sec li{display:grid;grid-template-columns:2.8em minmax(0,1fr);font-size:13px;line-height:1.5;padding:6px 8px;border-radius:4px;transition:background .4s}
-.refs-sec li b{font-family:var(--f-mono);font-weight:500;color:var(--accent);font-variant-numeric:tabular-nums}
-.refs-sec li a{color:var(--accent);word-break:break-word}
-.refs-sec li.flash{background:color-mix(in srgb,var(--accent) 14%,transparent)}
-.refs-sec li.grp-t{display:block;grid-column:1/-1;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px;padding-left:8px}
 .refchips{display:flex;flex-wrap:wrap;gap:5px}
 .rc{font:inherit;font-family:var(--f-mono);font-size:11.5px;border:1px solid var(--line);background:var(--surface);color:var(--accent);border-radius:3px;padding:1px 7px;cursor:pointer}
 .rc:hover{border-color:var(--accent)}
@@ -304,19 +294,15 @@ body.tour-on{overflow:hidden}
 @media (max-width:1099px){.app>.stage:not(.tour){order:1;height:72dvh;height:72vh;min-height:460px}}
 @media (max-width:760px){.cap .hint{display:none}.cap{bottom:8px}.hud{font-size:9px}.stagebar{bottom:54px}}
 
-/* ---- Subpágina de referencias y barra lateral sin desplazamiento general ---- */
+.rc,.refbtn{text-decoration:none}
+a.rc{display:inline-block}
+
+/* ---- Barra lateral sin desplazamiento general ---- */
 .side{overflow:hidden}
 #structures{display:flex;flex-direction:column;min-height:0;flex:1}
 #index{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;margin-right:-8px;padding-right:8px}
 .layers .chip{padding:9px 2px}
 .acc-b button{padding-block:9px}
-.refs-top{margin-bottom:14px}
-.backbtn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);background:var(--surface);border-radius:8px;padding:9px 14px 9px 10px;font:600 14px var(--f-body);color:var(--ink);cursor:pointer}
-.backbtn svg{width:18px;height:18px}
-.backbtn:hover{border-color:var(--accent);color:var(--accent)}
-.about{margin-bottom:16px;padding:20px 22px}
-.about .lede{font-size:14.5px;color:var(--ink);max-width:80ch;margin-top:6px}
-.refs-page .refs-sec{margin-top:0}
 @media (max-width:1099px){#structures{flex:none}#index{overflow:visible;margin-right:0;padding-right:0}}
 .acc-t{min-height:44px}.acc-b button{padding-block:7px}.side{gap:16px}
 
@@ -505,7 +491,6 @@ body.tour-on{overflow:hidden}
       <button data-t="eco" aria-pressed="false">Ecografía</button>
       <button data-t="tutor" aria-pressed="false">Aprender</button>
       <button data-t="quiz" aria-pressed="false">Evaluación</button>
-      <button id="refsNav" aria-pressed="false">Referencias</button>
     </div><a class="navlink" href="anatomia-venosa-miembros-inferiores/">Guía de anatomía</a></nav>
     <button class="tourbtn" id="tourBtn" type="button" title="Reproducir animación para el paciente (pantalla completa)"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13l11-6.5z"/></svg><span>Animación<span class="tl-long"> para el paciente</span></span></button>
   </div>
@@ -600,18 +585,6 @@ body.tour-on{overflow:hidden}
     <ol class="lms-list" id="lmsList"></ol>
   </nav>
   <article class="lms-main card" id="lmsMain" aria-live="polite"></article>
-</main>
-
-<main class="wrap refs-page" id="refsView" hidden>
-  <div class="refs-top"><button class="backbtn" id="refsBack" type="button"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>Volver al modelo 3D</button></div>
-  <section class="card about"><h2>Cómo usar esta herramienta</h2><p class="lede">Gira el modelo, selecciona una vena para ver su ficha y abre Ecografía para colocar el transductor: el corte en modo B se genera a partir del mismo modelo.</p><p class="brandtag"><b>Material docente</b>Flebología y ecografía vascular</p><p class="lede" style="margin-top:12px">Parte del material docente del <a href="https://flebo.mx/" target="_blank" rel="noopener">Instituto Mexicano de Flebología</a>. <a href="https://flebo.mx/oferta-educativa/" target="_blank" rel="noopener">Aprende flebología en el IMF</a> o sigue las noticias en el <a href="https://boletin.flebologiamexico.com/" target="_blank" rel="noopener">Boletín de noticias flebológicas</a>.</p></section>
-  <section class="card refs-sec" id="referencias">
-    <h2>Referencias</h2>
-    <p class="intro">Cada ficha y cada corte ecográfico indican entre corchetes las fuentes que respaldan su contenido. La anatomía descriptiva general se basa en el tratado de referencia [19]; la nomenclatura, en los consensos internacionales [1–2], el mapa latinoamericano de 2023 [21], CEAP 2020 [22] y la actualización específica ASV de 2024 [23]. Los criterios ecográficos y clínicos se identifican con sus consensos UIP y guías ESVS y SVS/AVF.</p>
-    <ol id="refList"></ol>
-  </section>
-
-  <div class="notes">Contenido revisado contra la bibliografía citada (octubre de 2026). Huesos y músculos: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón [20], adaptados; las venas y su relación con estas estructuras son modelado propio del IMF, por lo que el modelo 3D se comparte bajo la misma licencia CC BY-SA. Modelo esquemático con proporciones aproximadas en centímetros, no a escala individual; existe variabilidad anatómica interindividual. Nomenclatura según el consenso internacional de anatomía venosa (UIP/IFAA): <i>vena femoral</i> en lugar de “femoral superficial”; <i>safena mayor / menor</i> (magna / parva en latín). Los valores de corte de reflujo provienen de Labropoulos (2003) [5] y la definición de perforante patológica de la guía SVS/AVF 2011 [6]; “Mickey Mouse” es una denominación didáctica de uso común para el corte transversal de la unión safenofemoral. La simulación ecográfica es didáctica y no reemplaza la práctica supervisada.</div>
 </main>
 
 <section class="wrap search-intro" id="searchIntro" aria-labelledby="searchIntroTitle">
@@ -812,15 +785,8 @@ const REFS=[
 {"n": 22, "a": "Lurie F, et al. The 2020 update of the CEAP classification system and reporting standards. J Vasc Surg Venous Lymphat Disord. 2020;8(3):342–352.", "u": "https://doi.org/10.1016/j.jvsv.2019.12.075"},
 {"n": 23, "a": "Meissner MH, et al. The anterior saphenous vein. Part 1. A position statement endorsed by AVLS, AVF and UIP. 2024;12(3):101721.", "u": "https://doi.org/10.1016/j.jvsv.2023.101721"}
 ];
-const refList=document.getElementById('refList');
-REFS.forEach(r=>{const li=document.createElement('li');
-  if(r.g){li.className='grp-t';li.textContent=r.g}
-  else{li.id='ref-'+r.n;li.innerHTML=`<b>[${r.n}]</b><span>${r.a}${r.u?` <a href="${r.u}" target="_blank" rel="noopener">Ver fuente ↗</a>`:''}</span>`}
-  refList.appendChild(li)});
-function refChips(arr){return arr&&arr.length?`<div class="refchips">${arr.slice().sort((a,b)=>a-b).map(n=>`<button class="rc" data-ref="${n}" title="Ver referencia ${n}">[${n}]</button>`).join('')}</div>`:''}
-document.addEventListener('click',e=>{const b=e.target.closest('.rc');if(!b)return;const li=document.getElementById('ref-'+b.dataset.ref);if(!li)return;
-  const go=()=>{li.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});li.classList.add('flash');setTimeout(()=>li.classList.remove('flash'),1800)};
-  if(view!=='refs'){setView('refs');setTimeout(go,80)}else go()});
+const REFERENCE_GUIDE='/anatomia-venosa-miembros-inferiores/';
+function refChips(arr){return arr&&arr.length?`<div class="refchips">${arr.slice().sort((a,b)=>a-b).map(n=>`<a class="rc" href="${REFERENCE_GUIDE}#ref-${n}" title="Ver referencia ${n} en la guía">[${n}]</a>`).join('')}</div>`:''}
 const ARTS=[
  {id:'aic',n:'Arteria ilíaca común',ab:'AIC',r:.5,pts:[[11.5,106.1,0.5],[8.0,100.47,0.8],[5.6,95.74,1.4]]},
  {id:'aie',n:'Arteria ilíaca externa',ab:'AIE',r:.42,pts:[[5.6,95.74,1.4],[4.4,92.58,3.4],[2.6,88.9,5.4]]},
@@ -1001,13 +967,12 @@ function select(id,{focus=false}={}){
    <div class="subtabs" role="tablist">${tabs.map(([k,n])=>`<button role="tab" data-p="${k}" aria-selected="${fsub.cur===k}">${n}</button>`).join('')}</div>
    ${pane('anat',`<div class="fsec"><h3>Trayecto</h3><p>${v.curso}</p></div><div class="fsec"><h3>Drena en</h3><p>${v.drena}</p></div><div class="fsec"><h3>Ecografía</h3><p>${v.us}</p></div>`)}
    ${pane('clin',`<div class="fsec clin"><h3>Relevancia clínica</h3><p>${v.clin}</p></div>`)}
-   ${pane('src',`<div class="fsec"><h3>Referencias de esta estructura</h3>${refChips(v.refs)||'<p>Sin referencias específicas.</p>'}<p class="rc-note">Toca un número para ir a la referencia completa.</p></div>`)}
-   <div class="f-actions"><button class="refbtn" id="goRefs" type="button">${BOOK}<span>Ver referencias</span>${CHEV}</button>
+   ${pane('src',`<div class="fsec"><h3>Referencias de esta estructura</h3>${refChips(v.refs)||'<p>Sin referencias específicas.</p>'}<p class="rc-note">Toca un número para consultar la referencia completa en la guía.</p></div>`)}
+   <div class="f-actions"><a class="refbtn" href="${REFERENCE_GUIDE}#referencias">${BOOK}<span>Referencias en la guía</span>${CHEV}</a>
    ${v.eco?`<button class="cta" id="goEco" type="button">Explorar en ecografía →</button>`:''}</div>`;
   panel.querySelector('.subtabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;fsub.cur=b.dataset.p;
     panel.querySelectorAll('.subtabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
     panel.querySelectorAll('.fpane').forEach(x=>x.hidden=x.dataset.p!==fsub.cur)};
-  document.getElementById('goRefs').onclick=()=>setView('refs');
   if(v.eco)document.getElementById('goEco').onclick=()=>{setTab('eco');applyPreset(v.eco,v.id)};
   renderIndex();
   if(focus){setRotate(false);const p=anchorOf(v);const dir=camera.position.clone().sub(controls.target).normalize();flyTo(p,p.clone().add(dir.multiplyScalar(110)))}
@@ -1042,7 +1007,7 @@ function setTab(t){if(view!=='app')setView('app',{push:true});S.tab=t;document.g
   if(t==='quiz')startQuiz();else{Q=null;select(S.sel)}
   if(t==='eco'){resizeUS();updateSlice();}
   paint();}
-tabSeg.onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='refsNav')setView('refs');else if(b.dataset.t==='tutor')setView('tutor');else setTab(b.dataset.t)};
+tabSeg.onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.t==='tutor')setView('tutor');else setTab(b.dataset.t)};
 
 /* ================= Ecografía ================= */
 const PRESETS=[
@@ -2623,26 +2588,26 @@ function navTick(now){
   camera.position.copy(controls.target).add(navOff);
 }
 
-/* ================= Subpáginas: Tutor y Referencias ================= */
-const appEl=document.getElementById('app'),refsView=document.getElementById('refsView'),tutorView=document.getElementById('tutorView'),footEl=document.querySelector('.site-foot'),refsNav=document.getElementById('refsNav');
+/* ================= Vistas: modelo y ruta de aprendizaje ================= */
+const appEl=document.getElementById('app'),tutorView=document.getElementById('tutorView'),footEl=document.querySelector('.site-foot');
 const BASE_TITLE=document.title;
-let lastView='app';
-function syncNav(){tabSeg.querySelectorAll('button').forEach(b=>{const key=b.id==='refsNav'?'refs':b.dataset.t;
+function syncNav(){tabSeg.querySelectorAll('button').forEach(b=>{const key=b.dataset.t;
   b.setAttribute('aria-pressed',view==='app'?key===S.tab:key===view)})}
 function setView(v,{push=true}={}){
   if(tour.on)tourStop();
   if(view===v)return;
-  if(v==='refs')lastView=view;
   view=v;
-  appEl.hidden=v!=='app';tutorView.hidden=v!=='tutor';refsView.hidden=v!=='refs';footEl.hidden=false;document.getElementById('searchIntro').hidden=v!=='app';
-  document.body.classList.toggle('view-refs',v==='refs');
+  appEl.hidden=v!=='app';tutorView.hidden=v!=='tutor';footEl.hidden=false;document.getElementById('searchIntro').hidden=v!=='app';
   syncNav();
-  document.title={app:BASE_TITLE,tutor:'Ruta de aprendizaje | '+BASE_TITLE,refs:'Referencias | '+BASE_TITLE}[v];
-    if(push){const h={refs:'#referencias',tutor:'#aprender',app:''}[v];try{history.pushState(null,'',h||location.pathname+location.search)}catch(_){}}
+  document.title={app:BASE_TITLE,tutor:'Ruta de aprendizaje | '+BASE_TITLE}[v];
+    if(push){const h={tutor:'#aprender',app:''}[v];try{history.pushState(null,'',h||location.pathname+location.search)}catch(_){}}
   window.scrollTo(0,0);
 }
-document.getElementById('refsBack').onclick=()=>setView(lastView==='tutor'?'tutor':'app');
-const hashView=()=>location.hash==='#referencias'?'refs':(location.hash==='#aprender'||location.hash==='#tutor')?'tutor':'app';
+// Los enlaces antiguos a bibliografía continúan en su ubicación única dentro de la guía.
+const hashView=()=>{
+  if(location.hash==='#referencias'||/^#ref-\d+$/.test(location.hash)){location.replace(REFERENCE_GUIDE+location.hash);return 'app'}
+  return location.hash==='#aprender'||location.hash==='#tutor'?'tutor':'app';
+};
 const syncView=()=>{if(hashView()!==view)setView(hashView(),{push:false})};
 addEventListener('popstate',syncView);addEventListener('hashchange',syncView);
 if(hashView()!=='app')setView(hashView(),{push:false});

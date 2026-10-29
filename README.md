@@ -24,7 +24,7 @@ Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama 
 
 - Título, descripción, URL canónica, Open Graph, Twitter Card y datos estructurados (JSON-LD) están en el `<head>` de `index.html`.
 - Si cambias el dominio, actualiza `index.html` (canonical, `og:url`, `og:image`, JSON-LD), `robots.txt`, `sitemap.xml` y `CNAME`.
-- Las secciones Aprender y Referencias son vistas dentro de la misma página (`#aprender`, `#referencias`), no URL separadas.
+- Aprender es una vista de la aplicación (`#aprender`). La bibliografía se encuentra únicamente al final de la guía (`/anatomia-venosa-miembros-inferiores/#referencias`); las citas enlazan directamente a cada referencia. Los antiguos enlaces `/#referencias` y `/#ref-N` redirigen a la guía.
 
 ## Regenerar las páginas para buscadores
 
