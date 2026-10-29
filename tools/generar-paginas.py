@@ -62,6 +62,10 @@ for v in ORDER:
     SLUG[v['id']] = s
 URLV = lambda v: f'venas/{SLUG[v["id"]]}/'
 
+# Direcciones anteriores que deben seguir funcionando: se genera una página mínima que redirige a la nueva.
+# (Agrega aquí el id de la vena y su dirección vieja cada vez que cambie un nombre.)
+OLD_SLUGS = {'vsm': 'vena-safena-magna', 'vsp': 'vena-safena-parva'}
+
 
 def png_size(path):
     with open(path, 'rb') as f:
@@ -395,6 +399,28 @@ for i, v in enumerate(ORDER):
             {"@type": "ListItem", "position": 3, "name": v['n'], "item": url}]},
     ]
     write(path + 'index.html', shell(title, desc, path, 'article', nodes, main, v['n']))
+
+# =====================================================================  redirecciones de direcciones anteriores
+for vid, old in OLD_SLUGS.items():
+    v = next(x for x in V if x['id'] == vid)
+    new_path = URLV(v)
+    stub = (f'''<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{E(v['n'])}: esta página cambió de dirección</title>
+<link rel="canonical" href="{SITE}{new_path}">
+<meta http-equiv="refresh" content="0; url=/{new_path}">
+<meta name="robots" content="noindex,follow">
+</head>
+<body style="font:16px/1.5 system-ui,sans-serif;margin:32px 16px">
+<p>Esta página cambió de dirección. Continúa en <a href="/{new_path}">{E(v['n'])}</a>.</p>
+<script>location.replace("/{new_path}")</script>
+</body>
+</html>
+''')
+    write(f'venas/{old}/index.html', stub)
 
 # =====================================================================  sitemap
 urls = [('', '1.0'), (GUIDE_PATH, '0.9')] + [(URLV(v), '0.7') for v in ORDER]
