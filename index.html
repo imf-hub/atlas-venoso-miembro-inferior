@@ -1382,7 +1382,7 @@ function navTick(now){
   navOff.setFromSpherical(navSph);
   navR.setFromMatrixColumn(camera.matrixWorld,0);navU.setFromMatrixColumn(camera.matrixWorld,1);
   const sp=navSph.radius*.5*dt;
-  controls.target.addScaledVector(navR,nav.px*sp).addScaledVector(navU,-nav.py*sp);
+  controls.target.addScaledVector(navR,-nav.px*sp).addScaledVector(navU,nav.py*sp);
   controls.target.set(Math.max(-70,Math.min(70,controls.target.x)),Math.max(0,Math.min(115,controls.target.y)),Math.max(-70,Math.min(70,controls.target.z)));
   camera.position.copy(controls.target).add(navOff);
 }
