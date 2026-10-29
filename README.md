@@ -50,7 +50,7 @@ Aparecen en la barra lateral y el pie de página de la herramienta, en la guía,
 
 ## Notas
 
-- «Aprender» es una ruta de lectura de 7 módulos (datos en `ROUTE` dentro de `index.html`). No hay chat con IA ni se guarda el avance de nadie.
+- «Aprender» es una ruta de lectura de 8 módulos (datos en `ROUTE` dentro de `index.html`). No hay chat con IA ni se guarda el avance de nadie.
 - Huesos y músculos: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón. Mantener la atribución.
 
 
@@ -63,3 +63,10 @@ Aparecen en la barra lateral y el pie de página de la herramienta, en la guía,
 - `tools/guia_anatomica.py` compone la guía con HTML accesible, buscador progresivo, filtros, navegación y estilos adaptables.
 - Ejecutar `python tools/generar-paginas.py` después de editar el catálogo, la guía o sus fuentes y publicar también los archivos generados.
 - Se conservan las direcciones anteriores de las safenas; el arco plantar conserva su URL aunque el rótulo precisa su profundidad.
+
+## Aprender y evaluación
+
+- `tools/aprendizaje.json` mantiene los ocho módulos y el banco de preguntas de nomenclatura con explicación, referencias, sistemas relacionados y módulo de repaso.
+- Las 17 equivalencias de la tabla VI se comparten con la guía desde `mapping2023` en `tools/guia-fuentes.json`.
+- `tools/actualizar_aprendizaje.py` sincroniza estos datos en `index.html`; también se ejecuta al generar páginas.
+- La evaluación ofrece rondas mixtas de reconocimiento y nomenclatura, o solo nomenclatura. Filtra por sistemas activos, explica respuestas correctas e incorrectas y enlaza a guía y módulos. El resultado es una práctica sin acreditación.

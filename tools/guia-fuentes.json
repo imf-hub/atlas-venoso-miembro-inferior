@@ -907,5 +907,92 @@
       "text": "Caggiati A. The Nomenclature of the Veins of the Lower Limbs, Based on their Planar Anatomy and Fascial Relationships. Acta Chirurgica Belgica. 2004;104(3):272-275.",
       "url": "https://doi.org/10.1080/00015458.2004.11679553"
     }
+  ],
+  "mapping2023": [
+    [
+      "GSV",
+      "Safena mayor o magna",
+      "Great saphenous vein"
+    ],
+    [
+      "SSV",
+      "Safena menor o parva",
+      "Small saphenous vein"
+    ],
+    [
+      "AAGSV",
+      "Safena accesoria anterior del muslo",
+      "Anterior accessory saphenous vein"
+    ],
+    [
+      "PAGSV",
+      "Safena accesoria posterior del muslo",
+      "Posterior accessory saphenous vein"
+    ],
+    [
+      "SFJ",
+      "Unión safenofemoral",
+      "Saphenofemoral junction"
+    ],
+    [
+      "SPJ",
+      "Unión safenopoplítea",
+      "Saphenopopliteal junction"
+    ],
+    [
+      "PV",
+      "Vena perforante",
+      "Perforating vein"
+    ],
+    [
+      "PPV",
+      "Perforante poplítea",
+      "Popliteal perforating vein"
+    ],
+    [
+      "GPV",
+      "Perforante glútea",
+      "Gluteal perforating vein"
+    ],
+    [
+      "EPV",
+      "Pudenda externa",
+      "External pudendal vein"
+    ],
+    [
+      "SCI",
+      "Circunfleja ilíaca superficial",
+      "Superficial circumflex iliac vein"
+    ],
+    [
+      "SEPi",
+      "Epigástrica superficial",
+      "Superficial epigastric vein"
+    ],
+    [
+      "CE SSV",
+      "Extensión craneal de la safena menor",
+      "Cranial extension of the small saphenous vein"
+    ],
+    [
+      "ASSV",
+      "Accesoria superficial de la safena menor",
+      "Superficial accessory vein of the small saphenous vein"
+    ],
+    [
+      "IV",
+      "Venas intersafenas",
+      "Intersaphenous veins"
+    ],
+    [
+      "LMV",
+      "Vena marginal lateral",
+      "Lateral marginal vein"
+    ],
+    [
+      "CiV",
+      "Vena ciática",
+      "Sciatic vein"
+    ]
   ]
 }

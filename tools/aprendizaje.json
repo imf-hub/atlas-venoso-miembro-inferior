@@ -1,0 +1,1055 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "t": "Sistemas venosos: nombres y siglas",
+      "refs": [
+        1,
+        2,
+        4,
+        21,
+        22
+      ],
+      "act": [
+        {
+          "v": "vf",
+          "l": "Vena femoral · FV"
+        },
+        {
+          "v": "vsm",
+          "l": "Safena mayor · GSV"
+        }
+      ],
+      "prob": "Dos informes describen la misma vena: uno dice “safena magna” y otro “great saphenous vein (GSV)”. Un tercero utiliza el nombre histórico “femoral superficial”.",
+      "obj": "Distinguir sinónimos, traducciones y nombres desaconsejados; reconocer qué fuente fija cada sigla.",
+      "q": "¿Safena mayor y safena magna son venas distintas? ¿La vena femoral pertenece al sistema superficial?",
+      "a": "Mayor y magna designan la misma vena: great saphenous vein, GSV. La femoral, femoral vein, FV, es profunda; el nombre histórico “femoral superficial” se desaconseja porque puede hacer interpretar mal su territorio.",
+      "perla": "Conserva el nombre principal en español, añade el equivalente inglés y usa la sigla de la fuente indicada. GSV y SSV pertenecen al mapa de 2023; FV y CFV se identifican aquí según CEAP 2020.",
+      "error": "Suponer que todo nombre distinto identifica otra vena o atribuir a la tabla VI de 2023 todas las siglas de la pelvis y del sistema profundo.",
+      "concepts": [
+        [
+          "Tres planos anatómicos",
+          "Superficial: por encima de la fascia muscular. Profundo: por debajo. Las perforantes atraviesan esa fascia y conectan ambos sistemas."
+        ],
+        [
+          "Nombre y función del documento",
+          "La nomenclatura identifica estructuras; CEAP clasifica enfermedad; el mapa de 2023 acompaña al informe dúplex. Ninguno convierte una variante anatómica en enfermedad por sí solo."
+        ]
+      ],
+      "guide": "lectura",
+      "terms": [
+        "vf",
+        "vfc",
+        "vsm",
+        "vsp"
+      ],
+      "codes": []
+    },
+    {
+      "id": "m2",
+      "t": "La ingle: GSV, SFJ y CFV",
+      "refs": [
+        3,
+        4,
+        5,
+        21,
+        22
+      ],
+      "act": [
+        {
+          "p": "usf",
+          "l": "Unión safenofemoral · SFJ"
+        }
+      ],
+      "prob": "Un mapa de la ingle marca GSV y SFJ; el informe español describe safena mayor y unión safenofemoral.",
+      "obj": "Relacionar GSV, SFJ y CFV con sus nombres completos y sus conexiones anatómicas.",
+      "q": "¿Qué significan GSV y SFJ? ¿SFJ es el nombre de otra vena?",
+      "a": "GSV significa great saphenous vein, safena mayor o magna. SFJ significa saphenofemoral junction, unión de la GSV con la vena femoral común (CFV, common femoral vein). SFJ identifica la unión, no un vaso independiente.",
+      "perla": "La sigla de la unión y las siglas de sus vasos cumplen funciones distintas. En corte transversal, confirma las relaciones de GSV, CFV y la arteria femoral común; el esquema didáctico no sustituye el seguimiento del vaso.",
+      "error": "Confundir SFJ con GSV o convertir el nombre “cayado” en una equivalencia exacta sin aclarar si se habla del segmento terminal, la unión o sus afluentes.",
+      "concepts": [
+        [
+          "La fascia importa",
+          "La GSV es superficial como sistema, aunque discurre dentro del compartimento entre fascia safena y fascia muscular."
+        ],
+        [
+          "Anatomía y hemodinámica",
+          "El nombre del vaso no determina su competencia. La evaluación del reflujo exige identificar el segmento, la maniobra y el contexto del estudio."
+        ]
+      ],
+      "guide": "anatomia-regional",
+      "terms": [
+        "vsm",
+        "vfc"
+      ],
+      "codes": [
+        "SFJ"
+      ]
+    },
+    {
+      "id": "m3",
+      "t": "Compartimento safeno: AAGSV y ASV",
+      "refs": [
+        4,
+        7,
+        21,
+        23
+      ],
+      "act": [
+        {
+          "p": "ojo",
+          "l": "GSV en su compartimento"
+        },
+        {
+          "p": "alin",
+          "l": "Accesoria anterior · AAGSV"
+        }
+      ],
+      "prob": "Un mapa de 2023 utiliza AAGSV, mientras que una publicación de 2024 habla de anterior saphenous vein (ASV).",
+      "obj": "Reconocer la misma estructura en las dos convenciones y diferenciar un tronco safeno de una tributaria paralela.",
+      "q": "¿AAGSV y ASV designan aquí venas distintas? ¿Por qué se conserva AAGSV en la etiqueta del atlas?",
+      "a": "No. AAGSV es la sigla de la accesoria anterior en la tabla VI del consenso latinoamericano de 2023. El posicionamiento AVLS/AVF/UIP de 2024 recomienda anterior saphenous vein, ASV. El atlas conserva AAGSV como referencia del mapa de 2023 y explica ASV y AASV entre sus equivalencias.",
+      "perla": "El cambio de 2024 es específico de la safena anterior. No renombra todas las accesorias ni convierte ASV en la sigla original de la tabla de 2023.",
+      "error": "Llamar duplicación a cualquier vena paralela, o enseñar ASV como si fuera la abreviatura utilizada por el mapa de 2023.",
+      "concepts": [
+        [
+          "Compartimento y alineación",
+          "El tronco safeno ocupa un compartimento fascial. La accesoria anterior se reconoce en relación con los vasos femorales; una tributaria fuera del compartimento no equivale automáticamente a un segundo tronco."
+        ],
+        [
+          "Dos fechas, una correspondencia",
+          "Anterior accessory saphenous vein aparece como AAGSV en el mapa de 2023 y como AASV en otras publicaciones. La recomendación específica de 2024 es ASV."
+        ]
+      ],
+      "guide": "consenso-2023",
+      "terms": [
+        "vsaa",
+        "vsm"
+      ],
+      "codes": []
+    },
+    {
+      "id": "m4",
+      "t": "Safena menor: SSV, SPJ y Giacomini",
+      "refs": [
+        4,
+        7,
+        21
+      ],
+      "act": [
+        {
+          "p": "pop",
+          "l": "Unión safenopoplítea · SPJ"
+        },
+        {
+          "p": "giac",
+          "l": "Conexión de Giacomini · IV"
+        }
+      ],
+      "prob": "El estudio describe una extensión craneal de la safena menor. En un esquema previo, toda extensión estaba rotulada como “Giacomini”.",
+      "obj": "Relacionar SSV, SPJ, CE SSV e IV sin tratar una conexión específica como equivalente de todas las extensiones.",
+      "q": "¿Toda CE SSV es una vena de Giacomini? ¿Qué informa IV?",
+      "a": "No. CE SSV es cranial extension of the small saphenous vein, extensión craneal de la safena menor. Giacomini describe la conexión hacia el territorio de la GSV mediante la circunfleja posterior del muslo. IV designa el grupo de venas intersafenas; no toda IV es esa configuración concreta.",
+      "perla": "SSV equivale a safena menor o parva. La SPJ puede variar de altura o no estar presente: sigue las conexiones observadas y descríbelas.",
+      "error": "Usar CE SSV, IV y Giacomini como tres sinónimos exactos, o usar LSV sin leyenda, porque en inglés puede significar long o lesser saphenous vein.",
+      "concepts": [
+        [
+          "Nombre principal y sinónimos",
+          "Small saphenous vein, SSV: safena menor o parva. Externa y corta son denominaciones históricas."
+        ],
+        [
+          "Unión y continuación",
+          "SPJ es saphenopopliteal junction. CE SSV nombra una continuación craneal; su destino anatómico debe describirse aparte."
+        ]
+      ],
+      "guide": "diferencias",
+      "terms": [
+        "vsp",
+        "giac"
+      ],
+      "codes": [
+        "SPJ",
+        "CE SSV",
+        "IV"
+      ]
+    },
+    {
+      "id": "m5",
+      "t": "Ejes profundos: ATV, PTV, PRV y POPV",
+      "refs": [
+        4,
+        9,
+        22
+      ],
+      "act": [
+        {
+          "p": "panto",
+          "l": "Tibiales posteriores · PTV"
+        },
+        {
+          "v": "vfib",
+          "l": "Fibulares / peroneas · PRV"
+        },
+        {
+          "v": "vpop",
+          "l": "Poplítea · POPV"
+        }
+      ],
+      "prob": "Un informe llama “fibulares” a las venas que otro texto denomina “peroneal veins (PRV)”. En el mismo mapa aparece PV junto a una perforante.",
+      "obj": "Reconocer equivalencias del eje profundo y distinguir las siglas CEAP de las convenciones del mapa superficial y perforante.",
+      "q": "¿PRV y venas fibulares corresponden a estructuras distintas? ¿PV identifica aquí la vena poplítea?",
+      "a": "Fibulares y peroneas son equivalentes anatómicos; PRV corresponde a peroneal vein en CEAP 2020. La poplítea se muestra como POPV. En el mapa latinoamericano de 2023, PV significa perforating vein, vena perforante.",
+      "perla": "ATV son las tibiales anteriores y PTV las posteriores en CEAP. Las tibiales posteriores profundas (PTV) son distintas de sus perforantes (PV con localización).",
+      "error": "Omitir “perforante” y convertir una conexión transfascial en un eje profundo, o presentar todas estas siglas como si procedieran de la tabla VI de 2023.",
+      "concepts": [
+        [
+          "Continuidad profunda",
+          "Los ejes de la pierna se relacionan con la poplítea y el eje femoroilíaco. Las venas musculares soleales y gastrocnemias completan la explicación del retorno."
+        ],
+        [
+          "Pareadas y variables",
+          "Las venas acompañantes suelen ser pares. Número, confluencias y duplicaciones pueden variar; una variante no demuestra por sí sola trombosis ni reflujo."
+        ]
+      ],
+      "guide": "anatomia-regional",
+      "terms": [
+        "vat",
+        "vpt",
+        "vfib",
+        "vpop"
+      ],
+      "codes": []
+    },
+    {
+      "id": "m6",
+      "t": "Perforantes: PV, topografía y epónimos",
+      "refs": [
+        2,
+        4,
+        21,
+        22
+      ],
+      "act": [
+        {
+          "p": "cock",
+          "l": "PV tibiales posteriores · Cockett"
+        },
+        {
+          "p": "dodd",
+          "l": "PV del canal femoral · Dodd"
+        },
+        {
+          "v": "pboyd",
+          "l": "PV paratibiales · Boyd proximal"
+        }
+      ],
+      "prob": "Un mapa solo escribe “Boyd” o “PV”. Falta saber qué nivel de la pierna señala y qué venas conecta.",
+      "obj": "Usar PV con localización y conexiones, y conservar los epónimos como antecedentes con alcance explícito.",
+      "q": "¿PV o Boyd, por sí solos, identifican completamente una perforante? ¿El arco posterior de pierna es PAGSV?",
+      "a": "No. PV es una sigla genérica y requiere región, nivel y conexiones. Boyd se relaciona con el grupo paratibial proximal; no con todo el grupo. El arco posterior de pierna (PAV, leyenda inglesa del atlas) no equivale a PAGSV, accesoria posterior del muslo en el mapa de 2023.",
+      "perla": "Cockett orienta a perforantes tibiales posteriores. Dodd necesita contexto topográfico porque aparece con distintos alcances en la literatura. Conserva el nombre descriptivo como referencia principal.",
+      "error": "Confundir las PTV profundas con sus PV, o deducir una indicación terapéutica únicamente del epónimo o de la presencia de una perforante en el dibujo.",
+      "concepts": [
+        [
+          "Conexión transfascial",
+          "Una perforante atraviesa la fascia muscular y conecta superficial con profundo. Una comunicante conecta venas de un mismo sistema."
+        ],
+        [
+          "Nombre y hallazgo funcional",
+          "Identificar la vena es distinto de demostrar reflujo. Un mapa anatómico no establece por sí solo si una perforante es patológica."
+        ]
+      ],
+      "guide": "diferencias",
+      "terms": [
+        "pcock",
+        "pboyd",
+        "pdodd",
+        "varq"
+      ],
+      "codes": [
+        "PV",
+        "PAGSV"
+      ]
+    },
+    {
+      "id": "m7",
+      "t": "Pelvis: IIV, IPV y EPV",
+      "refs": [
+        2,
+        10,
+        11,
+        21,
+        22
+      ],
+      "act": [
+        {
+          "v": "vii",
+          "l": "Ilíaca interna · IIV"
+        },
+        {
+          "v": "pud",
+          "l": "Pudenda interna · IPV"
+        }
+      ],
+      "prob": "Una ficha pélvica dice pudenda interna (IPV), pero la tabla del mapa de 2023 contiene EPV. También aparece el nombre tradicional “hipogástrica”.",
+      "obj": "Distinguir traducciones, sinónimos y vasos distintos, indicando la procedencia de las siglas pélvicas.",
+      "q": "¿EPV y pudenda interna son la misma vena? ¿Ilíaca interna e hipogástrica son estructuras diferentes?",
+      "a": "EPV significa external pudendal vein, pudenda externa, en el mapa de 2023. La pudenda interna se muestra como IPV, leyenda editorial inglesa identificada en el atlas. Ilíaca interna e hipogástrica son sinónimos; IIV corresponde a internal iliac vein en CEAP 2020.",
+      "perla": "Conserva internos/externos, superiores/inferiores y profundos/superficiales: esos calificativos pueden distinguir estructuras, no simples traducciones.",
+      "error": "Atribuir al mapa de 2023 todas las siglas pélvicas o confundir GPV, perforantes glúteas, con los grupos venosos glúteos pélvicos.",
+      "concepts": [
+        [
+          "Continuidad y territorio",
+          "La ilíaca externa continúa el retorno del miembro inferior; la interna recoge tributarias pélvicas. Confluyen en la ilíaca común."
+        ],
+        [
+          "Conexión no significa enfermedad",
+          "Las vías perineales, inguinales, glúteas y obturatrices pueden conectar territorios. Su significado funcional depende de los hallazgos y del contexto clínico."
+        ]
+      ],
+      "guide": "anatomia-regional",
+      "terms": [
+        "vic",
+        "vie",
+        "vii",
+        "pud",
+        "glu"
+      ],
+      "codes": [
+        "EPV",
+        "GPV"
+      ]
+    },
+    {
+      "id": "m8",
+      "t": "Del nombre al mapa: consensos y abreviaturas",
+      "refs": [
+        1,
+        2,
+        4,
+        21,
+        22,
+        23
+      ],
+      "act": [
+        {
+          "v": "vsm",
+          "l": "Comparar español, inglés y GSV"
+        },
+        {
+          "v": "vsaa",
+          "l": "Revisar AAGSV y ASV"
+        }
+      ],
+      "prob": "Al comparar un texto anatómico, un mapa de 2023 y una publicación de 2024, encuentras nombres y siglas diferentes para algunas estructuras.",
+      "obj": "Elegir una convención explícita y leer cada documento según su objetivo, territorio y fecha.",
+      "q": "¿Una publicación de fecha posterior sustituye automáticamente todos los nombres y siglas de las anteriores?",
+      "a": "No. La nomenclatura internacional de 2002 y 2005 aporta la base anatómica; UIP 2006 relaciona la anatomía con el ultrasonido. CEAP 2020 clasifica enfermedad e incluye localizaciones. El consenso latinoamericano de 2023 acuerda un mapa superficial y perforante; ASV es una actualización específica de 2024.",
+      "perla": "Escribe nombre completo, equivalente inglés y sigla con su fuente. Añade los sinónimos útiles y localiza las conexiones antes de aceptar una equivalencia.",
+      "error": "Anunciar todas las siglas como “UIP”, considerar toda diferencia de idioma un cambio anatómico, o presentar una leyenda local como una norma de consenso.",
+      "concepts": [
+        [
+          "Cuatro tipos de diferencia",
+          "Traducción: GSV y safena mayor. Sinónimo: mayor y magna. Cambio específico: accesoria anterior a ASV en 2024. Precisión: profundo en el arco plantar."
+        ],
+        [
+          "El mapa acompaña al informe",
+          "Una leyenda explica siglas y símbolos. El nombre identifica el vaso; el informe funcional añade permeabilidad, flujo y otros hallazgos. El color del atlas no demuestra competencia valvular."
+        ]
+      ],
+      "guide": "historia",
+      "terms": [],
+      "codes": [
+        "GSV",
+        "SSV",
+        "AAGSV",
+        "PAGSV",
+        "SFJ",
+        "SPJ",
+        "PV",
+        "PPV",
+        "GPV",
+        "EPV",
+        "SCI",
+        "SEPi",
+        "CE SSV",
+        "ASSV",
+        "IV",
+        "LMV",
+        "CiV"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "gsv",
+      "prompt": "En el mapa latinoamericano de 2023, ¿qué sigla corresponde a la safena mayor o magna?",
+      "options": [
+        "GSV",
+        "SSV",
+        "PAGSV",
+        "PV"
+      ],
+      "correct": 0,
+      "explain": "GSV desarrolla great saphenous vein. Mayor y magna son equivalencias españolas de la misma vena; no son vasos distintos.",
+      "refs": [
+        21
+      ],
+      "guide": "consenso-2023",
+      "module": "m1",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "ssv",
+      "prompt": "¿Cuál es el equivalente inglés y la sigla de safena menor o parva en 2023?",
+      "options": [
+        "Small saphenous vein · SSV",
+        "Great saphenous vein · GSV",
+        "Lateral marginal vein · LMV",
+        "Perforating vein · PV"
+      ],
+      "correct": 0,
+      "explain": "SSV es small saphenous vein. Externa o corta son nombres históricos. LSV puede ser ambiguo entre long y lesser saphenous vein.",
+      "refs": [
+        21,
+        4
+      ],
+      "guide": "consenso-2023",
+      "module": "m4",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "aagsv",
+      "prompt": "¿Qué sigla utiliza la tabla VI del consenso latinoamericano de 2023 para la accesoria anterior del muslo?",
+      "options": [
+        "AAGSV",
+        "ASV",
+        "PAGSV",
+        "ASSV"
+      ],
+      "correct": 0,
+      "explain": "La tabla de 2023 usa AAGSV. AASV aparece en otras publicaciones; ASV es la recomendación específica de 2024, explicada entre los otros nombres del atlas.",
+      "refs": [
+        21,
+        23
+      ],
+      "guide": "consenso-2023",
+      "module": "m3",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "asv",
+      "prompt": "¿Qué explica la correspondencia AAGSV (2023) y ASV (2024) en esta web?",
+      "options": [
+        "La misma estructura bajo la convención de mapeo y una actualización posterior específica",
+        "Dos venas de sistemas diferentes",
+        "Una sigla española y una portuguesa",
+        "El cambio de nombre de todas las safenas accesorias"
+      ],
+      "correct": 0,
+      "explain": "El posicionamiento AVLS/AVF/UIP de 2024 recomienda anterior saphenous vein, ASV. No convierte ASV en la sigla original del mapa de 2023 ni renombra todas las accesorias.",
+      "refs": [
+        21,
+        23
+      ],
+      "guide": "diferencias",
+      "module": "m3",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "sfj",
+      "prompt": "¿Qué describe SFJ en el mapa de 2023?",
+      "options": [
+        "Unión safenofemoral · saphenofemoral junction",
+        "Vena femoral superficial",
+        "Vena safena menor",
+        "Unión safenopoplítea"
+      ],
+      "correct": 0,
+      "explain": "SFJ identifica la unión entre GSV y femoral común; no es otra vena independiente.",
+      "refs": [
+        21,
+        4
+      ],
+      "guide": "consenso-2023",
+      "module": "m2",
+      "sys": [
+        "sup",
+        "deep"
+      ]
+    },
+    {
+      "id": "spj",
+      "prompt": "¿Qué significa SPJ?",
+      "options": [
+        "Unión safenopoplítea · saphenopopliteal junction",
+        "Extensión craneal de la safena menor",
+        "Vena tibial posterior",
+        "Perforante glútea"
+      ],
+      "correct": 0,
+      "explain": "SPJ identifica la unión de la SSV con la poplítea. Su altura y presencia varían; no es sinónimo de toda extensión craneal.",
+      "refs": [
+        21,
+        4
+      ],
+      "guide": "consenso-2023",
+      "module": "m4",
+      "sys": [
+        "sup",
+        "deep"
+      ]
+    },
+    {
+      "id": "pv",
+      "prompt": "En la tabla VI del mapa de 2023, PV significa…",
+      "options": [
+        "Perforating vein · vena perforante",
+        "Popliteal vein · vena poplítea",
+        "Plantar vein · vena plantar",
+        "Posterior arch vein · arco posterior"
+      ],
+      "correct": 0,
+      "explain": "En esta convención PV es perforante y requiere localización. El atlas usa POPV para la poplítea según CEAP 2020.",
+      "refs": [
+        21,
+        22
+      ],
+      "guide": "diferencias",
+      "module": "m6",
+      "sys": [
+        "perf",
+        "deep"
+      ]
+    },
+    {
+      "id": "ppv",
+      "prompt": "¿Qué identifica PPV en el consenso de mapeo de 2023?",
+      "options": [
+        "Perforante poplítea",
+        "Vena poplítea profunda",
+        "Vena tibial posterior",
+        "Arco venoso plantar profundo"
+      ],
+      "correct": 0,
+      "explain": "PPV es popliteal perforating vein. Una perforante de la región poplítea no equivale a la vena poplítea, POPV.",
+      "refs": [
+        21,
+        22
+      ],
+      "guide": "consenso-2023",
+      "module": "m6",
+      "sys": [
+        "perf",
+        "deep"
+      ]
+    },
+    {
+      "id": "gpv",
+      "prompt": "¿Qué significa GPV en el mapa de 2023?",
+      "options": [
+        "Gluteal perforating vein · perforante glútea",
+        "Grupo de todas las venas glúteas pélvicas",
+        "Great saphenous vein · safena mayor",
+        "Vena femoral profunda"
+      ],
+      "correct": 0,
+      "explain": "GPV nombra una perforante glútea. Los grupos glúteos superior e inferior pélvicos son estructuras distintas y llevan leyendas editoriales explícitas en el atlas.",
+      "refs": [
+        21,
+        2
+      ],
+      "guide": "diferencias",
+      "module": "m7",
+      "sys": [
+        "perf",
+        "pel"
+      ]
+    },
+    {
+      "id": "epv",
+      "prompt": "¿Qué vena corresponde a EPV en la tabla de 2023?",
+      "options": [
+        "Pudenda externa · external pudendal vein",
+        "Pudenda interna · internal pudendal vein",
+        "Ilíaca externa · external iliac vein",
+        "Epigástrica superficial · superficial epigastric vein"
+      ],
+      "correct": 0,
+      "explain": "EPV corresponde a pudenda externa. La pudenda interna es otra estructura; IPV se define como leyenda inglesa editorial del atlas.",
+      "refs": [
+        21,
+        2
+      ],
+      "guide": "diferencias",
+      "module": "m7",
+      "sys": [
+        "pel",
+        "sup"
+      ]
+    },
+    {
+      "id": "sci",
+      "prompt": "¿Qué estructura nombra SCI en el mapa latinoamericano de 2023?",
+      "options": [
+        "Circunfleja ilíaca superficial",
+        "Circunflejas femorales profundas",
+        "Ilíaca interna",
+        "Circunfleja posterior superficial del muslo"
+      ],
+      "correct": 0,
+      "explain": "SCI significa superficial circumflex iliac vein. Ilíaca y superficial son calificativos que deben conservarse; no es el grupo de circunflejas femorales profundas.",
+      "refs": [
+        21,
+        2
+      ],
+      "guide": "consenso-2023",
+      "module": "m8",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "sepi",
+      "prompt": "¿Qué significa SEPi en la tabla VI de 2023?",
+      "options": [
+        "Superficial epigastric vein · epigástrica superficial",
+        "Vena epigástrica inferior profunda",
+        "Vena pudenda interna",
+        "Extensión craneal de la safena menor"
+      ],
+      "correct": 0,
+      "explain": "SEPi se refiere a la epigástrica superficial. No debe confundirse con la vena epigástrica inferior del plano profundo.",
+      "refs": [
+        21
+      ],
+      "guide": "consenso-2023",
+      "module": "m8",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "cessv",
+      "prompt": "¿Qué describe CE SSV?",
+      "options": [
+        "Extensión craneal de la safena menor",
+        "Toda conexión de Giacomini, sin otras posibilidades",
+        "Unión safenopoplítea",
+        "Accesoria posterior del muslo"
+      ],
+      "correct": 0,
+      "explain": "CE SSV desarrolla cranial extension of the small saphenous vein. El destino de la extensión debe describirse: no toda extensión es la conexión específica de Giacomini.",
+      "refs": [
+        21,
+        4
+      ],
+      "guide": "diferencias",
+      "module": "m4",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "assv",
+      "prompt": "ASSV en el mapa de 2023 corresponde a…",
+      "options": [
+        "Accesoria superficial de la safena menor",
+        "Accesoria anterior de la safena mayor",
+        "Safena anterior según la actualización de 2024",
+        "Accesoria posterior del muslo"
+      ],
+      "correct": 0,
+      "explain": "ASSV significa superficial accessory vein of the small saphenous vein. Es distinta de AAGSV y de PAGSV.",
+      "refs": [
+        21
+      ],
+      "guide": "consenso-2023",
+      "module": "m8",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "iv",
+      "prompt": "¿Qué categoría identifica IV en el consenso de mapeo?",
+      "options": [
+        "Venas intersafenas",
+        "Ilíaca interna",
+        "Vena ciática",
+        "Todas las venas de Giacomini exclusivamente"
+      ],
+      "correct": 0,
+      "explain": "IV desarrolla intersaphenous veins. Giacomini describe una configuración intersafena concreta; no toda IV es Giacomini.",
+      "refs": [
+        21,
+        4
+      ],
+      "guide": "diferencias",
+      "module": "m4",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "lmv",
+      "prompt": "LMV en la tabla de 2023 significa…",
+      "options": [
+        "Lateral marginal vein · vena marginal lateral",
+        "Vena marginal medial",
+        "Vena muscular lateral de la pierna",
+        "Vena safena menor"
+      ],
+      "correct": 0,
+      "explain": "LMV corresponde a lateral marginal vein. Es preciso describir la región y el trayecto representados; no usarla para toda vena lateral.",
+      "refs": [
+        21
+      ],
+      "guide": "consenso-2023",
+      "module": "m8",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "civ-sciatic",
+      "prompt": "¿Cuál de estas siglas nombra la vena ciática en la tabla VI de 2023?",
+      "options": [
+        "CiV",
+        "CIV",
+        "SCI",
+        "GPV"
+      ],
+      "correct": 0,
+      "explain": "La capitalización importa: CiV es sciatic vein en el mapa; CIV corresponde a common iliac vein en CEAP. SCI y GPV identifican otras estructuras.",
+      "refs": [
+        21,
+        22
+      ],
+      "guide": "nomenclatura",
+      "module": "m8",
+      "sys": [
+        "pel",
+        "deep"
+      ]
+    },
+    {
+      "id": "pagsv",
+      "prompt": "PAGSV en el mapa de 2023 corresponde a…",
+      "options": [
+        "Accesoria posterior del muslo",
+        "Arco posterior de la pierna",
+        "Vena tibial posterior profunda",
+        "Perforante tibial posterior"
+      ],
+      "correct": 0,
+      "explain": "La localización del muslo es esencial. El arco posterior de pierna se muestra como PAV, leyenda editorial inglesa, y no es automáticamente PAGSV.",
+      "refs": [
+        21,
+        4
+      ],
+      "guide": "diferencias",
+      "module": "m6",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "femoral",
+      "prompt": "¿Cómo se nombra la vena antiguamente llamada “femoral superficial”?",
+      "options": [
+        "Vena femoral · femoral vein · FV",
+        "Vena safena mayor · GSV",
+        "Vena femoral común · CFV en todo su trayecto",
+        "Vena perforante · PV"
+      ],
+      "correct": 0,
+      "explain": "La femoral pertenece al sistema profundo. Se desaconseja “superficial” porque puede inducir una interpretación errónea del territorio; FV se identifica en CEAP 2020.",
+      "refs": [
+        1,
+        2,
+        13,
+        22
+      ],
+      "guide": "diferencias",
+      "module": "m1",
+      "sys": [
+        "deep"
+      ]
+    },
+    {
+      "id": "ptv",
+      "prompt": "¿Qué distingue PTV de las perforantes tibiales posteriores?",
+      "options": [
+        "PTV identifica las venas profundas; PV con localización identifica sus perforantes",
+        "Son dos idiomas para el mismo vaso",
+        "PTV es la unión safenopoplítea",
+        "PV identifica siempre la poplítea"
+      ],
+      "correct": 0,
+      "explain": "Posterior tibial veins (PTV) son el eje profundo en CEAP. Posterior tibial perforating veins son conexiones que atraviesan la fascia muscular.",
+      "refs": [
+        4,
+        21,
+        22
+      ],
+      "guide": "diferencias",
+      "module": "m5",
+      "sys": [
+        "deep",
+        "perf"
+      ]
+    },
+    {
+      "id": "prv",
+      "prompt": "¿Por qué las venas fibulares aparecen como PRV en el atlas?",
+      "options": [
+        "PRV desarrolla peroneal vein en CEAP; peroneas y fibulares son equivalentes",
+        "PRV significa perforante de la rodilla",
+        "Fibulares es un nombre desaconsejado",
+        "La tabla VI de 2023 fija PRV para todas las venas profundas"
+      ],
+      "correct": 0,
+      "explain": "La equivalencia anatómica fibular/peroneal permite conservar el nombre español fibulares y la sigla CEAP PRV, con fuente identificada.",
+      "refs": [
+        22
+      ],
+      "guide": "nomenclatura",
+      "module": "m5",
+      "sys": [
+        "deep"
+      ]
+    },
+    {
+      "id": "boyd",
+      "prompt": "¿Qué descripción evita la ambigüedad del epónimo Boyd?",
+      "options": [
+        "Perforantes paratibiales proximales, con nivel y conexiones",
+        "Todas las perforantes paratibiales de cualquier nivel",
+        "Toda vena tibial posterior profunda",
+        "Cualquier perforante de la fosa poplítea"
+      ],
+      "correct": 0,
+      "explain": "Boyd se relaciona con el grupo proximal; no equivale a todo el repertorio paratibial. Localización y conexiones aportan más precisión que el epónimo aislado.",
+      "refs": [
+        4,
+        2
+      ],
+      "guide": "diferencias",
+      "module": "m6",
+      "sys": [
+        "perf"
+      ]
+    },
+    {
+      "id": "perforante",
+      "prompt": "¿Qué diferencia anatómica define una perforante?",
+      "options": [
+        "Atraviesa la fascia muscular y conecta superficial con profundo",
+        "Conecta exclusivamente venas del mismo sistema",
+        "Es cualquier afluente de una safena",
+        "Es una vena paralela a otra"
+      ],
+      "correct": 0,
+      "explain": "Una comunicante conecta venas del mismo sistema; tributaria expresa una relación de afluencia. Son conceptos diferentes.",
+      "refs": [
+        1,
+        2,
+        4
+      ],
+      "guide": "anatomia",
+      "module": "m1",
+      "sys": []
+    },
+    {
+      "id": "hipogastrica",
+      "prompt": "Ilíaca interna e hipogástrica son…",
+      "options": [
+        "Sinónimos de la misma estructura",
+        "Dos tributarias de territorios distintos",
+        "Una vena superficial y otra profunda de la pierna",
+        "La pudenda externa y su unión"
+      ],
+      "correct": 0,
+      "explain": "Internal iliac vein corresponde a ilíaca interna; hypogastric vein es un nombre histórico equivalente. IIV se identifica aquí con CEAP 2020.",
+      "refs": [
+        2,
+        22
+      ],
+      "guide": "nomenclatura",
+      "module": "m7",
+      "sys": [
+        "pel"
+      ]
+    },
+    {
+      "id": "ipvf",
+      "prompt": "¿Qué fuente se atribuye a IPV para pudenda interna en esta web?",
+      "options": [
+        "Leyenda editorial inglesa del atlas",
+        "Tabla VI del consenso latinoamericano 2023",
+        "Actualización ASV de 2024",
+        "Sigla universal obligatoria de UIP"
+      ],
+      "correct": 0,
+      "explain": "IPV está definida como leyenda editorial del atlas. EPV sí figura en la tabla VI de 2023 y corresponde a pudenda externa.",
+      "refs": [
+        21,
+        2
+      ],
+      "guide": "diferencias",
+      "module": "m7",
+      "sys": [
+        "pel"
+      ]
+    },
+    {
+      "id": "scope",
+      "prompt": "¿Qué alcance tiene el consenso latinoamericano de mapeo de 2023?",
+      "options": [
+        "Mapa superficial y perforante que complementa el informe dúplex",
+        "Nomenclatura completa de todas las venas profundas y pélvicas",
+        "Sustitución de CEAP por una lista de vasos",
+        "Diagnóstico automático a partir de una sigla"
+      ],
+      "correct": 0,
+      "explain": "El alcance del documento no debe ampliarse por el hecho de que sus siglas estén en inglés. Las otras convenciones se identifican por separado.",
+      "refs": [
+        21
+      ],
+      "guide": "historia",
+      "module": "m8",
+      "sys": []
+    },
+    {
+      "id": "sinonimo",
+      "prompt": "¿Cuál es una equivalencia de idioma y no un cambio de estructura?",
+      "options": [
+        "Great saphenous vein y safena mayor",
+        "Pudenda externa y pudenda interna",
+        "Perforante tibial posterior y tibial posterior profunda",
+        "Circunfleja femoral profunda y circunfleja superficial del muslo"
+      ],
+      "correct": 0,
+      "explain": "GSV y safena mayor nombran la misma vena en idiomas diferentes. Los otros pares distinguen estructuras por territorio, profundidad o conexiones.",
+      "refs": [
+        1,
+        2,
+        21
+      ],
+      "guide": "lectura",
+      "module": "m1",
+      "sys": []
+    },
+    {
+      "id": "variante",
+      "prompt": "¿Qué puede afirmarse al observar dos venas paralelas?",
+      "options": [
+        "Hay que seguir sus trayectos y relaciones antes de llamarlas duplicación",
+        "Siempre es una duplicación verdadera",
+        "Siempre existe reflujo",
+        "El vaso lateral es necesariamente una perforante"
+      ],
+      "correct": 0,
+      "explain": "Un corte aislado no prueba duplicación ni enfermedad. La continuidad, las uniones y la relación fascial permiten interpretar qué estructuras se observan.",
+      "refs": [
+        2,
+        4
+      ],
+      "guide": "anatomia-regional",
+      "module": "m3",
+      "sys": []
+    },
+    {
+      "id": "fascia",
+      "prompt": "¿Por qué una safena puede ser superficial y estar dentro de un compartimento fascial?",
+      "options": [
+        "Superficial describe su relación con la fascia muscular; el compartimento también está limitado por fascia safena",
+        "Toda vena bajo fascia safena pertenece al sistema profundo",
+        "El compartimento safeno es una perforante",
+        "La clasificación depende únicamente del calibre"
+      ],
+      "correct": 0,
+      "explain": "Hay que indicar qué fascia se utiliza como referencia. La GSV es del sistema superficial y ocupa un compartimento entre fascia safena y fascia muscular.",
+      "refs": [
+        4
+      ],
+      "guide": "anatomia",
+      "module": "m3",
+      "sys": [
+        "sup"
+      ]
+    },
+    {
+      "id": "cfv",
+      "prompt": "¿Qué distingue CFV de SFJ?",
+      "options": [
+        "CFV es la femoral común; SFJ es la unión con la GSV",
+        "Son dos siglas del mismo vaso",
+        "CFV es una perforante; SFJ es una vena profunda",
+        "Ambas son siglas de la safena menor"
+      ],
+      "correct": 0,
+      "explain": "CFV se desarrolla como common femoral vein en CEAP. SFJ es saphenofemoral junction en el mapa de 2023; nombre de una unión y nombre de una vena no son intercambiables.",
+      "refs": [
+        21,
+        22
+      ],
+      "guide": "consenso-2023",
+      "module": "m2",
+      "sys": [
+        "deep",
+        "sup"
+      ]
+    },
+    {
+      "id": "function",
+      "prompt": "¿Qué informa por sí solo el nombre anatómico de una vena?",
+      "options": [
+        "Qué estructura se describe; la función requiere hallazgos adicionales",
+        "Que existe reflujo",
+        "Que necesita una intervención",
+        "Que el color del atlas prueba competencia valvular"
+      ],
+      "correct": 0,
+      "explain": "El nombre identifica la estructura. El informe funcional añade los hallazgos de permeabilidad y flujo; una representación docente no los demuestra por sí misma.",
+      "refs": [
+        4,
+        21
+      ],
+      "guide": "anatomia",
+      "module": "m8",
+      "sys": []
+    },
+    {
+      "id": "popv",
+      "prompt": "En la convención utilizada por el atlas, POPV identifica…",
+      "options": [
+        "La vena poplítea, según CEAP 2020",
+        "Una perforante poplítea, según la tabla VI de 2023",
+        "La pudenda interna",
+        "El arco plantar profundo"
+      ],
+      "correct": 0,
+      "explain": "POPV desarrolla popliteal vein en CEAP 2020. Evita confundir la poplítea con PV, perforante, y con PPV, perforante poplítea, en el mapa de 2023.",
+      "refs": [
+        21,
+        22
+      ],
+      "guide": "diferencias",
+      "module": "m5",
+      "sys": [
+        "deep",
+        "perf"
+      ]
+    }
+  ]
+}

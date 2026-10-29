@@ -25,6 +25,9 @@ import unicodedata
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
+from actualizar_aprendizaje import sync_learning
+sync_learning(ROOT)
+
 SITE = 'https://anatomia.flebologiamexico.com/'
 IMF = 'https://flebo.mx/'
 OFERTA = 'https://flebo.mx/oferta-educativa/'
