@@ -363,6 +363,51 @@ body.tour-on{overflow:hidden}
 .refs-page .refs-sec{margin-top:0}
 @media (max-width:1099px){#structures{flex:none}#index{overflow:visible;margin-right:0;padding-right:0}}
 .acc-t{min-height:44px}.acc-b button{padding-block:7px}.side{gap:16px}
+
+/* ---- Subpágina del tutor ---- */
+.tpage{max-width:1760px;margin:12px auto 0;height:calc(100vh - var(--hh) - 26px);height:calc(100dvh - var(--hh) - 26px);min-height:560px;display:flex;flex-direction:column;gap:12px;
+  padding-left:max(12px, env(safe-area-inset-left, 0px));padding-right:max(12px, env(safe-area-inset-right, 0px))}
+.tp-grid{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(380px,.85fr);gap:12px}
+.tp-chat,.tp-route{min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.tp-chat{padding:0}
+.tp-head{padding:22px 30px 14px;border-bottom:1px solid var(--line)}
+.tp-head .t-head h2{font-size:26px}
+.tp-ctxrow{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;margin-top:12px}
+.tp-ctxrow .t-ctx{margin:0}
+.tp-body{flex:1;min-height:0;overflow-y:auto;padding:22px 30px;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin;scrollbar-color:var(--line2) transparent}
+.tp-chat .t-log{max-height:none;overflow:visible;padding:0;gap:14px}
+.tp-chat .t-log:empty{display:none}
+.tp-chat .msg{font-size:15.5px;line-height:1.6;padding:13px 16px;border-radius:10px}
+.tp-chat .msg.u{max-width:72%}
+.tp-chat .msg.a{max-width:min(100%,82ch)}
+.t-welcome h3{margin:6px 0 4px;font:700 22px/1.2 var(--f-display)}
+.t-welcome>p{margin:0 0 16px;color:var(--muted);font-size:15px;max-width:60ch}
+.t-welcome .t-quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
+.t-welcome .qp{display:grid;gap:4px;text-align:left;border-radius:12px;padding:16px 18px;border:1px solid var(--line2);background:var(--surface);font-size:14px}
+.t-welcome .qp b{font:700 16px var(--f-display);color:var(--ink)}
+.t-welcome .qp span{color:var(--muted);line-height:1.4}
+.t-welcome .qp:hover{border-color:var(--accent)}
+.t-welcome .qp:hover b{color:var(--accent)}
+.tp-foot{border-top:1px solid var(--line);padding:14px 30px 16px;background:var(--surface)}
+.tp-foot .t-form textarea{min-height:64px;font-size:15px}
+.tp-foot .t-disc{margin-top:10px}
+.tp-route{padding:22px 24px}
+.tp-route .r-top h2{font-size:22px}
+.tp-route #route{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;margin-top:2px}
+.tpage>.t-off{margin:0;padding:14px 18px;border-radius:12px;background:color-mix(in srgb,var(--hl) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--hl) 40%,var(--line));font-size:14.5px;line-height:1.5}
+.tpage.no-ai .tp-chat{display:none}
+.tpage.no-ai .tp-grid{grid-template-columns:minmax(0,1fr)}
+.tpage.no-ai #route{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;align-content:start}
+@media (max-width:1099px){
+  .tpage{height:auto;min-height:0}
+  .tp-grid{display:flex;flex-direction:column}
+  .tp-chat,.tp-route{overflow:visible}
+  .tp-body{max-height:62vh;min-height:260px}
+  .tp-route #route{overflow:visible}
+  .tpage.no-ai #route{grid-template-columns:1fr}
+  .t-welcome .t-quick{grid-template-columns:1fr}
+  .tp-head,.tp-body,.tp-foot{padding-inline:18px}
+}
 </style>
 
 <header class="top" id="top">
@@ -452,39 +497,51 @@ body.tour-on{overflow:hidden}
         </div>
       </div>
 
-      <div id="tab-tutor" hidden>
-        <div class="card tutor">
-          <div class="t-head">
-            <div class="t-badge" aria-hidden="true">IMF</div>
-            <div><h2>Tutor clínico</h2><p class="t-sub">Pregúntale lo que quieras sobre anatomía venosa, ecografía o clínica. Responde con base en la bibliografía del atlas y te propone retos para razonar.</p></div>
-          </div>
-          <div class="t-ctx" id="tCtx"></div>
-          <div class="t-log" id="tLog" aria-live="polite"></div>
-          <div class="t-quick" id="tQuick">
-            <button class="qp" data-q="Explícame esta estructura a partir de un caso clínico breve y guíame con preguntas, sin darme la respuesta de inmediato.">Caso clínico guiado</button>
-            <button class="qp" data-q="Hazme 3 preguntas tipo examen de posgrado sobre esta estructura, una por una. Espera mi respuesta antes de corregir.">Preguntas de examen</button>
-            <button class="qp" data-q="¿Qué errores frecuentes se cometen con esta estructura en la ecografía y en la clínica, y cómo los evito?">Errores frecuentes</button>
-            <button class="qp" data-q="¿Cómo aplico esto en mi consulta diaria de flebología? Dame pasos concretos.">Aplicarlo en mi consulta</button>
-          </div>
-          <form class="t-form" id="tForm">
-            <label for="tIn" class="sr">Pregunta al tutor</label>
-            <textarea id="tIn" rows="2" placeholder="Escribe tu pregunta o tu respuesta al reto…"></textarea>
-            <div class="t-actions"><button type="button" class="tog" id="tStop" hidden>Detener</button><button type="button" class="tog" id="tNew">Nueva conversación</button><button type="submit" class="primary" id="tSend">Enviar</button></div>
-          </form>
-          <p class="t-off" id="tOff" hidden>El tutor con IA no está disponible en esta vista. La ruta guiada de abajo funciona sin conexión al tutor.</p>
-          <p class="t-disc">Herramienta docente: no sustituye el juicio clínico ni da indicaciones para pacientes concretos. Verifica las citas en la sección de referencias.</p>
-        </div>
-        <div class="card route" style="margin-top:12px">
-          <div class="r-top"><h2>Ruta de aprendizaje</h2><span id="rProg"></span></div>
-          <p class="t-sub">Siete módulos de unos 10 minutos. Cada uno parte de un problema clínico, te pide explorar el modelo, resolver un reto y llevarlo a tu práctica.</p>
-          <div class="bar"><b id="rBar" style="width:0%"></b></div>
-          <div id="route"></div>
-        </div>
-      </div>
-
       <div id="tab-quiz" hidden><div class="card" id="quiz"></div></div>
   </aside>
 </div>
+
+<main class="tpage" id="tutorView" hidden>
+  <p class="t-off" id="tOff" hidden><b>El chat con IA no está disponible en esta versión del sitio.</b> La ruta de aprendizaje funciona completa, sin conexión: cada módulo parte de un problema clínico, te lleva a explorar el modelo y termina con un reto.</p>
+  <div class="tp-grid">
+    <section class="card tutor tp-chat" aria-label="Chat con el tutor">
+      <div class="tp-head">
+        <div class="t-head">
+          <div class="t-badge" aria-hidden="true">IMF</div>
+          <div><h2>Tutor clínico</h2><p class="t-sub">Pregúntale lo que quieras sobre anatomía venosa, ecografía o clínica. Responde con base en la bibliografía del atlas y te propone retos para razonar.</p></div>
+        </div>
+        <div class="tp-ctxrow"><div class="t-ctx" id="tCtx"></div><button class="linkbtn" id="tToAtlas" type="button">Ir al atlas</button></div>
+      </div>
+      <div class="tp-body" id="tBody">
+        <div class="t-welcome" id="tWelcome">
+          <h3>¿Por dónde empezamos?</h3>
+          <p>Elige un punto de partida o escribe tu propia pregunta abajo. El tutor usa la estructura que tengas seleccionada en el atlas.</p>
+          <div class="t-quick" id="tQuick">
+            <button class="qp" data-q="Explícame esta estructura a partir de un caso clínico breve y guíame con preguntas, sin darme la respuesta de inmediato."><b>Caso clínico guiado</b><span>Un caso breve sobre la estructura, resuelto con preguntas.</span></button>
+            <button class="qp" data-q="Hazme 3 preguntas tipo examen de posgrado sobre esta estructura, una por una. Espera mi respuesta antes de corregir."><b>Preguntas de examen</b><span>Tres preguntas tipo posgrado, una por una.</span></button>
+            <button class="qp" data-q="¿Qué errores frecuentes se cometen con esta estructura en la ecografía y en la clínica, y cómo los evito?"><b>Errores frecuentes</b><span>Dónde se equivoca la gente en ecografía y en clínica.</span></button>
+            <button class="qp" data-q="¿Cómo aplico esto en mi consulta diaria de flebología? Dame pasos concretos."><b>Aplicarlo en mi consulta</b><span>Pasos concretos para tu práctica diaria.</span></button>
+          </div>
+        </div>
+        <div class="t-log" id="tLog" aria-live="polite"></div>
+      </div>
+      <div class="tp-foot">
+        <form class="t-form" id="tForm">
+          <label for="tIn" class="sr">Pregunta al tutor</label>
+          <textarea id="tIn" rows="2" placeholder="Escribe tu pregunta o tu respuesta al reto…"></textarea>
+          <div class="t-actions"><button type="button" class="tog" id="tStop" hidden>Detener</button><button type="button" class="tog" id="tNew">Nueva conversación</button><button type="submit" class="primary" id="tSend">Enviar</button></div>
+        </form>
+        <p class="t-disc">Herramienta docente: no sustituye el juicio clínico ni da indicaciones para pacientes concretos. Verifica las citas en la sección de referencias.</p>
+      </div>
+    </section>
+    <section class="card route tp-route" aria-label="Ruta de aprendizaje">
+      <div class="r-top"><h2>Ruta de aprendizaje</h2><span id="rProg"></span></div>
+      <p class="t-sub">Siete módulos de unos 10 minutos. Cada uno parte de un problema clínico, te pide explorar el modelo, resolver un reto y llevarlo a tu práctica.</p>
+      <div class="bar"><b id="rBar" style="width:0%"></b></div>
+      <div id="route"></div>
+    </section>
+  </div>
+</main>
 
 <main class="wrap refs-page" id="refsView" hidden>
   <div class="refs-top"><button class="backbtn" id="refsBack" type="button"><svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>Volver al atlas</button></div>
@@ -897,13 +954,12 @@ function onVein(id){if(S.tab==='quiz'){if(Q&&Q.type==='senala')answer(id)}else s
 const tabSeg=document.getElementById('tabSeg');
 let view='app';
 function setTab(t){if(view!=='app')setView('app',{push:true});S.tab=t;document.getElementById('app').dataset.tab=t;tabSeg.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.t===t));
-  ['ficha','eco','tutor','quiz'].forEach(k=>document.getElementById('tab-'+k).hidden=k!==t);
+  ['ficha','eco','quiz'].forEach(k=>document.getElementById('tab-'+k).hidden=k!==t);
   sliceGrp.visible=t==='eco';S.marks={};applyClip(t==='eco'&&!!S.cut);
   if(t==='quiz')startQuiz();else{Q=null;select(S.sel)}
   if(t==='eco'){resizeUS();updateSlice();}
-  if(t==='tutor')tutorCtx();
   paint();}
-tabSeg.onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='refsNav')setView('refs');else setTab(b.dataset.t)};
+tabSeg.onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='refsNav')setView('refs');else if(b.dataset.t==='tutor')setView('tutor');else setTab(b.dataset.t)};
 
 /* ================= Ecografía ================= */
 const PRESETS=[
@@ -1138,7 +1194,7 @@ function renderRoute(){
   document.getElementById('rBar').style.width=(DONE.size/ROUTE.length*100)+'%';
 }
 
-const tLog=document.getElementById('tLog'),tIn=document.getElementById('tIn'),tSend=document.getElementById('tSend'),tStop=document.getElementById('tStop');
+const tBody=document.getElementById('tBody'),tWelcome=document.getElementById('tWelcome'),tLog=document.getElementById('tLog'),tIn=document.getElementById('tIn'),tSend=document.getElementById('tSend'),tStop=document.getElementById('tStop');
 let SAMPLE=null,TOOLS_OK=false,TURNS=[],busy=false,ctl=null;
 function tutorCtx(){const v=byId[S.sel],p=PRESETS.find(x=>x.id===S.preset);
   document.getElementById('tCtx').innerHTML=`CONTEXTO · Vena: <b>${v.n}</b>${p?` · Corte: <b>${p.n}</b>`:''}`}
@@ -1180,29 +1236,29 @@ ${REFTXT()}`}
 const TOOLDEFS=[
  {name:'mostrar_vena',description:'Selecciona y enfoca una vena en el modelo 3D del atlas para que el médico la vea. Devuelve el nombre de la vena mostrada.',
   inputSchema:{type:'object',properties:{id:{type:'string',description:'id de la vena, por ejemplo vsm, vfc, vpop'}},required:['id']},
-  execute:(i)=>{const id=String(i.id||'');if(!byId[id])throw new Error('id de vena desconocido');select(id,{focus:true});tutorCtx();return 'Mostrada: '+byId[id].n}},
+  execute:(i)=>{const id=String(i.id||'');if(!byId[id])throw new Error('id de vena desconocido');select(id,{focus:true});tutorCtx();pendingVein=id;return 'Mostrada: '+byId[id].n}},
  {name:'mostrar_corte_ecografico',description:'Coloca el transductor del simulador en uno de los cortes ecográficos de referencia y muestra el plano en el modelo 3D. Devuelve el nombre del corte.',
   inputSchema:{type:'object',properties:{id:{type:'string',description:'id del corte: usf, ojo, alin, canal, dodd, pop, giac, panto, cock'}},required:['id']},
   execute:(i)=>{const id=String(i.id||'');const p=PRESETS.find(x=>x.id===id);if(!p)throw new Error('id de corte desconocido');
     applyPreset(id);sliceGrp.visible=true;tutorCtx();pendingCut=id;return 'Corte mostrado: '+p.n}}
 ];
-let pendingCut=null;
-function addMsg(cls,html){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;tLog.appendChild(d);tLog.scrollTop=tLog.scrollHeight;return d}
+let pendingCut=null,pendingVein=null;
+function addMsg(cls,html){tWelcome.hidden=true;const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;tLog.appendChild(d);tBody.scrollTop=tBody.scrollHeight;return d}
 function setBusy(b){busy=b;tSend.disabled=b;tStop.hidden=!b;document.querySelectorAll('.qp').forEach(x=>x.disabled=b)}
 const ERRCOPY={rate_limited:'Se alcanzó el límite de uso por ahora. Intenta de nuevo en unos minutos.',session_expired:'Tu sesión expiró. Vuelve a iniciar sesión en Claude.',refused:'El tutor no pudo responder esa pregunta. Intenta formularla de otra manera.',empty_completion:'No llegó respuesta. Intenta con una pregunta más concreta.',prompt_too_large:'La conversación es muy larga. Inicia una nueva conversación.'};
 async function ask(q){
   if(busy||!q.trim())return;
   if(!SAMPLE){document.getElementById('tOff').hidden=false;return}
-  if(S.tab!=='tutor')setTab('tutor');
+  if(view!=='tutor')setView('tutor');
   const v=byId[S.sel],p=PRESETS.find(x=>x.id===S.preset);
   addMsg('u',esc(q).replace(/\n/g,'<br>'));
   TURNS.push({role:'user',content:`[Contexto en pantalla: vena seleccionada «${v.n}» (id ${v.id})${p?`; último corte ecográfico «${p.n}» (id ${p.id})`:''}]\n\n${q}`});
   while(TURNS.length>14)TURNS.splice(0,2);
-  tIn.value='';setBusy(true);pendingCut=null;
+  tIn.value='';setBusy(true);pendingCut=null;pendingVein=null;
   const bub=addMsg('a','<span class="thinking">Pensando…</span>');
   ctl=new AbortController();
   try{
-    const opts={signal:ctl.signal,cache:false,onText:({text})=>{bub.innerHTML=md(text);tLog.scrollTop=tLog.scrollHeight}};
+    const opts={signal:ctl.signal,cache:false,onText:({text})=>{bub.innerHTML=md(text);tBody.scrollTop=tBody.scrollHeight}};
     if(TOOLS_OK){delete opts.cache;opts.tools=TOOLDEFS}
     const {text,truncated}=await SAMPLE([{role:'user',content:rules()},...TURNS],opts);
     bub.innerHTML=md(text)+(truncated?'<span class="tool">Respuesta recortada: pide que continúe.</span>':'');
@@ -1212,15 +1268,16 @@ async function ask(q){
     else if(e&&['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'].includes(e.code)){bub.remove();SAMPLE=null;tutorAvail()}
     else{bub.classList.add('err');bub.innerHTML=(e&&e.text?md(e.text):'')+`<p>${ERRCOPY[e&&e.code]||'Hubo un problema de conexión. Intenta de nuevo.'}</p>`;TURNS.pop()}
   }finally{
+    if(pendingVein&&!pendingCut){const b=document.createElement('button');b.className='go';b.textContent='Ver en el atlas →';b.onclick=()=>setTab('ficha');bub.appendChild(b)}
     if(pendingCut){const b=document.createElement('button');b.className='go';const id=pendingCut;b.textContent='Abrir este corte en Ecografía →';b.onclick=()=>{setTab('eco');applyPreset(id)};bub.appendChild(b)}
     setBusy(false);
   }
 }
-function tutorAvail(){const on=!!SAMPLE;['tForm','tQuick','tLog'].forEach(id=>document.getElementById(id).hidden=!on);document.getElementById('tOff').hidden=on}
+function tutorAvail(){const on=!!SAMPLE;['tForm','tWelcome','tLog'].forEach(id=>document.getElementById(id).hidden=!on);document.getElementById('tOff').hidden=on;tutorView.classList.toggle('no-ai',!on)}
 document.getElementById('tForm').onsubmit=e=>{e.preventDefault();ask(tIn.value)};
 tIn.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask(tIn.value)}});
 tStop.onclick=()=>ctl&&ctl.abort();
-document.getElementById('tNew').onclick=()=>{if(busy)ctl&&ctl.abort();TURNS=[];tLog.innerHTML=''};
+document.getElementById('tNew').onclick=()=>{if(busy)ctl&&ctl.abort();TURNS=[];tLog.innerHTML='';tWelcome.hidden=false;tBody.scrollTop=0};
 document.getElementById('tQuick').onclick=e=>{const b=e.target.closest('.qp');if(b)ask(b.dataset.q)};
 renderRoute();
 (window.claude&&claude.use?claude.use('sample'):Promise.resolve(null)).then(async s=>{SAMPLE=s;
@@ -1387,21 +1444,29 @@ function navTick(now){
   camera.position.copy(controls.target).add(navOff);
 }
 
-/* ================= Subpágina: Referencias ================= */
-const appEl=document.getElementById('app'),refsView=document.getElementById('refsView'),footEl=document.querySelector('.site-foot'),refsNav=document.getElementById('refsNav');
+/* ================= Subpáginas: Tutor y Referencias ================= */
+const appEl=document.getElementById('app'),refsView=document.getElementById('refsView'),tutorView=document.getElementById('tutorView'),footEl=document.querySelector('.site-foot'),refsNav=document.getElementById('refsNav');
+let lastView='app';
+function syncNav(){tabSeg.querySelectorAll('button').forEach(b=>{const key=b.id==='refsNav'?'refs':b.dataset.t;
+  b.setAttribute('aria-pressed',view==='app'?key===S.tab:key===view)})}
 function setView(v,{push=true}={}){
   if(tour.on)tourStop();
-  const r=v==='refs';if((view==='refs')===r)return;view=r?'refs':'app';
-  appEl.hidden=r;refsView.hidden=!r;footEl.hidden=!r;document.body.classList.toggle('view-refs',r);
-  tabSeg.querySelectorAll('button[data-t]').forEach(b=>b.setAttribute('aria-pressed',r?'false':String(b.dataset.t===S.tab)));
-  refsNav.setAttribute('aria-pressed',r);
-  if(push){try{history.pushState(null,'',r?'#referencias':location.pathname+location.search)}catch(_){}}
+  if(view===v)return;
+  if(v==='refs')lastView=view;
+  view=v;
+  appEl.hidden=v!=='app';tutorView.hidden=v!=='tutor';refsView.hidden=v!=='refs';footEl.hidden=v!=='refs';
+  document.body.classList.toggle('view-refs',v==='refs');
+  syncNav();
+  if(v==='tutor')tutorCtx();
+  if(push){const h={refs:'#referencias',tutor:'#tutor',app:''}[v];try{history.pushState(null,'',h||location.pathname+location.search)}catch(_){}}
   window.scrollTo(0,0);
 }
-document.getElementById('refsBack').onclick=()=>setView('app');
-const syncView=()=>{const r=location.hash==='#referencias';if(r!==(view==='refs'))setView(r?'refs':'app',{push:false})};
+document.getElementById('refsBack').onclick=()=>setView(lastView==='tutor'?'tutor':'app');
+document.getElementById('tToAtlas').onclick=()=>setView('app');
+const hashView=()=>location.hash==='#referencias'?'refs':location.hash==='#tutor'?'tutor':'app';
+const syncView=()=>{if(hashView()!==view)setView(hashView(),{push:false})};
 addEventListener('popstate',syncView);addEventListener('hashchange',syncView);
-if(location.hash==='#referencias')setView('refs',{push:false});
+if(hashView()!=='app')setView(hashView(),{push:false});
 
 /* ================= Modo exploración: ocultar paneles / pantalla completa ================= */
 {const app=document.getElementById('app'),lp=document.getElementById('lpBtn'),rp=document.getElementById('rpBtn'),fb=document.getElementById('fsBtn');
