@@ -36,6 +36,7 @@ GUIDE_PATH = 'anatomia-venosa-miembros-inferiores/'
 GUIDE = SITE + GUIDE_PATH
 TODAY = datetime.date.today().isoformat()
 E = html.escape
+BETA_FEEDBACK = io.open(os.path.join(ROOT, 'assets', 'beta-feedback.html'), encoding='utf-8').read()
 
 res = subprocess.run(['node', os.path.join('tools', 'extraer-datos.js'), 'index.html'], capture_output=True, check=True)
 D = json.loads(res.stdout.decode('utf-8'))
@@ -220,8 +221,11 @@ def shell(title, desc, path, og_type, graph_nodes, main, og_title=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap">
 <style>{STYLE}</style>
+<link rel="stylesheet" href="/assets/beta-feedback.css">
+<script src="/assets/beta-feedback.js" defer></script>
 </head>
 <body>
+{BETA_FEEDBACK}
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="top"><div class="top-in">
   <a href="/" aria-label="Anatomía venosa 3D del IMF"><img class="logo-c" src="/assets/logo-imf.png" width="{LW}" height="{LH}" alt="Instituto Mexicano de Flebología"><img class="logo-w" src="/assets/logo-imf-blanco.png" width="{LW}" height="{LH}" alt=""></a>
