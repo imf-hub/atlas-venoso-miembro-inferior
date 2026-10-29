@@ -152,6 +152,12 @@ footer{background:#141414;color:#E9E9EA;border-top:4px solid var(--accent)}
 footer a{color:#fff}
 footer p{margin:0}
 footer ul{list-style:none;margin:0;padding:0}
+
+.foot-legal{flex:1 1 100%;min-width:0;padding-top:18px;border-top:1px solid #575C64}
+.foot-legal p{margin:0 0 8px;font-size:12.5px;line-height:1.7;color:inherit}
+.foot-legal .foot-project{margin-bottom:14px;font-size:14px}
+.foot-legal .foot-credit{margin:16px 0 0}
+.foot-legal .foot-credit small{font-size:12px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 '''
 
@@ -214,8 +220,15 @@ def shell(title, desc, path, og_type, graph_nodes, main, og_title=None):
 {main}
 </main>
 <footer><div class="foot-in">
-  <div><p><b>Instituto Mexicano de Flebología y Linfología, S.C.</b></p><p>Formación médica en flebología, linfología y ecografía vascular.</p><p>© 2026 IMF. Material de uso académico.</p></div>
+  <div><p><b>Instituto Mexicano de Flebología y Linfología, S.C.</b></p><p>Formación médica en flebología, linfología y ecografía vascular.</p></div>
   <ul><li><a href="{IMF}" target="_blank" rel="noopener">flebo.mx</a></li><li><a href="{OFERTA}" target="_blank" rel="noopener">Aprende flebología en el IMF</a></li><li><a href="{BOLETIN}" target="_blank" rel="noopener">Boletín de noticias flebológicas</a></li><li><a href="/">Anatomía venosa 3D</a></li><li><a href="/{GUIDE_PATH}">Guía de anatomía venosa</a></li></ul>
+  <div class="foot-legal">
+    <p class="foot-project"><b>Proyecto del Instituto Mexicano de Flebología</b><br>Por la excelencia en la flebología.</p>
+    <p>© 2026 Instituto Mexicano de Flebología y Linfología, S.C. Todos los derechos reservados, salvo los materiales sujetos a las licencias indicadas.</p>
+    <p>El contenido original y el desarrollo de este sitio están protegidos por la legislación aplicable en materia de derechos de autor. Su reproducción o reutilización requiere autorización, salvo las excepciones legales y las licencias expresamente indicadas.</p>
+    <p>Modelo 3D: <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noopener">CC BY-SA 2.1 Japón</a>. BodyParts3D, © DBCLS; adaptaciones del IMF.</p>
+    <p class="foot-credit"><small>Web realizada por <a href="https://lisis.mx/" target="_blank" rel="noopener">Consultoría LISIS (lisis.mx)</a> · Agencia de inteligencia artificial aplicada.</small></p>
+  </div>
 </div></footer>
 </body>
 </html>
