@@ -264,6 +264,23 @@ body.tour-on{overflow:hidden}
 .stage.tour .navpad{display:none}
 @media (max-width:520px){.navpad{transform:scale(.85);transform-origin:top right}}
 
+
+/* ===== Modo exploración: ocultar fichas y pantalla completa ===== */
+.viewacts{margin-left:auto;gap:6px}
+.vact{display:inline-flex;align-items:center;gap:7px;font:600 13px var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 12px;cursor:pointer}
+.vact svg{width:16px;height:16px;flex:none}
+.vact:hover{border-color:var(--ink)}
+.vact[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+@media (max-width:700px){.viewacts{margin-left:0}.vact span{display:none}.vact{padding:8px 10px}}
+.layout.solo{grid-template-columns:minmax(0,1fr)}
+.layout.solo aside{display:none}
+.layout.solo .stage{height:min(calc(100vh - 210px),1000px)}
+body.fs .brandbar header.titlebar .lede,body.fs .refs-sec,body.fs .site-foot{display:none}
+body.fs .brandbar{padding-bottom:8px;gap:8px 24px}
+body.fs .brandbar .logo{height:40px}
+body.fs .brandbar h1{font-size:20px}
+body.fs .toolbar{margin-block:8px}
+body.fs .stage,body.fs .layout.solo .stage{height:calc(100vh - 170px);min-height:320px}
 /* ===== Panel plegable ===== */
 .navpad .navtoggle{width:auto;height:28px;padding:0 10px;font:600 12px var(--f-body);white-space:nowrap}
 .navpad.min{grid-template-columns:auto;padding:6px}
@@ -355,6 +372,7 @@ button{transition:background .15s,border-color .15s,color .15s}
     </div>
     <div class="grp"><span class="lbl">Capas</span><div class="chips" id="layerChips"></div></div>
     <div class="grp"><span class="lbl">Venas</span><div class="chips" id="sysChips"></div></div>
+    <div class="grp viewacts"><button class="vact" id="panelBtn" type="button" aria-pressed="false" title="Ocultar o mostrar las fichas laterales"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 2.5v11" stroke="currentColor" stroke-width="1.5"/></svg><span>Ocultar fichas</span></button><button class="vact" id="fsBtn" type="button" aria-pressed="false" title="Pantalla completa para explorar"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>Pantalla completa</span></button></div>
   </div>
 
   <div class="layout">
@@ -1293,6 +1311,18 @@ function navTick(now){
   controls.target.addScaledVector(navR,nav.px*sp).addScaledVector(navU,-nav.py*sp);
   controls.target.set(Math.max(-70,Math.min(70,controls.target.x)),Math.max(0,Math.min(115,controls.target.y)),Math.max(-70,Math.min(70,controls.target.z)));
   camera.position.copy(controls.target).add(navOff);
+}
+
+/* ================= Modo exploración ================= */
+{const lay=document.querySelector('.layout'),pb=document.getElementById('panelBtn'),fb=document.getElementById('fsBtn');
+ const setPanel=hide=>{lay.classList.toggle('solo',hide);pb.setAttribute('aria-pressed',hide);pb.querySelector('span').textContent=hide?'Mostrar fichas':'Ocultar fichas'};
+ pb.onclick=()=>setPanel(!lay.classList.contains('solo'));
+ const isFs=()=>document.fullscreenElement===document.documentElement;
+ const syncFs=()=>{const on=isFs();document.body.classList.toggle('fs',on);fb.setAttribute('aria-pressed',on);fb.querySelector('span').textContent=on?'Salir de pantalla completa':'Pantalla completa'};
+ fb.onclick=()=>{if(isFs()){document.exitFullscreen().catch(()=>{});return}
+  const el=document.documentElement;if(el.requestFullscreen){el.requestFullscreen().then(()=>{setPanel(true);syncFs()}).catch(()=>{document.body.classList.toggle('fs');setPanel(document.body.classList.contains('fs'))})}
+  else{document.body.classList.toggle('fs');setPanel(document.body.classList.contains('fs'))}};
+ document.addEventListener('fullscreenchange',()=>{syncFs();if(!document.fullscreenElement)setPanel(false)});
 }
 /* ================= Bucle ================= */
 function resize(){const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix()}
