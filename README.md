@@ -1,6 +1,6 @@
-﻿# Atlas venoso del miembro inferior
+﻿# Anatomía venosa del miembro inferior
 
-Atlas interactivo 3D de anatomía venosa del miembro inferior del Instituto Mexicano de Flebología (IMF): modelo 3D, ficha por estructura, simulador de ecografía en modo B, evaluación y ruta de aprendizaje.
+Modelo interactivo 3D de la anatomía venosa del miembro inferior del Instituto Mexicano de Flebología (IMF): modelo 3D, ficha por estructura, simulador de ecografía en modo B, evaluación y ruta de aprendizaje.
 
 Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama `main`).
 
@@ -8,8 +8,8 @@ Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama 
 
 | Archivo | Para qué sirve |
 |---|---|
-| `index.html` | Todo el atlas en un solo archivo (HTML, CSS, JS y datos del modelo). No hay build. |
-| `anatomia-venosa-miembros-inferiores/index.html` | Guía estática en HTML (sin JavaScript) con el texto de las 27 venas y las referencias. Es la página pensada para buscadores; enlaza al atlas y al IMF. Se genera con `tools/generar-paginas.py`. |
+| `index.html` | Toda la herramienta en un solo archivo (HTML, CSS, JS y datos del modelo). No hay build. |
+| `anatomia-venosa-miembros-inferiores/index.html` | Guía estática en HTML (sin JavaScript) con el texto de las 27 venas y las referencias. Es la página pensada para buscadores; enlaza al modelo 3D y al IMF. Se genera con `tools/generar-paginas.py`. |
 | `venas/<vena>/index.html` | Una página estática por vena (27), con su propia URL, para buscadores. Generadas, no editar a mano. |
 | `tools/generar-paginas.py` | Genera la guía, las páginas de vena y `sitemap.xml` a partir de los datos de `index.html` (requiere Python 3 y Node). |
 | `CNAME` | Dominio personalizado de GitHub Pages. No borrar. |
@@ -42,11 +42,11 @@ Actualiza la guía, las 27 páginas de vena, `sitemap.xml` y la lista de venas d
 - Oferta educativa (Aprende flebología en el IMF): https://flebo.mx/oferta-educativa/
 - Boletín de noticias flebológicas: https://boletin.flebologiamexico.com/
 
-Aparecen en la barra lateral y el pie de página del atlas, en la guía, en el resultado de la evaluación y en los datos estructurados (JSON-LD).
+Aparecen en la barra lateral y el pie de página de la herramienta, en la guía, en el resultado de la evaluación y en los datos estructurados (JSON-LD).
 
 ## Enlace directo a una vena
 
-`https://anatomia.flebologiamexico.com/#v-vsm` abre el atlas con esa vena seleccionada (usa el id de la vena: vsm, vfc, etc.).
+`https://anatomia.flebologiamexico.com/#v-vsm` abre el modelo 3D con esa vena seleccionada (usa el id de la vena: vsm, vfc, etc.).
 
 ## Notas
 

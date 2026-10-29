@@ -1,7 +1,7 @@
 {
-  "name": "Atlas venoso del miembro inferior",
-  "short_name": "Atlas venoso",
-  "description": "Atlas interactivo 3D de las venas del miembro inferior del Instituto Mexicano de Flebología.",
+  "name": "Anatomía venosa del miembro inferior",
+  "short_name": "Anatomía venosa",
+  "description": "Modelo interactivo 3D de las venas del miembro inferior del Instituto Mexicano de Flebología.",
   "lang": "es-MX",
   "start_url": "./",
   "scope": "./",

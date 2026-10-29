@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera las páginas estáticas para buscadores a partir de los datos del atlas (index.html):
+"""Genera las páginas estáticas para buscadores a partir de los datos de la herramienta (index.html):
 
   - anatomia-venosa-miembros-inferiores/index.html   guía con todas las venas
   - venas/<vena>/index.html                           una página por vena
@@ -207,15 +207,15 @@ def shell(title, desc, path, og_type, graph_nodes, main, og_title=None):
 </head>
 <body>
 <header class="top"><div class="top-in">
-  <a href="/" aria-label="Atlas venoso 3D del IMF"><img class="logo-c" src="/assets/logo-imf.png" width="{LW}" height="{LH}" alt="Instituto Mexicano de Flebología"><img class="logo-w" src="/assets/logo-imf-blanco.png" width="{LW}" height="{LH}" alt=""></a>
-  <nav aria-label="Principal"><a href="/">Atlas 3D</a><a href="/{GUIDE_PATH}">Guía de anatomía</a><a href="{OFERTA}" target="_blank" rel="noopener">Aprende en el IMF</a><a href="{BOLETIN}" target="_blank" rel="noopener">Boletín</a></nav>
+  <a href="/" aria-label="Anatomía venosa 3D del IMF"><img class="logo-c" src="/assets/logo-imf.png" width="{LW}" height="{LH}" alt="Instituto Mexicano de Flebología"><img class="logo-w" src="/assets/logo-imf-blanco.png" width="{LW}" height="{LH}" alt=""></a>
+  <nav aria-label="Principal"><a href="/">Modelo 3D</a><a href="/{GUIDE_PATH}">Guía de anatomía</a><a href="{OFERTA}" target="_blank" rel="noopener">Aprende en el IMF</a><a href="{BOLETIN}" target="_blank" rel="noopener">Boletín</a></nav>
 </div></header>
 <main>
 {main}
 </main>
 <footer><div class="foot-in">
   <div><p><b>Instituto Mexicano de Flebología y Linfología, S.C.</b></p><p>Formación médica en flebología, linfología y ecografía vascular.</p><p>© 2026 IMF. Material de uso académico.</p></div>
-  <ul><li><a href="{IMF}" target="_blank" rel="noopener">flebo.mx</a></li><li><a href="{OFERTA}" target="_blank" rel="noopener">Aprende flebología en el IMF</a></li><li><a href="{BOLETIN}" target="_blank" rel="noopener">Boletín de noticias flebológicas</a></li><li><a href="/">Atlas venoso 3D</a></li><li><a href="/{GUIDE_PATH}">Guía de anatomía venosa</a></li></ul>
+  <ul><li><a href="{IMF}" target="_blank" rel="noopener">flebo.mx</a></li><li><a href="{OFERTA}" target="_blank" rel="noopener">Aprende flebología en el IMF</a></li><li><a href="{BOLETIN}" target="_blank" rel="noopener">Boletín de noticias flebológicas</a></li><li><a href="/">Anatomía venosa 3D</a></li><li><a href="/{GUIDE_PATH}">Guía de anatomía venosa</a></li></ul>
 </div></footer>
 </body>
 </html>
@@ -231,7 +231,7 @@ def write(path, text):
 
 IMF_BLOCK = f'''  <section class="imf" aria-labelledby="imf-h">
     <h2 id="imf-h">Aprende flebología en el IMF</h2>
-    <p>El Instituto Mexicano de Flebología forma médicos en flebología, linfología y ecografía vascular. Este atlas es parte de ese material docente.</p>
+    <p>El Instituto Mexicano de Flebología forma médicos en flebología, linfología y ecografía vascular. Esta herramienta es parte de ese material docente.</p>
     <ul>
       <li><a href="{OFERTA}" target="_blank" rel="noopener">Oferta educativa del IMF</a>: cursos y programas para médicos.</li>
       <li><a href="{IMF}" target="_blank" rel="noopener">flebo.mx</a>: sitio del Instituto Mexicano de Flebología.</li>
@@ -267,7 +267,7 @@ for k, heading, _ in SYSORDER:
       <h4>Drena en</h4><p>{E(v['drena'])}</p>
       <h4>Ecografía</h4><p>{E(v['us'])}</p>
       <h4>Relevancia clínica</h4><p>{E(v['clin'])}</p>
-      <p class="vfoot"><span>Referencias: {ref_links(v['refs'])}</span><span><a class="see3d" href="/{URLV(v)}">Ficha completa →</a> · <a class="see3d" href="/#v-{v['id']}">Ver en el atlas 3D →</a></span></p>
+      <p class="vfoot"><span>Referencias: {ref_links(v['refs'])}</span><span><a class="see3d" href="/{URLV(v)}">Ficha completa →</a> · <a class="see3d" href="/#v-{v['id']}">Ver en el modelo 3D →</a></span></p>
     </article>'''
     sections += f'\n  <section class="sys" id="{k}">\n    <h2>{heading}</h2>{arts}\n  </section>'
 
@@ -282,12 +282,12 @@ reflist += '</ol>' if open_ol else ''
 
 G_TITLE = 'Anatomía venosa de los miembros inferiores: guía | IMF Flebología'
 G_DESC = ('Guía de anatomía venosa de los miembros inferiores: trayecto, drenaje, ecografía y relevancia clínica de cada vena '
-          'de la pierna y el muslo. Con atlas 3D del IMF.')
-g_main = f'''  <p class="crumbs"><a href="/">Atlas venoso 3D</a> › Anatomía venosa de los miembros inferiores</p>
+          'de la pierna y el muslo. Con modelo 3D interactivo del IMF.')
+g_main = f'''  <p class="crumbs"><a href="/">Anatomía venosa 3D</a> › Anatomía venosa de los miembros inferiores</p>
   <h1>Anatomía venosa de los miembros inferiores</h1>
-  <p class="lead">Guía de las venas de la pierna y el muslo, organizadas por sistema: superficial, profundo, perforante y pélvico. De cada vena encontrarás su trayecto, adónde drena, cómo se ve en la ecografía y por qué importa en la clínica. Es el texto de referencia del Atlas venoso 3D del Instituto Mexicano de Flebología.</p>
+  <p class="lead">Guía de las venas de la pierna y el muslo, organizadas por sistema: superficial, profundo, perforante y pélvico. De cada vena encontrarás su trayecto, adónde drena, cómo se ve en la ecografía y por qué importa en la clínica. Es el texto de referencia del Anatomía venosa 3D del Instituto Mexicano de Flebología.</p>
   <div class="cta">
-    <a class="btn p" href="/">Abrir el atlas 3D interactivo</a>
+    <a class="btn p" href="/">Abrir el modelo 3D interactivo</a>
     <a class="btn s" href="{OFERTA}" target="_blank" rel="noopener">Aprende flebología en el IMF</a>
   </div>
   <nav class="toc" aria-label="Índice de esta guía"><h2>En esta guía</h2><ul>{toc}<li><a href="#referencias">Referencias</a></li></ul></nav>
@@ -307,7 +307,7 @@ g_nodes = [
      "image": SITE + "og-image.png", "primaryImageOfPage": {"@type": "ImageObject", "url": SITE + "og-image.png"},
      "hasPart": [{"@type": "WebPage", "url": SITE + URLV(v), "name": v['n']} for v in ORDER]},
     {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Atlas venoso 3D", "item": SITE},
+        {"@type": "ListItem", "position": 1, "name": "Anatomía venosa 3D", "item": SITE},
         {"@type": "ListItem", "position": 2, "name": "Anatomía venosa de los miembros inferiores", "item": GUIDE}]},
 ]
 write(GUIDE_PATH + 'index.html', shell(G_TITLE, G_DESC, GUIDE_PATH, 'article', g_nodes, g_main, 'Anatomía venosa de los miembros inferiores'))
@@ -345,14 +345,14 @@ for i, v in enumerate(ORDER):
         pn += f'<a class="prev" href="/{URLV(prev_)}"><small>← Anterior</small>{E(prev_["n"])}</a>'
     if next_:
         pn += f'<a class="next" href="/{URLV(next_)}"><small>Siguiente →</small>{E(next_["n"])}</a>'
-    main = f'''  <p class="crumbs"><a href="/">Atlas venoso 3D</a> › <a href="/{GUIDE_PATH}">Anatomía venosa de los miembros inferiores</a> › {E(v['n'])}</p>
+    main = f'''  <p class="crumbs"><a href="/">Anatomía venosa 3D</a> › <a href="/{GUIDE_PATH}">Anatomía venosa de los miembros inferiores</a> › {E(v['n'])}</p>
   <h1>{E(v['n'])}</h1>
   <p class="latin">{E(v['ta'])}</p>
   <p class="pills"><span class="pill">{E(v['ab'])}</span>{pair}<a class="pill" href="/{GUIDE_PATH}#{v['sys']}">{E(SYSNAME[v['sys']])}</a></p>
   {alt}
   <p class="lead">{E(intro)}</p>
   <div class="cta">
-    <a class="btn p" href="/#v-{v['id']}">Ver esta vena en el atlas 3D</a>
+    <a class="btn p" href="/#v-{v['id']}">Ver esta vena en el modelo 3D</a>
     <a class="btn s" href="{OFERTA}" target="_blank" rel="noopener">Aprende flebología en el IMF</a>
   </div>
   <article class="vein single">
@@ -377,7 +377,7 @@ for i, v in enumerate(ORDER):
          "audience": {"@type": "MedicalAudience", "audienceType": "Clinician"}, "publisher": {"@id": IMF + "#org"},
          "image": SITE + "og-image.png"},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Atlas venoso 3D", "item": SITE},
+            {"@type": "ListItem", "position": 1, "name": "Anatomía venosa 3D", "item": SITE},
             {"@type": "ListItem", "position": 2, "name": "Anatomía venosa de los miembros inferiores", "item": GUIDE},
             {"@type": "ListItem", "position": 3, "name": v['n'], "item": url}]},
     ]

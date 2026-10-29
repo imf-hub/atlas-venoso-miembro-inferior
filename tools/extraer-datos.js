@@ -1,4 +1,4 @@
-// Lee los datos del atlas (venas, referencias, sistemas) desde index.html y los imprime como JSON.
+// Lee los datos de la herramienta (venas, referencias, sistemas) desde index.html y los imprime como JSON.
 // Uso: node tools/extraer-datos.js index.html
 const fs = require('fs');
 const s = fs.readFileSync(process.argv[2] || 'index.html', 'utf8');
