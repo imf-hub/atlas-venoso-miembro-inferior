@@ -1,6 +1,6 @@
 ﻿# Atlas venoso del miembro inferior
 
-Atlas interactivo 3D de anatomía venosa del miembro inferior del Instituto Mexicano de Flebología (IMF): modelo 3D, ficha por estructura, simulador de ecografía en modo B, evaluación, tutor y ruta de aprendizaje.
+Atlas interactivo 3D de anatomía venosa del miembro inferior del Instituto Mexicano de Flebología (IMF): modelo 3D, ficha por estructura, simulador de ecografía en modo B, evaluación y ruta de aprendizaje.
 
 Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama `main`).
 
@@ -24,7 +24,7 @@ Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama 
 
 - Título, descripción, URL canónica, Open Graph, Twitter Card y datos estructurados (JSON-LD) están en el `<head>` de `index.html`.
 - Si cambias el dominio, actualiza `index.html` (canonical, `og:url`, `og:image`, JSON-LD), `robots.txt`, `sitemap.xml` y `CNAME`.
-- Las secciones Tutor y Referencias son vistas dentro de la misma página (`#tutor`, `#referencias`), no URL separadas.
+- Las secciones Aprender y Referencias son vistas dentro de la misma página (`#aprender`, `#referencias`), no URL separadas.
 
 ## Regenerar las páginas para buscadores
 
@@ -50,7 +50,7 @@ Aparecen en la barra lateral y el pie de página del atlas, en la guía, en el r
 
 ## Notas
 
-- El chat del tutor con IA solo funciona dentro de Claude (usa una función de ese entorno). En el sitio público se muestra la ruta de aprendizaje y un aviso.
+- «Aprender» es una ruta de lectura de 7 módulos (datos en `ROUTE` dentro de `index.html`). No hay chat con IA ni se guarda el avance de nadie.
 - Huesos y músculos: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón. Mantener la atribución.
 
 

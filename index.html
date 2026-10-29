@@ -220,8 +220,6 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .qtop{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
 .bar{height:3px;background:var(--line);border-radius:2px;margin:8px 0 14px;overflow:hidden}
 .bar b{display:block;height:100%;background:var(--accent);transition:width .3s}
-.qprompt{font-family:var(--f-display);font-weight:700;font-size:19px;line-height:1.25;margin:0 0 12px;text-wrap:balance}
-.qprompt small{display:block;font-family:var(--f-body);font-size:13px;color:var(--muted);margin-bottom:4px}
 .opts{display:grid;gap:6px}
 .opt{font:inherit;font-size:14px;text-align:left;padding:9px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);cursor:pointer}
 .opt:hover:not(:disabled){border-color:var(--ink)}
@@ -247,57 +245,6 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .rc:hover{border-color:var(--accent)}
 .rc-note{font-size:12px;color:var(--muted);margin-top:6px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-.tutor h2,.route h2{font-family:var(--f-display);font-weight:800;font-size:19px;margin:0}
-.t-head{display:flex;gap:12px;align-items:flex-start}
-.t-badge{flex:none;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:12px;letter-spacing:.04em}
-.t-sub{color:var(--muted);font-size:13.5px;margin:4px 0 0}
-.t-ctx{margin:12px 0 10px;font-size:12px;color:var(--muted);font-family:var(--f-mono);letter-spacing:.02em}
-.t-ctx b{color:var(--ink);font-family:var(--f-body);font-weight:600;letter-spacing:0}
-.t-log{display:flex;flex-direction:column;gap:10px;max-height:52vh;overflow-y:auto;padding-right:2px}
-.t-log:empty{display:none}
-.msg{font-size:14px;line-height:1.55;padding:10px 12px;border-radius:6px;max-width:100%;min-width:0;overflow-wrap:anywhere}
-.msg.u{align-self:flex-end;background:var(--ink);color:var(--surface);max-width:88%}
-.msg.a{background:var(--bg);border-left:3px solid var(--accent)}
-.msg.a p{margin:0 0 8px}.msg.a p:last-child{margin:0}
-.msg.a ul{margin:0 0 8px;padding-left:18px}
-.msg.a .rc{margin:0 1px}
-.msg.a.err{border-left-color:var(--bad);color:var(--muted)}
-.msg .tool{display:block;font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-top:6px}
-.msg .go{font:inherit;font-size:12.5px;font-weight:600;color:var(--accent);background:none;border:1px solid var(--line);border-radius:4px;padding:4px 9px;margin-top:8px;cursor:pointer}
-.thinking{color:var(--muted);font-style:italic}
-.t-quick{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 10px}
-.qp{font:inherit;font-size:12.5px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:99px;padding:5px 11px;cursor:pointer}
-.qp:hover{border-color:var(--accent);color:var(--accent)}
-.t-form textarea{width:100%;font:inherit;font-size:14px;border:1px solid var(--line);border-radius:6px;padding:9px 11px;background:var(--surface);color:var(--ink);resize:vertical;min-height:58px}
-.t-form textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
-.t-actions{display:flex;justify-content:flex-end;gap:8px;align-items:center;margin-top:8px}
-.t-actions .primary{margin:0;background:var(--accent);color:#fff}
-.t-actions .primary:disabled{opacity:.5;cursor:default}
-.t-off{font-size:13px;background:var(--bg);padding:10px 12px;border-radius:4px;margin:10px 0 0}
-.t-disc{font-size:11.5px;color:var(--muted);margin:12px 0 0}
-.r-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.r-top span{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
-.route .bar{margin:10px 0 6px}
-.mod{border-top:1px solid var(--line)}
-.mod summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:28px minmax(0,1fr) 20px;gap:10px;align-items:center;padding:11px 2px}
-.mod summary::-webkit-details-marker{display:none}
-.mod .num{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-.mod.done .num{background:var(--ok);border-color:var(--ok);color:#fff}
-.mod .mt{font-weight:600;font-size:14px}
-.mod .chev{color:var(--muted);transition:transform .2s;text-align:center}
-.mod[open] .chev{transform:rotate(90deg)}
-.mod .body{padding:0 2px 14px 38px;display:grid;gap:10px;font-size:13.5px}
-.mod .lab{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
-.mod .case{background:var(--bg);border-radius:4px;padding:9px 11px}
-.mod .reto{border:1px dashed var(--line);border-radius:4px;padding:9px 11px}
-.mod .ans{margin-top:6px;color:var(--ink)}
-.mod .perla{border-left:3px solid var(--ok);padding-left:10px}
-.mod .error{border-left:3px solid var(--bad);padding-left:10px}
-.mod .row{gap:6px}
-.mini{font:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:4px;padding:5px 10px;cursor:pointer}
-.mini.acc{color:var(--accent)}
-.mini:hover{border-color:var(--ink)}
-@media (max-width:440px){.mod .body{padding-left:2px}}
 .notes{margin-top:20px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
 .site-foot{background:var(--foot-bg);color:var(--foot-fg);border-top:4px solid var(--accent)}
 .site-foot .in{max-width:1400px;margin:0 auto;padding-block:28px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
@@ -364,50 +311,6 @@ body.tour-on{overflow:hidden}
 @media (max-width:1099px){#structures{flex:none}#index{overflow:visible;margin-right:0;padding-right:0}}
 .acc-t{min-height:44px}.acc-b button{padding-block:7px}.side{gap:16px}
 
-/* ---- Subpágina del tutor ---- */
-.tpage{max-width:1760px;margin:12px auto 0;height:calc(100vh - var(--hh) - 26px);height:calc(100dvh - var(--hh) - 26px);min-height:560px;display:flex;flex-direction:column;gap:12px;
-  padding-left:max(12px, env(safe-area-inset-left, 0px));padding-right:max(12px, env(safe-area-inset-right, 0px))}
-.tp-grid{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(380px,.85fr);gap:12px}
-.tp-chat,.tp-route{min-height:0;display:flex;flex-direction:column;overflow:hidden}
-.tp-chat{padding:0}
-.tp-head{padding:22px 30px 14px;border-bottom:1px solid var(--line)}
-.tp-head .t-head h2{font-size:26px}
-.tp-ctxrow{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;margin-top:12px}
-.tp-ctxrow .t-ctx{margin:0}
-.tp-body{flex:1;min-height:0;overflow-y:auto;padding:22px 30px;display:flex;flex-direction:column;gap:14px;scrollbar-width:thin;scrollbar-color:var(--line2) transparent}
-.tp-chat .t-log{max-height:none;overflow:visible;padding:0;gap:14px}
-.tp-chat .t-log:empty{display:none}
-.tp-chat .msg{font-size:15.5px;line-height:1.6;padding:13px 16px;border-radius:10px}
-.tp-chat .msg.u{max-width:72%}
-.tp-chat .msg.a{max-width:min(100%,82ch)}
-.t-welcome h3{margin:6px 0 4px;font:700 22px/1.2 var(--f-display)}
-.t-welcome>p{margin:0 0 16px;color:var(--muted);font-size:15px;max-width:60ch}
-.t-welcome .t-quick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
-.t-welcome .qp{display:grid;gap:4px;text-align:left;border-radius:12px;padding:16px 18px;border:1px solid var(--line2);background:var(--surface);font-size:14px}
-.t-welcome .qp b{font:700 16px var(--f-display);color:var(--ink)}
-.t-welcome .qp span{color:var(--muted);line-height:1.4}
-.t-welcome .qp:hover{border-color:var(--accent)}
-.t-welcome .qp:hover b{color:var(--accent)}
-.tp-foot{border-top:1px solid var(--line);padding:14px 30px 16px;background:var(--surface)}
-.tp-foot .t-form textarea{min-height:64px;font-size:15px}
-.tp-foot .t-disc{margin-top:10px}
-.tp-route{padding:22px 24px}
-.tp-route .r-top h2{font-size:22px}
-.tp-route #route{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;margin-top:2px}
-.tpage>.t-off{margin:0;padding:14px 18px;border-radius:12px;background:color-mix(in srgb,var(--hl) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--hl) 40%,var(--line));font-size:14.5px;line-height:1.5}
-.tpage.no-ai .tp-chat{display:none}
-.tpage.no-ai .tp-grid{grid-template-columns:minmax(0,1fr)}
-.tpage.no-ai #route{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;align-content:start}
-@media (max-width:1099px){
-  .tpage{height:auto;min-height:0}
-  .tp-grid{display:flex;flex-direction:column}
-  .tp-chat,.tp-route{overflow:visible}
-  .tp-body{max-height:62vh;min-height:260px}
-  .tp-route #route{overflow:visible}
-  .tpage.no-ai #route{grid-template-columns:1fr}
-  .t-welcome .t-quick{grid-template-columns:1fr}
-  .tp-head,.tp-body,.tp-foot{padding-inline:18px}
-}
 
 /* ---- Enlaces del IMF y guía ---- */
 .mainnav{align-items:stretch;gap:4px}
@@ -423,6 +326,91 @@ body.tour-on{overflow:hidden}
 .site-foot a{color:var(--foot-fg)}
 .flinks{list-style:none;margin:0;padding:0;font-size:13px;line-height:1.9}
 @media (max-width:1099px){.mainnav .navlink{padding:0 12px}}
+/* ---- Ruta de aprendizaje (estilo LMS) ---- */
+.lms{max-width:1760px;margin:12px auto 0;height:calc(100vh - var(--hh) - 26px);height:calc(100dvh - var(--hh) - 26px);min-height:560px;display:grid;grid-template-columns:330px minmax(0,1fr);gap:12px;
+  padding-left:max(12px, env(safe-area-inset-left, 0px));padding-right:max(12px, env(safe-area-inset-right, 0px))}
+.lms .card{padding:0;min-height:0;overflow:hidden}
+.lms-side{display:flex;flex-direction:column}
+.lms-course{padding:22px 22px 16px;border-bottom:1px solid var(--line)}
+.lms-eyebrow{margin:0 0 6px;font:600 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.lms-course h2{font:800 21px/1.2 var(--f-display);margin:0}
+.lms-meta{margin:8px 0 0;font-size:13.5px;color:var(--muted)}
+.lms-list{list-style:none;margin:0;padding:8px 0;overflow-y:auto;flex:1;min-height:0;scrollbar-width:thin;scrollbar-color:var(--line2) transparent}
+.lms-list button{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:center;width:100%;text-align:left;padding:12px 22px 12px 19px;border:0;border-left:3px solid transparent;background:none;color:var(--ink);cursor:pointer;font:500 15px/1.3 var(--f-body)}
+.lms-list button:hover{background:var(--bg)}
+.lms-list button[aria-current="step"]{background:color-mix(in srgb,var(--accent) 9%,var(--surface));border-left-color:var(--accent);font-weight:600}
+.lms-n{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line2);font:600 14px var(--f-mono);color:var(--muted);background:var(--surface)}
+.lms-list button[aria-current="step"] .lms-n{background:var(--accent);border-color:var(--accent);color:#fff}
+.lms-list small{display:block;margin-top:2px;font:400 12.5px var(--f-body);color:var(--muted)}
+.lms-list .sep{height:1px;background:var(--line);margin:8px 22px}
+.lms-main{overflow-y:auto!important;scroll-behavior:smooth}
+.lms-in{max-width:800px;margin:0 auto;padding:34px 36px 44px}
+.les-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:600 12.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.les-title{font:800 clamp(26px,3vw,36px)/1.12 var(--f-display);letter-spacing:-.015em;margin:10px 0 18px;text-wrap:balance}
+.steps{position:sticky;top:0;z-index:2;display:flex;gap:6px;flex-wrap:wrap;margin:0 -8px 8px;padding:10px 8px;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.steps button{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);background:var(--surface);color:var(--ink);border-radius:99px;padding:6px 13px 6px 7px;font:500 13.5px var(--f-body);cursor:pointer}
+.steps button b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font:700 12px var(--f-mono)}
+.steps button:hover{border-color:var(--accent);color:var(--accent)}
+.les-sec{padding:26px 0 6px;scroll-margin-top:70px}
+.les-sec h3{display:flex;align-items:center;gap:12px;font:700 20px/1.2 var(--f-display);margin:0 0 12px}
+.les-sec h3 b{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font:700 14px var(--f-mono)}
+.les-sec p{margin:0 0 12px;font-size:16.5px;line-height:1.65}
+.les-sec .hint{font-size:14.5px;color:var(--muted)}
+.callout{border-radius:10px;padding:14px 18px;font-size:16px;line-height:1.65;margin:0 0 12px}
+.callout b{display:block;font:600 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.callout.case{background:var(--bg);border-left:4px solid var(--ink)}
+.callout.perla{background:color-mix(in srgb,var(--ok) 10%,var(--surface));border-left:4px solid var(--ok)}
+.callout.perla b{color:var(--ok)}
+.callout.error{background:color-mix(in srgb,var(--bad) 9%,var(--surface));border-left:4px solid var(--bad)}
+.callout.error b{color:var(--bad)}
+.acts{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.act{display:grid;gap:3px;text-align:left;padding:14px 16px;border:1px solid var(--line2);border-radius:10px;background:var(--surface);color:var(--ink);cursor:pointer;font:600 15px/1.3 var(--f-body)}
+.act small{font:500 12.5px var(--f-body);color:var(--accent)}
+.act:hover{border-color:var(--accent)}
+.reto{border:1.5px dashed var(--line2);border-radius:10px;padding:16px 18px}
+.reto p{margin:0 0 12px}
+.ans{margin-top:12px;padding:12px 16px;border-radius:8px;background:color-mix(in srgb,var(--ok) 9%,var(--surface));font-size:16px;line-height:1.6}
+.mini{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line2);background:var(--surface);color:var(--ink);border-radius:8px;padding:8px 14px;cursor:pointer}
+.mini:hover{border-color:var(--accent);color:var(--accent)}
+.les-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:34px;padding-top:20px;border-top:1px solid var(--line)}
+.les-nav button{flex:1 1 240px;text-align:left;border:1px solid var(--line2);background:var(--surface);border-radius:10px;padding:14px 18px;color:var(--ink);cursor:pointer;font:600 15px/1.3 var(--f-body)}
+.les-nav button small{display:block;font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.les-nav button:hover{border-color:var(--accent)}
+.les-nav .nx{text-align:right}
+.lms-hero h2{font:800 clamp(28px,3.4vw,40px)/1.1 var(--f-display);letter-spacing:-.02em;margin:8px 0 14px;text-wrap:balance}
+.lms-hero .lead{font-size:18px;line-height:1.6;color:var(--ink);margin:0 0 20px;max-width:60ch}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border:0;border-radius:8px;background:var(--accent);color:#fff;font:600 16px var(--f-body);cursor:pointer}
+.cta-btn:hover{filter:brightness(1.08)}
+.lms-h{font:700 20px var(--f-display);margin:38px 0 14px}
+.how{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.how li{border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--surface)}
+.how b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font:700 13px var(--f-mono);margin-bottom:8px}
+.how strong{display:block;font:700 15px var(--f-display);margin-bottom:2px}
+.how span{font-size:13.5px;color:var(--muted);line-height:1.45}
+.mods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.mod-card{display:grid;grid-template-columns:36px minmax(0,1fr);gap:12px;text-align:left;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);cursor:pointer}
+.mod-card:hover{border-color:var(--accent)}
+.mod-card .lms-n{width:36px;height:36px}
+.mod-card strong{display:block;font:700 15.5px/1.25 var(--f-display);margin-bottom:4px}
+.mod-card div span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.lms-note{margin-top:30px;font-size:13.5px;color:var(--muted)}
+@media (max-width:1099px){
+  .lms{display:flex;flex-direction:column;height:auto;min-height:0}
+  .lms-side{overflow:visible}
+  .lms-course{padding:16px 18px 10px;border:0}
+  .lms-list{display:flex;overflow-x:auto;overflow-y:hidden;padding:0 12px 12px;gap:8px;flex:none}
+  .lms-list li{flex:none}
+  .lms-list .sep{display:none}
+  .lms-list button{grid-template-columns:30px auto;width:auto;min-width:150px;max-width:230px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;font-size:14px}
+  .lms-list button[aria-current="step"]{border-color:var(--accent)}
+  .lms-list small{display:none}
+  .lms-n{width:30px;height:30px}
+  .lms-main{overflow:visible!important}
+  .lms-in{padding:22px 18px 32px}
+  .steps{position:static;backdrop-filter:none}
+  .how{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mods{grid-template-columns:1fr}
+}
 </style>
 <meta name="description" content="Atlas 3D de anatomía venosa del miembro inferior: explora las venas de la pierna, ecografía en modo B, evaluación y referencias. Instituto Mexicano de Flebología.">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -463,7 +451,7 @@ body.tour-on{overflow:hidden}
     <nav class="mainnav" aria-label="Secciones del atlas"><div class="seg" id="tabSeg">
       <button data-t="ficha" aria-pressed="true">Atlas 3D</button>
       <button data-t="eco" aria-pressed="false">Ecografía</button>
-      <button data-t="tutor" aria-pressed="false">Tutor</button>
+      <button data-t="tutor" aria-pressed="false">Aprender</button>
       <button data-t="quiz" aria-pressed="false">Evaluación</button>
       <button id="refsNav" aria-pressed="false">Referencias</button>
     </div><a class="navlink" href="anatomia-venosa-miembros-inferiores/">Guía de anatomía</a></nav>
@@ -550,46 +538,16 @@ body.tour-on{overflow:hidden}
   </aside>
 </div>
 
-<main class="tpage" id="tutorView" hidden>
-  <p class="t-off" id="tOff" hidden><b>El chat con IA no está disponible en esta versión del sitio.</b> La ruta de aprendizaje funciona completa, sin conexión: cada módulo parte de un problema clínico, te lleva a explorar el modelo y termina con un reto.</p>
-  <div class="tp-grid">
-    <section class="card tutor tp-chat" aria-label="Chat con el tutor">
-      <div class="tp-head">
-        <div class="t-head">
-          <div class="t-badge" aria-hidden="true">IMF</div>
-          <div><h2>Tutor clínico</h2><p class="t-sub">Pregúntale lo que quieras sobre anatomía venosa, ecografía o clínica. Responde con base en la bibliografía del atlas y te propone retos para razonar.</p></div>
-        </div>
-        <div class="tp-ctxrow"><div class="t-ctx" id="tCtx"></div><button class="linkbtn" id="tToAtlas" type="button">Ir al atlas</button></div>
-      </div>
-      <div class="tp-body" id="tBody">
-        <div class="t-welcome" id="tWelcome">
-          <h3>¿Por dónde empezamos?</h3>
-          <p>Elige un punto de partida o escribe tu propia pregunta abajo. El tutor usa la estructura que tengas seleccionada en el atlas.</p>
-          <div class="t-quick" id="tQuick">
-            <button class="qp" data-q="Explícame esta estructura a partir de un caso clínico breve y guíame con preguntas, sin darme la respuesta de inmediato."><b>Caso clínico guiado</b><span>Un caso breve sobre la estructura, resuelto con preguntas.</span></button>
-            <button class="qp" data-q="Hazme 3 preguntas tipo examen de posgrado sobre esta estructura, una por una. Espera mi respuesta antes de corregir."><b>Preguntas de examen</b><span>Tres preguntas tipo posgrado, una por una.</span></button>
-            <button class="qp" data-q="¿Qué errores frecuentes se cometen con esta estructura en la ecografía y en la clínica, y cómo los evito?"><b>Errores frecuentes</b><span>Dónde se equivoca la gente en ecografía y en clínica.</span></button>
-            <button class="qp" data-q="¿Cómo aplico esto en mi consulta diaria de flebología? Dame pasos concretos."><b>Aplicarlo en mi consulta</b><span>Pasos concretos para tu práctica diaria.</span></button>
-          </div>
-        </div>
-        <div class="t-log" id="tLog" aria-live="polite"></div>
-      </div>
-      <div class="tp-foot">
-        <form class="t-form" id="tForm">
-          <label for="tIn" class="sr">Pregunta al tutor</label>
-          <textarea id="tIn" rows="2" placeholder="Escribe tu pregunta o tu respuesta al reto…"></textarea>
-          <div class="t-actions"><button type="button" class="tog" id="tStop" hidden>Detener</button><button type="button" class="tog" id="tNew">Nueva conversación</button><button type="submit" class="primary" id="tSend">Enviar</button></div>
-        </form>
-        <p class="t-disc">Herramienta docente: no sustituye el juicio clínico ni da indicaciones para pacientes concretos. Verifica las citas en la sección de referencias.</p>
-      </div>
-    </section>
-    <section class="card route tp-route" aria-label="Ruta de aprendizaje">
-      <div class="r-top"><h2>Ruta de aprendizaje</h2><span id="rProg"></span></div>
-      <p class="t-sub">Siete módulos de unos 10 minutos. Cada uno parte de un problema clínico, te pide explorar el modelo, resolver un reto y llevarlo a tu práctica.</p>
-      <div class="bar"><b id="rBar" style="width:0%"></b></div>
-      <div id="route"></div>
-    </section>
-  </div>
+<main class="lms" id="tutorView" hidden>
+  <nav class="lms-side card" aria-label="Módulos de la ruta de aprendizaje">
+    <div class="lms-course">
+      <p class="lms-eyebrow">Ruta de aprendizaje</p>
+      <h2>Anatomía venosa del miembro inferior</h2>
+      <p class="lms-meta">7 módulos · unos 10 minutos cada uno</p>
+    </div>
+    <ol class="lms-list" id="lmsList"></ol>
+  </nav>
+  <article class="lms-main card" id="lmsMain" aria-live="polite"></article>
 </main>
 
 <main class="wrap refs-page" id="refsView" hidden>
@@ -1160,7 +1118,7 @@ us.addEventListener('click',e=>{const r=us.getBoundingClientRect(),x=(e.clientX-
   if(best&&bd<14*DPR){select(best.id);syncUSControls()}});
 
 
-/* ================= Tutor clínico y ruta de aprendizaje ================= */
+/* ================= Ruta de aprendizaje ================= */
 const ROUTE=[
  {id:'m1',t:'Sistemas venosos y nomenclatura',refs:[1,13],act:[{v:'vf',l:'Ver la vena femoral'}],
   prob:'Un informe ecográfico dice “trombosis de la vena femoral superficial” y el paciente fue enviado a casa sin anticoagulación.',
@@ -1212,127 +1170,61 @@ const ROUTE=[
   perla:'Ante varices atípicas o recurrentes sin conexión safena, busca un origen pélvico antes de tratar.',
   error:'Atribuir todas las varices del muslo a la safena magna sin explorar el periné.'}
 ];
-let DONE=new Set();
-try{DONE=new Set(JSON.parse(localStorage.getItem('atlas-ruta')||'[]'))}catch(e){}
-const saveDone=()=>{try{localStorage.setItem('atlas-ruta',JSON.stringify([...DONE]))}catch(e){}};
-const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function renderRoute(){
-  const el=document.getElementById('route');el.innerHTML='';
-  ROUTE.forEach((m,i)=>{
-    const d=document.createElement('details');d.className='mod'+(DONE.has(m.id)?' done':'');
-    d.innerHTML=`<summary><span class="num">${DONE.has(m.id)?'✓':i+1}</span><span class="mt">${m.t}</span><span class="chev" aria-hidden="true">›</span></summary>
-     <div class="body">
-      <div class="case"><span class="lab">Situación clínica</span>${m.prob}</div>
-      <div><span class="lab">Objetivo</span>${m.obj}</div>
-      <div><span class="lab">Explora en el modelo</span><div class="row">${m.act.map((a,k)=>`<button class="mini acc" data-k="${k}">${a.l} →</button>`).join('')}</div></div>
-      <div class="reto"><span class="lab">Reto</span>${m.q}<div class="ans" hidden><b>Respuesta:</b> ${m.a}</div>
-        <div class="row" style="margin-top:8px"><button class="mini" data-x="ans">Ver respuesta</button><button class="mini" data-x="tutor">Responder al tutor</button></div></div>
-      <div class="perla"><span class="lab">Perla clínica</span>${m.perla}</div>
-      <div class="error"><span class="lab">Error frecuente</span>${m.error}</div>
-      ${refChips(m.refs)}
-      <div class="row"><button class="mini" data-x="case">Discutir un caso con el tutor</button><button class="mini" data-x="done">${DONE.has(m.id)?'Marcar como pendiente':'Marcar como completado'}</button></div>
-     </div>`;
-    d.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{const a=m.act[+b.dataset.k];
-      if(a.p){setTab('eco');applyPreset(a.p)}else{setTab('ficha');select(a.v,{focus:true})}});
-    d.querySelector('[data-x="ans"]').onclick=e=>{const an=d.querySelector('.ans');an.hidden=!an.hidden;e.target.textContent=an.hidden?'Ver respuesta':'Ocultar respuesta'};
-    d.querySelector('[data-x="tutor"]').onclick=()=>{tIn.value=`Reto del módulo “${m.t}”: ${m.q}\nMi respuesta: `;tIn.focus();tIn.scrollIntoView({block:'center'})};
-    d.querySelector('[data-x="case"]').onclick=()=>ask(`Quiero profundizar en el módulo “${m.t}”. Plantéame un caso clínico breve a partir de esta situación: ${m.prob} Guíame paso a paso con preguntas, sin darme la respuesta de inmediato.`);
-    d.querySelector('[data-x="done"]').onclick=()=>{DONE.has(m.id)?DONE.delete(m.id):DONE.add(m.id);saveDone();const open=d.open;renderRoute();el.children[i].open=open};
-    el.appendChild(d);
-  });
-  document.getElementById('rProg').textContent=`${DONE.size} de ${ROUTE.length} completados`;
-  document.getElementById('rBar').style.width=(DONE.size/ROUTE.length*100)+'%';
+/* ================= Ruta de aprendizaje (lectura, sin chat ni seguimiento de avance) ================= */
+const lmsList=document.getElementById('lmsList'),lmsMain=document.getElementById('lmsMain');
+const lmsEsc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let lmsCur=-1;
+const lmsFirst=t=>String(t).split(/(?<=[.!?])\s/)[0];
+function lmsOutline(){
+  lmsList.innerHTML='';
+  const add=(i,num,title,sub)=>{const li=document.createElement('li'),b=document.createElement('button');b.type='button';
+    b.innerHTML=`<span class="lms-n">${num}</span><span>${title}<small>${sub}</small></span>`;
+    if(i===lmsCur)b.setAttribute('aria-current','step');b.onclick=()=>lmsShow(i);li.appendChild(b);lmsList.appendChild(li)};
+  add(-1,'i','Introducción','Cómo funciona esta ruta');
+  const sep=document.createElement('li');sep.className='sep';lmsList.appendChild(sep);
+  ROUTE.forEach((m,i)=>add(i,i+1,m.t,'≈ 10 min'));
 }
-
-const tBody=document.getElementById('tBody'),tWelcome=document.getElementById('tWelcome'),tLog=document.getElementById('tLog'),tIn=document.getElementById('tIn'),tSend=document.getElementById('tSend'),tStop=document.getElementById('tStop');
-let SAMPLE=null,TOOLS_OK=false,TURNS=[],busy=false,ctl=null;
-function tutorCtx(){const v=byId[S.sel],p=PRESETS.find(x=>x.id===S.preset);
-  document.getElementById('tCtx').innerHTML=`CONTEXTO · Vena: <b>${v.n}</b>${p?` · Corte: <b>${p.n}</b>`:''}`}
-function md(t){
-  const lines=esc(t).split('\n');let html='',list=false;
-  const inline=x=>x.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\[(\d{1,2}(?:\s*[,–-]\s*\d{1,2})*)\]/g,(m,g)=>{
-    const ns=g.split(/\s*,\s*/).flatMap(x=>{const r=x.split(/\s*[–-]\s*/).map(Number);return r.length===2?Array.from({length:r[1]-r[0]+1},(_,i)=>r[0]+i):[r[0]]});
-    return ns.every(n=>document.getElementById('ref-'+n))?ns.map(n=>`<button class="rc" data-ref="${n}">[${n}]</button>`).join(''):m});
-  lines.forEach(l=>{const li=l.match(/^\s*[-•*]\s+(.*)/)||l.match(/^\s*\d+[.)]\s+(.*)/);
-    if(li){if(!list){html+='<ul>';list=true}html+=`<li>${inline(li[1])}</li>`}
-    else{if(list){html+='</ul>';list=false}if(l.trim())html+=`<p>${inline(l.replace(/^#+\s*/,''))}</p>`}});
-  if(list)html+='</ul>';return html}
-const KB=()=>V.map(v=>`- ${v.id} | ${v.n}${v.alt?' ('+v.alt+')':''} | Sistema: ${SYS[v.sys].n} | Trayecto: ${v.curso} | Drena en: ${v.drena} | Ecografía: ${v.us} | Clínica: ${v.clin} | Referencias: ${v.refs.join(', ')}`).join('\n');
-const REFTXT=()=>REFS.filter(r=>r.n).map(r=>`[${r.n}] ${r.a}`).join('\n');
-const PRESTXT=()=>PRESETS.map(p=>`- ${p.id}: ${p.n} (${p.s})`).join('\n');
-function rules(){return `Eres el tutor clínico del Atlas Venoso 3D del Instituto Mexicano de Flebología (IMF). Conversas con médicos de posgrado (flebología, angiología, cirugía vascular, radiología) que estudian la anatomía venosa del miembro inferior, la ecografía Doppler y su aplicación clínica.
-
-Enfoque andragógico (aprendizaje de adultos):
-- Parte de la experiencia del médico: cuando sea útil, pregúntale qué ve en su práctica o qué haría.
-- Centra la explicación en problemas reales (un paciente, un estudio, una decisión) y en su aplicación inmediata.
-- Reconoce lo que el médico responde bien y corrige con precisión y respeto lo que no.
-- Cuando convenga, termina con UNA pregunta socrática o un mini reto. Si te pide preguntas de examen, házlas de una en una y espera su respuesta.
-
-Reglas de contenido:
-- Responde en español de México, con terminología correcta y nomenclatura del consenso internacional (vena femoral, safena magna/parva, perforantes por topografía).
-- Sé breve: unas 150 palabras, salvo que pidan más. Párrafos cortos y listas con "-". Usa **negritas** solo para términos clave.
-- Basa tus afirmaciones en el contenido del atlas y en las referencias listadas. Cita entre corchetes [n] únicamente números de esa lista. Nunca inventes referencias, estudios ni cifras. Si algo no está respaldado aquí o es controvertido, dilo con claridad.
-- Es docencia, no consulta: no des indicaciones de tratamiento para un paciente real concreto; puedes discutir casos didácticos.
-${TOOLS_OK?'- Puedes usar las herramientas para mostrar en el modelo la vena o el corte ecográfico del que hablas; úsalas cuando ayuden a ver la anatomía, como máximo una o dos veces por respuesta.':''}
-
-CONTENIDO DEL ATLAS (id | nombre | datos):
-${KB()}
-
-CORTES ECOGRÁFICOS DISPONIBLES (id: nombre):
-${PRESTXT()}
-
-REFERENCIAS DEL ATLAS:
-${REFTXT()}`}
-const TOOLDEFS=[
- {name:'mostrar_vena',description:'Selecciona y enfoca una vena en el modelo 3D del atlas para que el médico la vea. Devuelve el nombre de la vena mostrada.',
-  inputSchema:{type:'object',properties:{id:{type:'string',description:'id de la vena, por ejemplo vsm, vfc, vpop'}},required:['id']},
-  execute:(i)=>{const id=String(i.id||'');if(!byId[id])throw new Error('id de vena desconocido');select(id,{focus:true});tutorCtx();pendingVein=id;return 'Mostrada: '+byId[id].n}},
- {name:'mostrar_corte_ecografico',description:'Coloca el transductor del simulador en uno de los cortes ecográficos de referencia y muestra el plano en el modelo 3D. Devuelve el nombre del corte.',
-  inputSchema:{type:'object',properties:{id:{type:'string',description:'id del corte: usf, ojo, alin, canal, dodd, pop, giac, panto, cock'}},required:['id']},
-  execute:(i)=>{const id=String(i.id||'');const p=PRESETS.find(x=>x.id===id);if(!p)throw new Error('id de corte desconocido');
-    applyPreset(id);sliceGrp.visible=true;tutorCtx();pendingCut=id;return 'Corte mostrado: '+p.n}}
-];
-let pendingCut=null,pendingVein=null;
-function addMsg(cls,html){tWelcome.hidden=true;const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;tLog.appendChild(d);tBody.scrollTop=tBody.scrollHeight;return d}
-function setBusy(b){busy=b;tSend.disabled=b;tStop.hidden=!b;document.querySelectorAll('.qp').forEach(x=>x.disabled=b)}
-const ERRCOPY={rate_limited:'Se alcanzó el límite de uso por ahora. Intenta de nuevo en unos minutos.',session_expired:'Tu sesión expiró. Vuelve a iniciar sesión en Claude.',refused:'El tutor no pudo responder esa pregunta. Intenta formularla de otra manera.',empty_completion:'No llegó respuesta. Intenta con una pregunta más concreta.',prompt_too_large:'La conversación es muy larga. Inicia una nueva conversación.'};
-async function ask(q){
-  if(busy||!q.trim())return;
-  if(!SAMPLE){document.getElementById('tOff').hidden=false;return}
-  if(view!=='tutor')setView('tutor');
-  const v=byId[S.sel],p=PRESETS.find(x=>x.id===S.preset);
-  addMsg('u',esc(q).replace(/\n/g,'<br>'));
-  TURNS.push({role:'user',content:`[Contexto en pantalla: vena seleccionada «${v.n}» (id ${v.id})${p?`; último corte ecográfico «${p.n}» (id ${p.id})`:''}]\n\n${q}`});
-  while(TURNS.length>14)TURNS.splice(0,2);
-  tIn.value='';setBusy(true);pendingCut=null;pendingVein=null;
-  const bub=addMsg('a','<span class="thinking">Pensando…</span>');
-  ctl=new AbortController();
-  try{
-    const opts={signal:ctl.signal,cache:false,onText:({text})=>{bub.innerHTML=md(text);tBody.scrollTop=tBody.scrollHeight}};
-    if(TOOLS_OK){delete opts.cache;opts.tools=TOOLDEFS}
-    const {text,truncated}=await SAMPLE([{role:'user',content:rules()},...TURNS],opts);
-    bub.innerHTML=md(text)+(truncated?'<span class="tool">Respuesta recortada: pide que continúe.</span>':'');
-    TURNS.push({role:'assistant',content:text});
-  }catch(e){
-    if(e&&e.code==='cancelled'){bub.innerHTML=e.text?md(e.text)+'<span class="tool">Detenido.</span>':'<span class="tool">Detenido.</span>';if(e.text)TURNS.push({role:'assistant',content:e.text})}
-    else if(e&&['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'].includes(e.code)){bub.remove();SAMPLE=null;tutorAvail()}
-    else{bub.classList.add('err');bub.innerHTML=(e&&e.text?md(e.text):'')+`<p>${ERRCOPY[e&&e.code]||'Hubo un problema de conexión. Intenta de nuevo.'}</p>`;TURNS.pop()}
-  }finally{
-    if(pendingVein&&!pendingCut){const b=document.createElement('button');b.className='go';b.textContent='Ver en el atlas →';b.onclick=()=>setTab('ficha');bub.appendChild(b)}
-    if(pendingCut){const b=document.createElement('button');b.className='go';const id=pendingCut;b.textContent='Abrir este corte en Ecografía →';b.onclick=()=>{setTab('eco');applyPreset(id)};bub.appendChild(b)}
-    setBusy(false);
+function lmsIntro(){
+  const how=[['Caso','Parte de un problema clínico real.'],['Explora','Abre la estructura en el modelo 3D.'],['Reto','Responde una pregunta y compara.'],['Para llevar','Una perla y un error frecuente.']];
+  return `<div class="lms-in lms-hero">
+    <p class="lms-eyebrow">Ruta de aprendizaje</p>
+    <h2>Anatomía venosa del miembro inferior, paso a paso</h2>
+    <p class="lead">Siete módulos para leer y entender mejor la anatomía venosa, la ecografía y su aplicación clínica. Cada uno parte de un problema clínico, te lleva a explorar el modelo, plantea un reto y cierra con lo que conviene llevar a tu consulta.</p>
+    <button class="cta-btn" type="button" data-go="0">Comenzar con el módulo 1 →</button>
+    <h3 class="lms-h">Cómo funciona cada módulo</h3>
+    <ol class="how">${how.map((h,i)=>`<li><b>${i+1}</b><strong>${h[0]}</strong><span>${h[1]}</span></li>`).join('')}</ol>
+    <h3 class="lms-h">Módulos</h3>
+    <div class="mods">${ROUTE.map((m,i)=>`<button class="mod-card" type="button" data-go="${i}"><span class="lms-n">${i+1}</span><div><strong>${m.t}</strong><span>${lmsFirst(m.obj)}</span></div></button>`).join('')}</div>
+    <p class="lms-note">Es una sección de consulta: no necesitas registrarte y no se guarda tu avance. Es material docente; no sustituye el juicio clínico.</p>
+  </div>`;
+}
+function lmsLesson(i){
+  const m=ROUTE[i],prev=ROUTE[i-1],next=ROUTE[i+1];
+  const acts=m.act.map((a,k)=>`<button class="act" type="button" data-k="${k}">${a.l}<small>${a.p?'Abrir en Ecografía →':'Abrir en el atlas 3D →'}</small></button>`).join('');
+  const sec=(id,n,t,body)=>`<section class="les-sec" id="les-${id}"><h3><b>${n}</b>${t}</h3>${body}</section>`;
+  return `<div class="lms-in">
+    <div class="les-top"><span>Módulo ${i+1} de ${ROUTE.length}</span><span>≈ 10 min de lectura</span></div>
+    <h2 class="les-title">${m.t}</h2>
+    <div class="steps" role="navigation" aria-label="Partes del módulo">${[['caso','Caso'],['obj','Objetivo'],['explora','Explora'],['reto','Reto'],['llevar','Para llevar']].map(([id,l],k)=>`<button type="button" data-s="${id}"><b>${k+1}</b>${l}</button>`).join('')}</div>
+    ${sec('caso',1,'Situación clínica',`<div class="callout case">${m.prob}</div>`)}
+    ${sec('obj',2,'Objetivo',`<p>${m.obj}</p>`)}
+    ${sec('explora',3,'Explora en el modelo',`<p class="hint">Cada botón abre el atlas en la estructura indicada. Para volver a este módulo, usa «Aprender» en el menú.</p><div class="acts">${acts}</div>`)}
+    ${sec('reto',4,'Reto',`<div class="reto"><p>${m.q}</p><button class="mini" type="button" data-x="ans">Ver respuesta</button><div class="ans" hidden><b>Respuesta:</b> ${m.a}</div></div>`)}
+    ${sec('llevar',5,'Para llevar a tu práctica',`<div class="callout perla"><b>Perla clínica</b>${m.perla}</div><div class="callout error"><b>Error frecuente</b>${m.error}</div>${refChips(m.refs)}`)}
+    <div class="les-nav">${prev?`<button type="button" data-go="${i-1}"><small>← Módulo ${i}</small>${prev.t}</button>`:`<button type="button" data-go="-1"><small>← Inicio</small>Introducción</button>`}${next?`<button type="button" class="nx" data-go="${i+1}"><small>Módulo ${i+2} →</small>${next.t}</button>`:''}</div>
+  </div>`;
+}
+function lmsShow(i){
+  lmsCur=i;lmsMain.innerHTML=i<0?lmsIntro():lmsLesson(i);lmsOutline();lmsMain.scrollTop=0;
+  lmsMain.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>lmsShow(+b.dataset.go));
+  if(i>=0){const m=ROUTE[i];
+    lmsMain.querySelectorAll('.act').forEach(b=>b.onclick=()=>{const a=m.act[+b.dataset.k];if(a.p){setTab('eco');applyPreset(a.p)}else{setTab('ficha');select(a.v,{focus:true})}});
+    lmsMain.querySelector('[data-x="ans"]').onclick=e=>{const an=lmsMain.querySelector('.ans');an.hidden=!an.hidden;e.target.textContent=an.hidden?'Ver respuesta':'Ocultar respuesta'};
+    lmsMain.querySelectorAll('.steps button').forEach(b=>b.onclick=()=>document.getElementById('les-'+b.dataset.s).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}));
   }
+  const cur=lmsList.querySelector('[aria-current="step"]');if(cur&&cur.scrollIntoView)cur.scrollIntoView({block:'nearest',inline:'nearest'});
 }
-function tutorAvail(){const on=!!SAMPLE;['tForm','tWelcome','tLog'].forEach(id=>document.getElementById(id).hidden=!on);document.getElementById('tOff').hidden=on;tutorView.classList.toggle('no-ai',!on)}
-document.getElementById('tForm').onsubmit=e=>{e.preventDefault();ask(tIn.value)};
-tIn.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask(tIn.value)}});
-tStop.onclick=()=>ctl&&ctl.abort();
-document.getElementById('tNew').onclick=()=>{if(busy)ctl&&ctl.abort();TURNS=[];tLog.innerHTML='';tWelcome.hidden=false;tBody.scrollTop=0};
-document.getElementById('tQuick').onclick=e=>{const b=e.target.closest('.qp');if(b)ask(b.dataset.q)};
-renderRoute();
-(window.claude&&claude.use?claude.use('sample'):Promise.resolve(null)).then(async s=>{SAMPLE=s;
-  if(s){try{const l=await s.limits();TOOLS_OK=!!(l&&l.tools)}catch(e){TOOLS_OK=false}}
-  tutorAvail()}).catch(()=>{SAMPLE=null;tutorAvail()});
+lmsShow(-1);
 
 /* ================= Autoevaluación ================= */
 const quiz=document.getElementById('quiz');let Q=null,QS=null;const TOTAL=10;
@@ -1508,14 +1400,12 @@ function setView(v,{push=true}={}){
   appEl.hidden=v!=='app';tutorView.hidden=v!=='tutor';refsView.hidden=v!=='refs';footEl.hidden=v!=='refs';
   document.body.classList.toggle('view-refs',v==='refs');
   syncNav();
-  document.title={app:BASE_TITLE,tutor:'Tutor clínico | '+BASE_TITLE,refs:'Referencias | '+BASE_TITLE}[v];
-  if(v==='tutor')tutorCtx();
-  if(push){const h={refs:'#referencias',tutor:'#tutor',app:''}[v];try{history.pushState(null,'',h||location.pathname+location.search)}catch(_){}}
+  document.title={app:BASE_TITLE,tutor:'Ruta de aprendizaje | '+BASE_TITLE,refs:'Referencias | '+BASE_TITLE}[v];
+    if(push){const h={refs:'#referencias',tutor:'#aprender',app:''}[v];try{history.pushState(null,'',h||location.pathname+location.search)}catch(_){}}
   window.scrollTo(0,0);
 }
 document.getElementById('refsBack').onclick=()=>setView(lastView==='tutor'?'tutor':'app');
-document.getElementById('tToAtlas').onclick=()=>setView('app');
-const hashView=()=>location.hash==='#referencias'?'refs':location.hash==='#tutor'?'tutor':'app';
+const hashView=()=>location.hash==='#referencias'?'refs':(location.hash==='#aprender'||location.hash==='#tutor')?'tutor':'app';
 const syncView=()=>{if(hashView()!==view)setView(hashView(),{push:false})};
 addEventListener('popstate',syncView);addEventListener('hashchange',syncView);
 if(hashView()!=='app')setView(hashView(),{push:false});
