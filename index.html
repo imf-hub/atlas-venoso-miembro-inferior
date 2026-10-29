@@ -230,6 +230,11 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .bar{height:3px;background:var(--line);border-radius:2px;margin:8px 0 14px;overflow:hidden}
 .bar b{display:block;height:100%;background:var(--accent);transition:width .3s}
 .opts{display:grid;gap:6px}
+#quiz .qprompt{margin:20px 0 18px;padding:16px 16px 18px;border-left:4px solid var(--accent);border-radius:0 8px 8px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+#quiz .quiz-instruction{margin:0 0 10px;font:400 12px/1.5 var(--f-body);color:var(--muted)}
+#quiz .quiz-question{margin:0;font:800 clamp(22px,1.9vw,28px)/1.3 var(--f-display);letter-spacing:-.015em;color:var(--ink);text-wrap:pretty;overflow-wrap:anywhere}
+#quiz .quiz-target{display:block;margin-top:10px}
+#quiz .quiz-question-english{margin:10px 0 0;font:400 13px/1.5 var(--f-body);color:var(--muted)}
 .opt{font:inherit;font-size:14px;text-align:left;padding:9px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);cursor:pointer}
 .opt:hover:not(:disabled){border-color:var(--ink)}
 .opt.ok{border-color:var(--ok);color:var(--ok);font-weight:600}
@@ -2399,9 +2404,9 @@ function nextQ(){
   }
   paint();
   let body='';
-  if(Q.type==='terms')body=`<p class="qprompt"><small>Nombres, siglas y consensos · elige una respuesta</small>${lmsEsc(Q.question.prompt)}</p><div class="opts">${Q.opts.map(o=>`<button type="button" class="opt" data-id="${o}">${lmsEsc(Q.question.options[+o])}</button>`).join('')}</div>`;
-  else if(Q.type==='senala')body=`<div class="qprompt"><small>Haz clic en el modelo 3D; puedes girarlo</small>${quizIdentity(byId[Q.id])}</div>`;
-  else body=`<p class="qprompt"><small>¿Qué estructura está resaltada en naranja?</small>Identifica la vena</p><div class="opts">${Q.opts.map(o=>`<button type="button" class="opt" data-id="${o}">${quizIdentity(byId[o])}</button>`).join('')}</div>`;
+  if(Q.type==='terms')body=`<div class="qprompt"><p class="quiz-instruction">Nombres, siglas y consensos · elige una respuesta</p><h2 class="quiz-question" id="quiz-question">${lmsEsc(Q.question.prompt)}</h2></div><div class="opts" role="group" aria-labelledby="quiz-question">${Q.opts.map(o=>`<button type="button" class="opt" data-id="${o}">${lmsEsc(Q.question.options[+o])}</button>`).join('')}</div>`;
+  else if(Q.type==='senala')body=`<div class="qprompt"><p class="quiz-instruction">Haz clic en el modelo 3D; puedes girarlo</p><h2 class="quiz-question" id="quiz-question">Señala en el modelo:<span class="quiz-target">${lmsEsc(byId[Q.id].n)} <span class="learn-badge">${lmsEsc(byId[Q.id].ab)}</span></span></h2><p class="quiz-question-english" lang="en">${lmsEsc(byId[Q.id].en)}</p></div>`;
+  else body=`<div class="qprompt"><p class="quiz-instruction">Reconocimiento anatómico · elige una respuesta</p><h2 class="quiz-question" id="quiz-question">¿Qué estructura está resaltada en naranja?</h2></div><div class="opts" role="group" aria-labelledby="quiz-question">${Q.opts.map(o=>`<button type="button" class="opt" data-id="${o}">${quizIdentity(byId[o])}</button>`).join('')}</div>`;
   quiz.innerHTML=`${modeButtons()}<p class="quiz-hint">${quizMode==='mixed'?'Reconocimiento en 3D y nomenclatura.':'Nombres en español e inglés, siglas, epónimos y fuentes.'} Según los sistemas activos.</p><div class="qtop"><span>Pregunta ${QS.i+1} de ${QS.order.length}</span><span id="qsc">Aciertos ${QS.score}</span></div><div class="bar"><b style="width:${QS.i/QS.order.length*100}%"></b></div>${body}<div class="fb" id="qfb" role="status" aria-live="polite"></div><div id="qnx"></div>`;
   quiz.querySelectorAll('.opt').forEach(b=>b.onclick=()=>answer(b.dataset.id));bindQuizModes();
 }
