@@ -11,6 +11,6 @@ const V = eval('(' + grab('const V=', '\n];') + ')');
 const REFS = eval('(' + grab('const REFS=', '\n];') + ')');
 const SYS = eval('(' + grab('const SYS=', '};') + ')');
 process.stdout.write(JSON.stringify({
-  V: V.map(v => ({ id: v.id, sys: v.sys, n: v.n, alt: v.alt || '', ta: v.ta, ab: v.ab, pair: !!v.pair, curso: v.curso, drena: v.drena, us: v.us, clin: v.clin, refs: v.refs })),
+  V: V.map(v => ({ id: v.id, sys: v.sys, n: v.n, alt: v.alt || '', ta: v.ta, ab: v.ab, en: v.en, abSource: v.abSource, abNote: v.abNote, pair: !!v.pair, curso: v.curso, drena: v.drena, us: v.us, clin: v.clin, refs: v.refs })),
   REFS, SYS
 }));

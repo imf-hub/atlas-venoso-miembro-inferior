@@ -57,7 +57,7 @@ def slugify(t):
 ORDER = [v for k, _, _ in SYSORDER for v in V if v['sys'] == k]
 SLUG = {}
 for v in ORDER:
-    s = slugify(v['n'])
+    s = 'arco-venoso-plantar' if v['id'] == 'arcp' else slugify(v['n'])
     assert s not in SLUG.values(), 'slug repetido: ' + s
     SLUG[v['id']] = s
 URLV = lambda v: f'venas/{SLUG[v["id"]]}/'
@@ -76,6 +76,8 @@ def png_size(path):
 LW, LH = png_size('assets/logo-imf.png')
 
 STYLE = '''
+.skip{position:absolute;left:16px;top:-100px;z-index:100;background:var(--surface);padding:12px}.skip:focus{top:10px}
+
 :root{--bg:#EEF0F3;--surface:#fff;--ink:#16181C;--muted:#575C64;--line:#E0E3E8;--line2:#CDD2D9;--accent:#C62821;--accent-ink:#fff;--tint:#FBEDEC;
  --f-display:"Montserrat","Public Sans",system-ui,sans-serif;--f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--f-latin:"Source Serif 4",Georgia,serif}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1012;--surface:#1A1B1E;--ink:#EDEDEE;--muted:#A8ABB0;--line:#2B2D31;--line2:#3B3E44;--accent:#E5544B;--accent-ink:#fff;--tint:#2A1B1B;color-scheme:dark}}
@@ -120,6 +122,7 @@ h1{font:800 clamp(30px,5vw,44px)/1.1 var(--f-display);letter-spacing:-.02em;marg
 .pills{margin:0 0 6px;display:flex;gap:6px;flex-wrap:wrap}
 .pill{font-size:12px;font-weight:600;padding:2px 10px;border:1px solid var(--line2);border-radius:99px;color:var(--muted);text-decoration:none}
 a.pill:hover{border-color:var(--accent);color:var(--accent)}
+.nomen-note{font-size:14px;padding:14px 18px;background:var(--tint);border-left:3px solid var(--accent);margin:16px 0 24px}
 .alt{margin:0 0 6px;color:var(--muted);font-size:14.5px}
 .vein h4,.vein.single h2{font:700 15px var(--f-display);margin:16px 0 2px}
 .vein.single h2{font-size:19px;margin:22px 0 4px}
@@ -167,7 +170,7 @@ footer ul{list-style:none;margin:0;padding:0}
 
 NOTES = ('Contenido revisado contra la bibliografía citada (octubre de 2026). Huesos y músculos del modelo 3D: BodyParts3D, © DBCLS, '
          'CC BY-SA 2.1 Japón, adaptados; las venas y su relación con estas estructuras son modelado propio del IMF. '
-         'Nomenclatura según el consenso internacional de anatomía venosa (UIP/IFAA). Material docente: no sustituye el juicio clínico.')
+         'Nombres españoles con equivalentes ingleses; siglas del mapeo latinoamericano 2023, CEAP 2020 y leyendas editoriales identificadas. Material docente: no sustituye el juicio clínico.')
 
 ORG = {
     "@type": "Organization", "@id": IMF + "#org", "name": "Instituto Mexicano de Flebología y Linfología, S.C.",
@@ -216,11 +219,12 @@ def shell(title, desc, path, og_type, graph_nodes, main, og_title=None):
 <style>{STYLE}</style>
 </head>
 <body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="top"><div class="top-in">
   <a href="/" aria-label="Anatomía venosa 3D del IMF"><img class="logo-c" src="/assets/logo-imf.png" width="{LW}" height="{LH}" alt="Instituto Mexicano de Flebología"><img class="logo-w" src="/assets/logo-imf-blanco.png" width="{LW}" height="{LH}" alt=""></a>
   <nav aria-label="Principal"><a href="/">Modelo 3D</a><a href="/{GUIDE_PATH}">Guía de anatomía</a><a href="{OFERTA}" target="_blank" rel="noopener">Aprende en el IMF</a><a href="{BOLETIN}" target="_blank" rel="noopener">Boletín</a></nav>
 </div></header>
-<main>
+<main id="contenido"{' class="guide-main"' if path == GUIDE_PATH else ''}>
 {main}
 </main>
 <footer><div class="foot-in">
@@ -266,68 +270,11 @@ def ref_li(r):
     return f'<li id="ref-{r["n"]}" value="{r["n"]}">{E(r["a"])}{u}</li>'
 
 
-# =====================================================================  guía
-toc = ''.join(f'<li><a href="#{k}">{n} <span>{sum(1 for v in V if v["sys"] == k)}</span></a></li>' for k, n, _ in SYSORDER)
-sections = ''
-for k, heading, _ in SYSORDER:
-    arts = ''
-    for v in [x for x in V if x['sys'] == k]:
-        alt = f'<p class="alt">También: {E(v["alt"])}</p>' if v['alt'] else ''
-        pair = '<span class="pill">Pareadas</span>' if v['pair'] else ''
-        arts += f'''
-    <article class="vein" id="v-{v['id']}">
-      <h3><a href="/{URLV(v)}">{E(v['n'])}</a></h3>
-      <p class="latin">{E(v['ta'])}</p>
-      <p class="pills"><span class="pill">{E(v['ab'])}</span>{pair}</p>
-      {alt}
-      <h4>Trayecto</h4><p>{E(v['curso'])}</p>
-      <h4>Drena en</h4><p>{E(v['drena'])}</p>
-      <h4>Ecografía</h4><p>{E(v['us'])}</p>
-      <h4>Relevancia clínica</h4><p>{E(v['clin'])}</p>
-      <p class="vfoot"><span>Referencias: {ref_links(v['refs'])}</span><span><a class="see3d" href="/{URLV(v)}">Ficha completa →</a> · <a class="see3d" href="/#v-{v['id']}">Ver en el modelo 3D →</a></span></p>
-    </article>'''
-    sections += f'\n  <section class="sys" id="{k}">\n    <h2>{heading}</h2>{arts}\n  </section>'
-
-reflist, open_ol = '', False
-for r in REFS:
-    if 'g' in r:
-        reflist += ('</ol>' if open_ol else '') + f'<h3>{E(r["g"])}</h3><ol class="reflist">'
-        open_ol = True
-    else:
-        reflist += ref_li(r)
-reflist += '</ol>' if open_ol else ''
-
-G_TITLE = 'Anatomía venosa de los miembros inferiores: guía | IMF Flebología'
-G_DESC = ('Guía de anatomía venosa de los miembros inferiores: trayecto, drenaje, ecografía y relevancia clínica de cada vena '
-          'de la pierna y el muslo. Con modelo 3D interactivo del IMF.')
-g_main = f'''  <p class="crumbs"><a href="/">Anatomía venosa 3D</a> › Anatomía venosa de los miembros inferiores</p>
-  <h1>Anatomía venosa de los miembros inferiores</h1>
-  <p class="lead">Guía de las venas de la pierna y el muslo, organizadas por sistema: superficial, profundo, perforante y pélvico. De cada vena encontrarás su trayecto, adónde drena, cómo se ve en la ecografía y por qué importa en la clínica. Es el texto de referencia del Anatomía venosa 3D del Instituto Mexicano de Flebología.</p>
-  <div class="cta">
-    <a class="btn p" href="/">Abrir el modelo 3D interactivo</a>
-    <a class="btn s" href="{OFERTA}" target="_blank" rel="noopener">Aprende flebología en el IMF</a>
-  </div>
-  <nav class="toc" aria-label="Índice de esta guía"><h2>En esta guía</h2><ul>{toc}<li><a href="#referencias">Referencias</a></li></ul></nav>
-{sections}
-{IMF_BLOCK}
-  <section class="refs" id="referencias">
-    <h2>Referencias</h2>
-    {reflist}
-    <p class="notes">{E(NOTES)}</p>
-  </section>'''
-g_nodes = [
-    {"@type": "MedicalWebPage", "@id": GUIDE + "#page", "url": GUIDE, "name": "Anatomía venosa de los miembros inferiores",
-     "description": G_DESC, "inLanguage": "es-MX", "isPartOf": {"@id": SITE + "#website"},
-     "about": {"@type": "AnatomicalSystem", "name": "Sistema venoso del miembro inferior",
-               "alternateName": ["Venas de la pierna", "Anatomía venosa de los miembros inferiores"]},
-     "audience": {"@type": "MedicalAudience", "audienceType": "Clinician"}, "publisher": {"@id": IMF + "#org"},
-     "image": SITE + "og-image.png", "primaryImageOfPage": {"@type": "ImageObject", "url": SITE + "og-image.png"},
-     "hasPart": [{"@type": "WebPage", "url": SITE + URLV(v), "name": v['n']} for v in ORDER]},
-    {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Anatomía venosa 3D", "item": SITE},
-        {"@type": "ListItem", "position": 2, "name": "Anatomía venosa de los miembros inferiores", "item": GUIDE}]},
-]
-write(GUIDE_PATH + 'index.html', shell(G_TITLE, G_DESC, GUIDE_PATH, 'article', g_nodes, g_main, 'Anatomía venosa de los miembros inferiores'))
+# ===================================================================== guía ampliada
+from guia_anatomica import render_guide, GUIDE_STYLE
+STYLE += GUIDE_STYLE
+g_main, g_nodes, G_TITLE, G_DESC = render_guide(V, ORDER, REFS, URLV, GUIDE, SITE, IMF_BLOCK, NOTES)
+write(GUIDE_PATH + 'index.html', shell(G_TITLE, G_DESC, GUIDE_PATH, 'article', g_nodes, g_main))
 
 
 # =====================================================================  una página por vena
@@ -351,7 +298,7 @@ for i, v in enumerate(ORDER):
     intro = (f'{v["n"]} ({v["ta"]}), abreviada {v["ab"]}, forma parte del {SYSDESC[v["sys"]]} del miembro inferior. '
              f'{"Se presenta en pares. " if v["pair"] else ""}'
              'Esta ficha resume su trayecto, adónde drena, cómo se identifica en la ecografía y su relevancia clínica.')
-    alt = f'<p class="alt">También llamada: {E(v["alt"])}</p>' if v['alt'] else ''
+    alt = f'<p class="alt">Otros nombres e inglés: {E(v["alt"])}</p>' if v['alt'] else ''
     pair = '<span class="pill">Pareadas</span>' if v['pair'] else ''
     cited = ''.join(ref_li(REFBYN[n]) for n in sorted(v['refs']) if n in REFBYN)
     same = [x for x in ORDER if x['sys'] == v['sys'] and x['id'] != v['id']]
@@ -367,6 +314,7 @@ for i, v in enumerate(ORDER):
   <p class="latin">{E(v['ta'])}</p>
   <p class="pills"><span class="pill">{E(v['ab'])}</span>{pair}<a class="pill" href="/{GUIDE_PATH}#{v['sys']}">{E(SYSNAME[v['sys']])}</a></p>
   {alt}
+  <p class="nomen-note"><b>{E(v["abSource"])}</b><br>{E(v["abNote"])} <a href="/{GUIDE_PATH}#nomenclatura">Entender la nomenclatura →</a></p>
   <p class="lead">{E(intro)}</p>
   <div class="cta">
     <a class="btn p" href="/#v-{v['id']}">Ver esta vena en el modelo 3D</a>
@@ -389,7 +337,7 @@ for i, v in enumerate(ORDER):
     nodes = [
         {"@type": "MedicalWebPage", "@id": url + "#page", "url": url, "name": v['n'], "description": desc, "inLanguage": "es-MX",
          "isPartOf": {"@id": SITE + "#website"},
-         "about": {"@type": "Vein", "name": v['n'], "alternateName": [x for x in (v['ta'], v['alt']) if x],
+         "about": {"@type": "Vein", "name": v['n'], "alternateName": [x for x in (v['ta'], v['en'], v['ab'], v['alt']) if x],
                    "partOfSystem": {"@type": "AnatomicalSystem", "name": "Sistema venoso del miembro inferior"}},
          "audience": {"@type": "MedicalAudience", "audienceType": "Clinician"}, "publisher": {"@id": IMF + "#org"},
          "image": SITE + "og-image.png"},

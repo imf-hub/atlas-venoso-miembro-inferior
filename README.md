@@ -9,7 +9,7 @@ Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama 
 | Archivo | Para qué sirve |
 |---|---|
 | `index.html` | Toda la herramienta en un solo archivo (HTML, CSS, JS y datos del modelo). No hay build. |
-| `anatomia-venosa-miembros-inferiores/index.html` | Guía estática en HTML (sin JavaScript) con el texto de las 27 venas y las referencias. Es la página pensada para buscadores; enlaza al modelo 3D y al IMF. Se genera con `tools/generar-paginas.py`. |
+| `anatomia-venosa-miembros-inferiores/index.html` | Guía de anatomía y nomenclatura: historia, tabla bilingüe de 79 entradas, siglas del consenso 2023, anatomía regional y 27 fichas. El texto se sirve en HTML; JavaScript mejora la búsqueda y navegación. Es la página pensada para buscadores; enlaza al modelo 3D y al IMF. Se genera con `tools/generar-paginas.py`. |
 | `venas/<vena>/index.html` | Una página estática por vena (27), con su propia URL, para buscadores. Generadas, no editar a mano. |
 | `tools/generar-paginas.py` | Genera la guía, las páginas de vena y `sitemap.xml` a partir de los datos de `index.html` (requiere Python 3 y Node). |
 | `CNAME` | Dominio personalizado de GitHub Pages. No borrar. |
@@ -54,3 +54,12 @@ Aparecen en la barra lateral y el pie de página de la herramienta, en la guía,
 - Huesos y músculos: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón. Mantener la atribución.
 
 
+
+## Nomenclatura bilingüe y guía ampliada
+
+- `index.html` mantiene el catálogo único del modelo y las fichas: `n` (español), `en` (inglés), `alt` (otros términos e históricos), `ab` (sigla visible), `abSource` y `abNote` (fuente y alcance). No modificar los id del modelo al cambiar un nombre.
+- La tabla VI de Bottini 2023 es la referencia de siglas superficiales y perforantes: GSV, SSV, AAGSV, PV, IV, etc. CEAP 2020 se identifica para otros ejes. Las siglas inglesas editoriales se rotulan como tales. AAGSV (2023) y ASV (2024) se explican con sus fuentes.
+- `tools/guia-fuentes.json` conserva la síntesis anatómica, la tabla comparativa y 22 referencias verificadas del documento ampliado.
+- `tools/guia_anatomica.py` compone la guía con HTML accesible, buscador progresivo, filtros, navegación y estilos adaptables.
+- Ejecutar `python tools/generar-paginas.py` después de editar el catálogo, la guía o sus fuentes y publicar también los archivos generados.
+- Se conservan las direcciones anteriores de las safenas; el arco plantar conserva su URL aunque el rótulo precisa su profundidad.
