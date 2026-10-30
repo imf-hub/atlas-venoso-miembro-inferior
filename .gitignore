@@ -1,2 +1,12 @@
 __pycache__/
 *.pyc
+node_modules/
+captures/
+release-local/
+revision-*-resultados.json
+revision-uniones.html
+assets/revision-*
+assets/*-inventory.json
+assets/z-anatomy/prueba-encaje.glb
+REVISION-*.txt
+tools/check-inline-*.js

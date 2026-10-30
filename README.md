@@ -4,13 +4,25 @@ Modelo interactivo 3D de la anatomía venosa del miembro inferior del Instituto 
 
 Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama `main`).
 
+## Actualización 2026.10.29-z1 · Z-Anatomy
+
+El modelo utiliza 143 mallas de Z-Anatomy exportadas en cuatro GLB por capa, con 30 fichas seleccionables. Se conservan las 27 fichas originales, las capas, el simulador ecográfico, los ocho módulos de aprendizaje y la evaluación. Los cortes ecográficos se obtienen de las mismas mallas que se ven en 3D. El botón **Cayado** acerca a la unión safenofemoral.
+
+Se integraron los dos ajustes de contacto revisados: arqueada posterior y perforante paratibial con la safena mayor. Las siete estructuras complementarias del IMF se identifican en sus fichas. Estos ajustes recolocan los extremos; las superficies complementarias siguen sin fusionar. El proyecto conserva su condición de fase beta y requiere revisión médica de recorridos y variantes. No se añaden válvulas.
+
+Procedencia y licencias: `assets/z-anatomy/metadata.json` y `assets/z-anatomy/CREDITOS.txt`. Z-Anatomy, CC BY-SA 4.0; BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón; adaptaciones y complementos 3D del IMF bajo CC BY-SA 4.0. Three.js se sirve localmente con su licencia MIT.
+
+Para reproducir los modelos: instalar las dependencias con `npm ci`, descargar los cuatro FBX de la carpeta oficial indicada en los créditos y definir `Z_ANATOMY_SOURCE_DIR` con esa carpeta. Ejecutar `npm run prepare:z`, `python tools/integrate-z.py`, `python tools/generar-paginas.py` y `npm test`. Los identificadores Git de los FBX se comprueban antes de exportar. `tools/atlas-base.txt` conserva la versión de partida del atlas para que la integración sea reproducible.
+
+Los FBX completos, capturas, comparaciones de revisión y archivos temporales locales no forman parte del despliegue.
+
 ## Archivos
 
 | Archivo | Para qué sirve |
 |---|---|
-| `index.html` | Toda la herramienta en un solo archivo (HTML, CSS, JS y datos del modelo). No hay build. |
-| `anatomia-venosa-miembros-inferiores/index.html` | Guía de anatomía y nomenclatura: historia, tabla bilingüe de 79 entradas, siglas del consenso 2023, anatomía regional y 27 fichas. El texto se sirve en HTML; JavaScript mejora la búsqueda y navegación. Es la página pensada para buscadores; enlaza al modelo 3D y al IMF. Se genera con `tools/generar-paginas.py`. |
-| `venas/<vena>/index.html` | Una página estática por vena (27), con su propia URL, para buscadores. Generadas, no editar a mano. |
+| `index.html` | Interfaz, fichas y lógica de la herramienta. Los modelos 3D se cargan por capas desde assets/z-anatomy/. No hay build para servir la web. |
+| `anatomia-venosa-miembros-inferiores/index.html` | Guía de anatomía y nomenclatura: historia, tabla bilingüe de 79 entradas, siglas del consenso 2023, anatomía regional y 30 fichas. El texto se sirve en HTML; JavaScript mejora la búsqueda y navegación. Es la página pensada para buscadores; enlaza al modelo 3D y al IMF. Se genera con `tools/generar-paginas.py`. |
+| `venas/<vena>/index.html` | Una página estática por vena (30), con su propia URL, para buscadores. Generadas, no editar a mano. |
 | `tools/generar-paginas.py` | Genera la guía, las páginas de vena y `sitemap.xml` a partir de los datos de `index.html` (requiere Python 3 y Node). |
 | `CNAME` | Dominio personalizado de GitHub Pages. No borrar. |
 | `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png` | Favicon: emblema rojo del IMF sobre fondo transparente. |
@@ -34,7 +46,7 @@ Cada vez que cambies una ficha o una referencia en `index.html`:
 python tools/generar-paginas.py
 ```
 
-Actualiza la guía, las 27 páginas de vena, `sitemap.xml` y la lista de venas del `<noscript>` de la portada. Después haz commit y push de los archivos generados.
+Actualiza la guía, las 30 páginas de vena, `sitemap.xml` y la lista de venas del `<noscript>` de la portada. Después haz commit y push de los archivos generados.
 
 ## Enlaces del IMF
 

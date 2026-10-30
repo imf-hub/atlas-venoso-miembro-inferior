@@ -8,6 +8,7 @@ const Pd = new Proxy({}, { get: () => [] }), C = new Proxy({}, { get: () => [] }
 const perfPts = () => [], offsetPts = () => [], arr = () => [], atY = () => ({}), surf = () => [], v3 = () => ({}), mkCurve = () => ({});
 const grab = (marker, close) => { const a = s.indexOf(marker); const b = s.indexOf(close, a) + close.length; return s.slice(a + marker.length, b).replace(/;$/, ''); };
 const V = eval('(' + grab('const V=', '\n];') + ')');
+const extraStart=s.indexOf('// Afluentes presentes en Z-Anatomy:');if(extraStart>=0)eval(s.slice(extraStart,s.indexOf('const byId=',extraStart)));
 const REFS = eval('(' + grab('const REFS=', '\n];') + ')');
 const SYS = eval('(' + grab('const SYS=', '};') + ')');
 process.stdout.write(JSON.stringify({

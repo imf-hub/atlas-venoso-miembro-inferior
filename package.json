@@ -1,0 +1,11 @@
+{
+  "name": "atlas-venoso-imf",
+  "version": "2026.10.29",
+  "private": true,
+  "scripts": {
+    "prepare:z": "node tools/prepare-z.mjs",
+    "verify:z": "node tools/verify-z.mjs",
+    "test": "node tools/verify-z.mjs && node tools/verificar-aprendizaje.cjs"
+  },
+  "devDependencies": { "three": "0.128.0" }
+}

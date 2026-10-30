@@ -1,0 +1,15 @@
+Modelo del miembro inferior derecho para el atlas de flebología del IMF.
+Versión 2026.10.29-z1.
+
+Origen: Z-Anatomy, https://github.com/LluisV/Z-Anatomy/tree/PC-Version/Resources/Models/FBX
+Licencia Z-Anatomy: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0).
+https://creativecommons.org/licenses/by-sa/4.0/
+Base anatómica: BodyParts3D, © The Database Center for Life Science (DBCLS), Japón.
+Licencia original BodyParts3D: CC BY-SA 2.1 Japón.
+https://creativecommons.org/licenses/by-sa/2.1/jp/
+
+Adaptaciones IMF: selección del miembro inferior derecho y pelvis, conversión de FBX a GLB, horneado de transformaciones, traslación rígida [9,0,3] sin escalado, división editorial proximal/distal de vasos femorales, materiales y selección por estructura. Los modelos 3D adaptados y complementos de esta carpeta se distribuyen bajo CC BY-SA 4.0, conservando la atribución de las fuentes anteriores. La licencia MIT de Three.js se incluye en assets/vendor/three-LICENSE.txt.
+
+Complementos IMF: safena anterior, Giacomini, arqueada posterior, obturatriz, perforante del canal femoral, perforante paratibial y perforantes tibiales posteriores. No se atribuyen como mallas originales de Z-Anatomy. La actualización recoloca dos inserciones dentro del vaso receptor; no representa una fusión de superficies ni validación médica de todas las variantes.
+
+Los archivos originales se identifican por tamaño y Git blob SHA en metadata.json. Las venas tibiales y fibulares de la fuente representan grupos, sin duplicación individual de todas las venas acompañantes. Sin válvulas añadidas.

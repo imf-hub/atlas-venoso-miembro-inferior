@@ -172,8 +172,8 @@ footer ul{list-style:none;margin:0;padding:0}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 '''
 
-NOTES = ('Contenido revisado contra la bibliografía citada (octubre de 2026). Huesos y músculos del modelo 3D: BodyParts3D, © DBCLS, '
-         'CC BY-SA 2.1 Japón, adaptados; las venas y su relación con estas estructuras son modelado propio del IMF. '
+NOTES = ('Contenido revisado contra la bibliografía citada (octubre de 2026). Modelo 3D actualizado con Z-Anatomy (CC BY-SA 4.0), '
+         'basado en BodyParts3D, © DBCLS (CC BY-SA 2.1 Japón), con adaptaciones del IMF. Siete estructuras conservan modelado complementario del IMF, identificado en sus fichas. '
          'Nombres españoles con equivalentes ingleses; siglas del mapeo latinoamericano 2023, CEAP 2020 y leyendas editoriales identificadas. Material docente: no sustituye el juicio clínico.')
 
 ORG = {
@@ -241,7 +241,7 @@ def shell(title, desc, path, og_type, graph_nodes, main, og_title=None):
     <p class="foot-project"><b>Proyecto del Instituto Mexicano de Flebología</b><br>Por la excelencia en la flebología.</p>
     <p>© 2026 Instituto Mexicano de Flebología y Linfología, S.C. Todos los derechos reservados, salvo los materiales sujetos a las licencias indicadas.</p>
     <p>El contenido original y el desarrollo de este sitio están protegidos por la legislación aplicable en materia de derechos de autor. Su reproducción o reutilización requiere autorización, salvo las excepciones legales y las licencias expresamente indicadas.</p>
-    <p>Modelo 3D: <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noopener">CC BY-SA 2.1 Japón</a>. BodyParts3D, © DBCLS; adaptaciones del IMF.</p>
+    <p>Modelo 3D: Z-Anatomy · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>; BodyParts3D, © DBCLS · <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noopener">CC BY-SA 2.1 Japón</a>. Adaptaciones y estructuras complementarias del IMF.</p>
     <p class="foot-credit"><small>Web realizada por <a href="https://lisis.mx/" target="_blank" rel="noopener">Consultoría LISIS (lisis.mx)</a> · Agencia de inteligencia artificial aplicada.</small></p>
   </div>
 </div></footer>
