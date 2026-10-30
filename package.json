@@ -3,9 +3,12 @@
   "version": "2026.10.29",
   "private": true,
   "scripts": {
-    "prepare:z": "node tools/prepare-z.mjs",
+    "prepare:z": "node tools/prepare-z.mjs && node tools/fusionar-uniones.mjs --apply",
     "verify:z": "node tools/verify-z.mjs",
-    "test": "node tools/verify-z.mjs && node tools/verificar-aprendizaje.cjs"
+    "test": "node tools/verify-z.mjs && node tools/verificar-uniones.mjs && node tools/verificar-aprendizaje.cjs"
   },
-  "devDependencies": { "three": "0.128.0" }
+  "devDependencies": {
+    "manifold-3d": "3.5.4",
+    "three": "0.128.0"
+  }
 }

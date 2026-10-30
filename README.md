@@ -4,11 +4,15 @@ Modelo interactivo 3D de la anatomía venosa del miembro inferior del Instituto 
 
 Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama `main`).
 
-## Actualización 2026.10.29-z1 · Z-Anatomy
+## Actualización 2026.10.29-uniones2 · Uniones continuas
 
-El modelo utiliza 143 mallas de Z-Anatomy exportadas en cuatro GLB por capa, con 30 fichas seleccionables. Se conservan las 27 fichas originales, las capas, el simulador ecográfico, los ocho módulos de aprendizaje y la evaluación. Los cortes ecográficos se obtienen de las mismas mallas que se ven en 3D. El botón **Cayado** acerca a la unión safenofemoral.
+El modelo utiliza 143 mallas basadas en Z-Anatomy y complementos del IMF exportadas en cuatro GLB por capa, con 30 fichas seleccionables. Se conservan las 27 fichas originales, las capas, el simulador ecográfico, los ocho módulos de aprendizaje y la evaluación. Los cortes ecográficos se obtienen de las mismas mallas que se ven en 3D. El botón **Cayado** acerca a la unión safenofemoral.
 
-Se integraron los dos ajustes de contacto revisados: arqueada posterior y perforante paratibial con la safena mayor. Las siete estructuras complementarias del IMF se identifican en sus fichas. Estos ajustes recolocan los extremos; las superficies complementarias siguen sin fusionar. El proyecto conserva su condición de fase beta y requiere revisión médica de recorridos y variantes. No se añaden válvulas.
+Las siete estructuras complementarias del IMF conservan sus fichas y ahora tienen 15 inserciones con una pared continua: unión booleana, eliminación de paredes internas y suavizado local sin alterar el resto del trayecto. Las normales se comparten entre etiquetas anatómicas para evitar costuras de iluminación. La ecografía enlaza los contornos de los vasos fusionados antes de dibujar el lumen. Las superficies receptoras adaptadas se identifican en sus fichas.
+
+La safena anterior se inserta en un tramo cerrado de la safena mayor y evita un cruce no deseado con la vena femoral. La obturatriz entra lateralmente en un tramo cerrado de la ilíaca interna. Son ajustes del esquema complementario, no una validación clínica ni geometría nativa de Z-Anatomy. Los extremos libres del recorte original se conservan. No se añaden válvulas. El proyecto mantiene su condición de fase beta.
+
+`npm test` comprueba las 30 fichas, los nueve cortes ecográficos de referencia, las 15 conexiones mediante bordes y normales compartidos, contornos ecográficos cerrados en cada unión y los módulos de aprendizaje. `assets/z-anatomy/fusion-report.json` registra las inserciones y la auditoría geométrica. Manifold es una dependencia de preparación, no se carga en el navegador.
 
 Procedencia y licencias: `assets/z-anatomy/metadata.json` y `assets/z-anatomy/CREDITOS.txt`. Z-Anatomy, CC BY-SA 4.0; BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón; adaptaciones y complementos 3D del IMF bajo CC BY-SA 4.0. Three.js se sirve localmente con su licencia MIT.
 

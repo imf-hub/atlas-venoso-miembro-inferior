@@ -1581,7 +1581,7 @@
     ]
   },
   "manifest": {
-    "release": "2026.10.29-z1",
+    "release": "2026.10.29-uniones2",
     "releaseDate": "2026-10-29",
     "publicationApproved": true,
     "sourceCommitAtlas": "a26b7a9a4c7a4e3af169593092150cca3d95fbe5",
@@ -1648,10 +1648,10 @@
         "name": "Internal_iliac_veinr",
         "id": "vii",
         "kind": "vein",
-        "source": "Z-Anatomy",
+        "source": "Z-Anatomy · uniones adaptadas IMF",
         "sourceName": "Internal_iliac_veinr",
-        "vertices": 130,
-        "triangles": 236,
+        "vertices": 1115,
+        "triangles": 2113,
         "bounds": {
           "min": [
             5.998521327972412,
@@ -1663,7 +1663,8 @@
             98.4165267944336,
             4.796926975250244
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
@@ -1868,10 +1869,10 @@
         "name": "Great_saphenous_veinr",
         "id": "vsm",
         "kind": "vein",
-        "source": "Z-Anatomy",
+        "source": "Z-Anatomy · uniones adaptadas IMF",
         "sourceName": "Great_saphenous_veinr",
-        "vertices": 1735,
-        "triangles": 3423,
+        "vertices": 17426,
+        "triangles": 34563,
         "bounds": {
           "min": [
             1.809175968170166,
@@ -1883,17 +1884,18 @@
             85.51643371582031,
             8.752914428710938
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
         "name": "Small_saphenous_veinr",
         "id": "vsp",
         "kind": "vein",
-        "source": "Z-Anatomy",
+        "source": "Z-Anatomy · uniones adaptadas IMF",
         "sourceName": "Small_saphenous_veinr",
-        "vertices": 1192,
-        "triangles": 2360,
+        "vertices": 8438,
+        "triangles": 16797,
         "bounds": {
           "min": [
             -1.8246450424194336,
@@ -1905,7 +1907,8 @@
             49.049861907958984,
             0.12737488746643066
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
@@ -1956,22 +1959,23 @@
         "name": "Posterior_tibial_veinsr",
         "id": "vpt",
         "kind": "vein",
-        "source": "Z-Anatomy",
+        "source": "Z-Anatomy · uniones adaptadas IMF",
         "sourceName": "Posterior_tibial_veinsr",
-        "vertices": 1015,
-        "triangles": 2006,
+        "vertices": 6617,
+        "triangles": 13046,
         "bounds": {
           "min": [
             -1.1672687530517578,
             3.3992464542388916,
-            -3.294048309326172
+            -3.29406476020813
           ],
           "max": [
             4.137962341308594,
             37.55129623413086,
             -0.0702979564666748
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
@@ -2265,11 +2269,11 @@
         "name": "Femoral_distal_segment",
         "id": "vf",
         "kind": "vein",
-        "source": "Z-Anatomy",
+        "source": "Z-Anatomy · uniones adaptadas IMF",
         "sourceName": "Femoral_veinr",
         "segmentPlaneY": 84.25,
-        "vertices": 675,
-        "triangles": 1310,
+        "vertices": 6076,
+        "triangles": 12058,
         "bounds": {
           "min": [
             1.493433952331543,
@@ -2281,7 +2285,8 @@
             84.25,
             8.130376815795898
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
@@ -4570,161 +4575,185 @@
         "name": "vsaa",
         "id": "vsaa",
         "kind": "vein",
-        "source": "IMF · esquema complementario adaptado",
+        "source": "IMF · unión continua adaptada",
         "sourceName": "vsaa",
         "supplemental": true,
-        "vertices": 2720,
-        "triangles": 5088,
+        "vertices": 7042,
+        "triangles": 13996,
         "bounds": {
           "min": [
-            1.135494589805603,
-            63.658443450927734,
-            7.634199619293213
+            1.1361191272735596,
+            63.65851974487305,
+            7.918204307556152
           ],
           "max": [
-            5.084407806396484,
-            85.457275390625,
-            8.999750137329102
+            4.991580009460449,
+            85.10160827636719,
+            9.186044692993164
           ]
-        }
+        },
+        "routeAdjustment": {
+          "axis": "anterior",
+          "heightRange": [
+            82.8,
+            85.2
+          ],
+          "maxCm": 0.85,
+          "reason": "Evitar cruce geométrico con el vaso femoral; sin comunicación adicional."
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
         "name": "giac",
         "id": "giac",
         "kind": "vein",
-        "source": "IMF · esquema complementario adaptado",
+        "source": "IMF · unión continua adaptada",
         "sourceName": "giac",
         "supplemental": true,
-        "vertices": 3808,
-        "triangles": 7136,
+        "vertices": 6555,
+        "triangles": 13027,
         "bounds": {
           "min": [
-            1.0873327255249023,
-            48.64441680908203,
+            1.0897136926651,
+            48.78370666503906,
             -5.075739860534668
           ],
           "max": [
             6.75611686706543,
-            72.74944305419922,
-            6.712157726287842
+            72.68110656738281,
+            6.485208511352539
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
         "name": "varq",
         "id": "varq",
         "kind": "vein",
-        "source": "IMF · esquema complementario adaptado",
+        "source": "IMF · unión continua adaptada",
         "sourceName": "varq",
         "supplemental": true,
-        "vertices": 4012,
-        "triangles": 7520,
+        "vertices": 7274,
+        "triangles": 14266,
         "bounds": {
           "min": [
-            2.557966470718384,
+            2.5580639839172363,
             9.042407989501953,
             -6.00985050201416
           ],
           "max": [
             4.468857765197754,
-            38.04360580444336,
-            0.29333484172821045
+            38.038002014160156,
+            0.16020739078521729
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
         "name": "obt",
         "id": "obt",
         "kind": "vein",
-        "source": "IMF · esquema complementario adaptado",
+        "source": "IMF · unión continua adaptada",
         "sourceName": "obt",
         "supplemental": true,
-        "vertices": 1224,
-        "triangles": 2272,
+        "vertices": 3516,
+        "triangles": 6943,
         "bounds": {
           "min": [
-            3.293384313583374,
-            85.57769775390625,
-            1.6406192779541016
+            3.292975664138794,
+            85.57777404785156,
+            1.8783842325210571
           ],
           "max": [
-            6.579380035400391,
-            94.56268310546875,
-            4.305936336517334
+            6.270334243774414,
+            94.93350219726562,
+            4.306251049041748
           ]
-        }
+        },
+        "routeAdjustment": {
+          "reason": "Inserción lateral en un tramo cerrado de la ilíaca interna",
+          "point": [
+            6.4025710077,
+            95,
+            2.0388928703
+          ]
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
         "name": "pdodd",
         "id": "pdodd",
         "kind": "vein",
-        "source": "IMF · esquema complementario adaptado",
+        "source": "IMF · unión continua adaptada",
         "sourceName": "pdodd",
         "supplemental": true,
-        "vertices": 833,
-        "triangles": 1536,
+        "vertices": 587,
+        "triangles": 1093,
         "bounds": {
           "min": [
-            3.232095718383789,
-            63.83179473876953,
-            5.08320426940918
+            3.6884379386901855,
+            63.89307403564453,
+            5.241211891174316
           ],
           "max": [
-            5.232443332672119,
-            64.31367492675781,
+            5.0634894371032715,
+            64.30033874511719,
             5.562201023101807
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
         "name": "pboyd",
         "id": "pboyd",
         "kind": "vein",
-        "source": "IMF · esquema complementario adaptado",
+        "source": "IMF · unión continua adaptada",
         "sourceName": "pboyd",
         "supplemental": true,
-        "vertices": 833,
-        "triangles": 1536,
+        "vertices": 777,
+        "triangles": 1464,
         "bounds": {
           "min": [
-            0.12218692898750305,
-            35.631195068359375,
-            -1.1399550437927246
+            0.3759371340274811,
+            35.642913818359375,
+            -1.0962457656860352
           ],
           "max": [
-            3.842349052429199,
-            36.114620208740234,
-            0.5525586009025574
+            3.7617015838623047,
+            36.13241958618164,
+            0.4943229556083679
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
         "name": "pcock",
         "id": "pcock",
         "kind": "vein",
-        "source": "IMF · esquema complementario adaptado",
+        "source": "IMF · unión continua adaptada",
         "sourceName": "pcock",
         "supplemental": true,
-        "vertices": 833,
-        "triangles": 1536,
+        "vertices": 611,
+        "triangles": 1078,
         "bounds": {
           "min": [
-            2.960397958755493,
-            11.546684265136719,
-            -3.690340995788574
+            3.0958333015441895,
+            11.616273880004883,
+            -3.632481575012207
           ],
           "max": [
-            3.4402520656585693,
-            12.003786087036133,
-            -3.0600621700286865
+            3.4163172245025635,
+            11.9810791015625,
+            -3.0844016075134277
           ]
-        }
+        },
+        "surfaceFusion": true
       },
       {
         "layer": "vascular",
@@ -4784,26 +4813,571 @@
     ],
     "junctionUpdates": [
       {
-        "id": "varq",
+        "id": "vsaa",
+        "object": "vsaa",
         "parent": "vsm",
         "point": [
-          4.262113640303327,
-          37.97,
-          0.2675198309151306
+          5.0037309328715,
+          85,
+          7.975930174191792
         ],
-        "surfaceFusion": false
+        "label": "Safena anterior con safena mayor",
+        "surfaceFusion": true
+      },
+      {
+        "id": "giac",
+        "object": "giac",
+        "parent": "vsm",
+        "point": [
+          5.384315460920334,
+          72.68000030517578,
+          6.676923185586929
+        ],
+        "label": "Giacomini con safena mayor",
+        "surfaceFusion": true
+      },
+      {
+        "id": "giac",
+        "object": "giac",
+        "parent": "vsp",
+        "point": [
+          1.217102326452732,
+          48.700000047683716,
+          -1.8232422098517418
+        ],
+        "label": "Giacomini con safena menor",
+        "surfaceFusion": true
+      },
+      {
+        "id": "varq",
+        "object": "varq",
+        "parent": "vsm",
+        "point": [
+          4.262113600969315,
+          37.96999979019165,
+          0.26751982886344194
+        ],
+        "label": "Arqueada posterior con safena mayor",
+        "surfaceFusion": true
+      },
+      {
+        "id": "obt",
+        "object": "obt",
+        "parent": "vii",
+        "point": [
+          6.402571002642311,
+          95.00000000000001,
+          2.0388928850491848
+        ],
+        "label": "Obturatriz con ilíaca interna",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pdodd",
+        "object": "pdodd",
+        "parent": "vsm",
+        "point": [
+          5.213809132575989,
+          64.19999980926514,
+          5.392706722021103
+        ],
+        "label": "Perforante del canal femoral superficial",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pdodd",
+        "object": "pdodd",
+        "parent": "vf",
+        "point": [
+          3.2544472217559814,
+          63.89999985694885,
+          5.149212032556534
+        ],
+        "label": "Perforante del canal femoral profunda",
+        "surfaceFusion": true
       },
       {
         "id": "pboyd",
+        "object": "pboyd",
         "parent": "vsm",
         "point": [
-          3.774883482979633,
+          3.77488349378109,
           36,
-          0.459427486026231
+          0.45942748337984085
         ],
-        "surfaceFusion": false
+        "label": "Perforante paratibial superficial",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pboyd",
+        "object": "pboyd",
+        "parent": "vpt",
+        "point": [
+          0.1369961341843009,
+          35.700000524520874,
+          -1.0724900364875793
+        ],
+        "label": "Perforante paratibial profunda",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pcock",
+        "object": "pcock",
+        "parent": "varq",
+        "point": [
+          3.332375168800354,
+          11.894114315509796,
+          -3.6392173916101456
+        ],
+        "label": "Perforante tibial posterior superficial",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pcock",
+        "object": "pcock",
+        "parent": "vpt",
+        "point": [
+          3.0093552470207214,
+          11.600000023841858,
+          -3.1247814893722534
+        ],
+        "label": "Perforante tibial posterior profunda",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pcock",
+        "object": "pcock_1",
+        "parent": "varq",
+        "point": [
+          2.679971680045128,
+          17.306124687194824,
+          -4.948649495840073
+        ],
+        "label": "Perforante tibial posterior superficial",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pcock",
+        "object": "pcock_1",
+        "parent": "vpt",
+        "point": [
+          2.4567588418722153,
+          17,
+          -2.5226967334747314
+        ],
+        "label": "Perforante tibial posterior profunda",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pcock",
+        "object": "pcock_2",
+        "parent": "varq",
+        "point": [
+          3.018551394343376,
+          22.718229293823242,
+          -5.582759857177734
+        ],
+        "label": "Perforante tibial posterior superficial",
+        "surfaceFusion": true
+      },
+      {
+        "id": "pcock",
+        "object": "pcock_2",
+        "parent": "vpt",
+        "point": [
+          2.1886199563741684,
+          22.399999856948853,
+          -1.7323180958628654
+        ],
+        "label": "Perforante tibial posterior profunda",
+        "surfaceFusion": true
       }
     ],
-    "valvesAdded": false
+    "valvesAdded": false,
+    "fusion": {
+      "jointCount": 15,
+      "joints": [
+        {
+          "id": "vsaa",
+          "object": "vsaa",
+          "parent": "vsm",
+          "point": [
+            5.0037309328715,
+            85,
+            7.975930174191792
+          ],
+          "label": "Safena anterior con safena mayor"
+        },
+        {
+          "id": "giac",
+          "object": "giac",
+          "parent": "vsm",
+          "point": [
+            5.384315460920334,
+            72.68000030517578,
+            6.676923185586929
+          ],
+          "label": "Giacomini con safena mayor"
+        },
+        {
+          "id": "giac",
+          "object": "giac",
+          "parent": "vsp",
+          "point": [
+            1.217102326452732,
+            48.700000047683716,
+            -1.8232422098517418
+          ],
+          "label": "Giacomini con safena menor"
+        },
+        {
+          "id": "varq",
+          "object": "varq",
+          "parent": "vsm",
+          "point": [
+            4.262113600969315,
+            37.96999979019165,
+            0.26751982886344194
+          ],
+          "label": "Arqueada posterior con safena mayor"
+        },
+        {
+          "id": "obt",
+          "object": "obt",
+          "parent": "vii",
+          "point": [
+            6.402571002642311,
+            95.00000000000001,
+            2.0388928850491848
+          ],
+          "label": "Obturatriz con ilíaca interna"
+        },
+        {
+          "id": "pdodd",
+          "object": "pdodd",
+          "parent": "vsm",
+          "point": [
+            5.213809132575989,
+            64.19999980926514,
+            5.392706722021103
+          ],
+          "label": "Perforante del canal femoral superficial"
+        },
+        {
+          "id": "pdodd",
+          "object": "pdodd",
+          "parent": "vf",
+          "point": [
+            3.2544472217559814,
+            63.89999985694885,
+            5.149212032556534
+          ],
+          "label": "Perforante del canal femoral profunda"
+        },
+        {
+          "id": "pboyd",
+          "object": "pboyd",
+          "parent": "vsm",
+          "point": [
+            3.77488349378109,
+            36,
+            0.45942748337984085
+          ],
+          "label": "Perforante paratibial superficial"
+        },
+        {
+          "id": "pboyd",
+          "object": "pboyd",
+          "parent": "vpt",
+          "point": [
+            0.1369961341843009,
+            35.700000524520874,
+            -1.0724900364875793
+          ],
+          "label": "Perforante paratibial profunda"
+        },
+        {
+          "id": "pcock",
+          "object": "pcock",
+          "parent": "varq",
+          "point": [
+            3.332375168800354,
+            11.894114315509796,
+            -3.6392173916101456
+          ],
+          "label": "Perforante tibial posterior superficial"
+        },
+        {
+          "id": "pcock",
+          "object": "pcock",
+          "parent": "vpt",
+          "point": [
+            3.0093552470207214,
+            11.600000023841858,
+            -3.1247814893722534
+          ],
+          "label": "Perforante tibial posterior profunda"
+        },
+        {
+          "id": "pcock",
+          "object": "pcock_1",
+          "parent": "varq",
+          "point": [
+            2.679971680045128,
+            17.306124687194824,
+            -4.948649495840073
+          ],
+          "label": "Perforante tibial posterior superficial"
+        },
+        {
+          "id": "pcock",
+          "object": "pcock_1",
+          "parent": "vpt",
+          "point": [
+            2.4567588418722153,
+            17,
+            -2.5226967334747314
+          ],
+          "label": "Perforante tibial posterior profunda"
+        },
+        {
+          "id": "pcock",
+          "object": "pcock_2",
+          "parent": "varq",
+          "point": [
+            3.018551394343376,
+            22.718229293823242,
+            -5.582759857177734
+          ],
+          "label": "Perforante tibial posterior superficial"
+        },
+        {
+          "id": "pcock",
+          "object": "pcock_2",
+          "parent": "vpt",
+          "point": [
+            2.1886199563741684,
+            22.399999856948853,
+            -1.7323180958628654
+          ],
+          "label": "Perforante tibial posterior profunda"
+        }
+      ],
+      "overlaps": [
+        {
+          "a": "Internal_iliac_veinr",
+          "b": "obt",
+          "volume": 0.038466706344912414,
+          "centroid": [
+            6.324507181970825,
+            94.79242784628123,
+            2.0452128766381925
+          ],
+          "distanceToIntended": 0.22185603753553895
+        },
+        {
+          "a": "Great_saphenous_veinr",
+          "b": "vsaa",
+          "volume": 0.024232622216655363,
+          "centroid": [
+            4.960593128851105,
+            84.89404421199598,
+            8.050269717239448
+          ],
+          "distanceToIntended": 0.13643264568200014
+        },
+        {
+          "a": "Great_saphenous_veinr",
+          "b": "giac",
+          "volume": 0.004604923437060983,
+          "centroid": [
+            5.398468635913227,
+            72.61439937754744,
+            6.572069046353333
+          ],
+          "distanceToIntended": 0.12449170487424628
+        },
+        {
+          "a": "Great_saphenous_veinr",
+          "b": "varq",
+          "volume": 0.002680092029966258,
+          "centroid": [
+            4.263354024438872,
+            37.944427743222306,
+            0.20320827011859635
+          ],
+          "distanceToIntended": 0.06922026310826844
+        },
+        {
+          "a": "Great_saphenous_veinr",
+          "b": "pdodd",
+          "volume": 0.008300837795883288,
+          "centroid": [
+            5.111764265067283,
+            64.1839520852102,
+            5.399018247604918
+          ],
+          "distanceToIntended": 0.10349164114752503
+        },
+        {
+          "a": "Great_saphenous_veinr",
+          "b": "pboyd",
+          "volume": 0.00555516996128468,
+          "centroid": [
+            3.7256329951225107,
+            35.99324404372297,
+            0.43185629641969936
+          ],
+          "distanceToIntended": 0.05684562352307306
+        },
+        {
+          "a": "Small_saphenous_veinr",
+          "b": "giac",
+          "volume": 0.008777124233235518,
+          "centroid": [
+            1.2209689969106121,
+            48.78672710147606,
+            -1.8568222894185573
+          ],
+          "distanceToIntended": 0.09308144145662836
+        },
+        {
+          "a": "Posterior_tibial_veinsr",
+          "b": "pboyd",
+          "volume": 0.0041687968535792175,
+          "centroid": [
+            0.29013210444097937,
+            35.70898554955886,
+            -1.0470341989847893
+          ],
+          "distanceToIntended": 0.15549712448902717
+        },
+        {
+          "a": "Posterior_tibial_veinsr",
+          "b": "pcock",
+          "volume": 0.0028236416346169215,
+          "centroid": [
+            3.059637642059434,
+            11.678486004608011,
+            -3.1496718331972198
+          ],
+          "distanceToIntended": 0.09647744629383168
+        },
+        {
+          "a": "Posterior_tibial_veinsr",
+          "b": "pcock_1",
+          "volume": 0.0028168956548929613,
+          "centroid": [
+            2.467068161962577,
+            17.014728826797494,
+            -2.6220835256332116
+          ],
+          "distanceToIntended": 0.10099977660920369
+        },
+        {
+          "a": "Posterior_tibial_veinsr",
+          "b": "pcock_2",
+          "volume": 0.003106565931112808,
+          "centroid": [
+            2.212842944313813,
+            22.40982962829686,
+            -1.8344879923955348
+          ],
+          "distanceToIntended": 0.10546120285192379
+        },
+        {
+          "a": "Femoral_distal_segment",
+          "b": "pdodd",
+          "volume": 0.007642650396623279,
+          "centroid": [
+            3.485498549693526,
+            63.93985739511625,
+            5.233342573255284
+          ],
+          "distanceToIntended": 0.24910095818509456
+        },
+        {
+          "a": "varq",
+          "b": "pcock",
+          "volume": 0.005075630197233724,
+          "centroid": [
+            3.3233707982414966,
+            11.871704708190897,
+            -3.576524525286886
+          ],
+          "distanceToIntended": 0.06718381261267146
+        },
+        {
+          "a": "varq",
+          "b": "pcock_1",
+          "volume": 0.0043778545458871485,
+          "centroid": [
+            2.678683548038178,
+            17.29806522079276,
+            -4.884824115328067
+          ],
+          "distanceToIntended": 0.06434511232607805
+        },
+        {
+          "a": "varq",
+          "b": "pcock_2",
+          "volume": 0.00372476479738634,
+          "centroid": [
+            3.015869720844825,
+            22.713377569496856,
+            -5.532842592685904
+          ],
+          "distanceToIntended": 0.05022413658829175
+        }
+      ],
+      "outputParts": 14,
+      "capTrianglesRemoved": 510,
+      "components": [
+        {
+          "triangles": 38198,
+          "genus": 3
+        },
+        {
+          "triangles": 808,
+          "genus": 0
+        },
+        {
+          "triangles": 3892,
+          "genus": 0
+        }
+      ],
+      "refinedTriangles": 133976,
+      "smoothingRadiusCm": 0.65,
+      "surfaceToleranceCm": 0.002,
+      "bytes": 3618576,
+      "valvesAdded": false,
+      "topology": {
+        "boundaryLoops": 15,
+        "nonManifold": 0,
+        "orientationDefects": 0
+      },
+      "coincidentFacesRemoved": 0,
+      "algorithm": "Union booleana; refinamiento lineal y suavizado Taubin local; etiquetas y normales compartidas",
+      "routeAdjustments": [
+        {
+          "id": "vsaa",
+          "point": [
+            5.003730950174267,
+            85,
+            7.91899091091479
+          ],
+          "anteriorOffsetMaxCm": 0.85
+        },
+        {
+          "id": "obt",
+          "point": [
+            6.4025710077,
+            95,
+            2.0388928703
+          ],
+          "reason": "Inserción lateral en tramo cerrado"
+        }
+      ]
+    }
   }
 }

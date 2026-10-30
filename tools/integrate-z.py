@@ -75,11 +75,8 @@ a=s.index('  Object.values(SLICES).forEach(');b=s.index('  bones.forEach(pts=>',
 s=s[:a]+"  Z.sections('bone',y).forEach(c=>bones.push(c.points.map(p=>map(...p))));\n"+s[b:]
 a=s.index('  VES.forEach(ve=>');b=s.index('  // Ganancia en profundidad',a)
 s=s[:a]+'''
-  VES.forEach(ve=>{
-    if(ve.kind==='vein'&&!S.active.has(byId[ve.id].sys))return;
-    if(ve.kind==='art'&&!LAY.art.visible)return;
-    for(const section of Z.cut(ve,y)){const pts=section.points.map(p=>map(...p));if(!section.closed){ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(...p):ctx.moveTo(...p));ctx.lineWidth=1.2*DPR;ctx.strokeStyle='rgba(200,200,200,.65)';ctx.stroke();continue}const m={x:section.center[0],z:section.center[1]},c=map(m.x,m.z);items.push({ve,m,section,c,pts})}
-  });
+  const visibleVessels=VES.filter(ve=>ve.kind==='vein'?S.active.has(byId[ve.id].sys):LAY.art.visible);
+  for(const section of Z.cutMany(visibleVessels,y)){const ve=section.records.find(r=>r.id===S.sel)||section.records[0],pts=section.points.map(p=>map(...p));if(!section.closed){ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(...p):ctx.moveTo(...p));ctx.lineWidth=1.2*DPR;ctx.strokeStyle='rgba(200,200,200,.65)';ctx.stroke();continue}const m={x:section.center[0],z:section.center[1]},c=map(m.x,m.z);items.push({ve,m,section,c,pts})}
   items.sort((a,b)=>(a.ve.kind==='art')-(b.ve.kind==='art'));
   items.forEach(it=>{
     const ve=it.ve,isV=ve.kind==='vein',thr=isV&&S.thr&&ve.id===S.sel;
@@ -132,5 +129,10 @@ capture+="\n}\n"
 capture=capture.replace('Web completa · Vista previa local · Sin publicar','Nueva versión · Modelo 3D y ecografía actualizados')
 s=s.replace("applyTheme();resize();renderIndex();select('vsm');",capture+"\napplyTheme();resize();renderIndex();select('vsm');")
 s=s.replace('assets/z-runtime.js"','assets/z-runtime.js?v=20261029-z1"')
-(ROOT/'index.html').write_text(s,encoding='utf-8')
+
+# Distinguish adapted receptor geometry from untouched Z-Anatomy meshes.
+s=s.replace("'Geometría original de Z-Anatomy.'", "(v.geometrySource?.includes('uniones adaptadas')?'Geometría Z-Anatomy con uniones adaptadas por el IMF.':'Geometría original de Z-Anatomy.')")
+s=s.replace('assets/z-runtime.js?v=20261029-z1','assets/z-runtime.js?v=20261029-uniones2')
+(ROOT/'index.html').write_text(s, encoding='utf-8')
+
 print('Atlas completo integrado:',len(s.encode('utf-8')),'bytes HTML')

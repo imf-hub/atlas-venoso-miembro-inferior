@@ -13,3 +13,5 @@ Adaptaciones IMF: selección del miembro inferior derecho y pelvis, conversión 
 Complementos IMF: safena anterior, Giacomini, arqueada posterior, obturatriz, perforante del canal femoral, perforante paratibial y perforantes tibiales posteriores. No se atribuyen como mallas originales de Z-Anatomy. La actualización recoloca dos inserciones dentro del vaso receptor; no representa una fusión de superficies ni validación médica de todas las variantes.
 
 Los archivos originales se identifican por tamaño y Git blob SHA en metadata.json. Las venas tibiales y fibulares de la fuente representan grupos, sin duplicación individual de todas las venas acompañantes. Sin válvulas añadidas.
+
+Actualización 2026.10.29-uniones2: el IMF reconstruyó 15 uniones de las siete estructuras complementarias con las superficies receptoras. Unión booleana y suavizado local; ajustes de trayecto en safena anterior y obturatriz. Estas adaptaciones 3D se distribuyen bajo CC BY-SA 4.0. No se añadieron válvulas. Registro: fusion-report.json.

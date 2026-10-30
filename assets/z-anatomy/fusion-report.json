@@ -1,0 +1,364 @@
+{
+  "jointCount": 15,
+  "joints": [
+    {
+      "id": "vsaa",
+      "object": "vsaa",
+      "parent": "vsm",
+      "point": [
+        5.0037309328715,
+        85,
+        7.975930174191792
+      ],
+      "label": "Safena anterior con safena mayor"
+    },
+    {
+      "id": "giac",
+      "object": "giac",
+      "parent": "vsm",
+      "point": [
+        5.384315460920334,
+        72.68000030517578,
+        6.676923185586929
+      ],
+      "label": "Giacomini con safena mayor"
+    },
+    {
+      "id": "giac",
+      "object": "giac",
+      "parent": "vsp",
+      "point": [
+        1.217102326452732,
+        48.700000047683716,
+        -1.8232422098517418
+      ],
+      "label": "Giacomini con safena menor"
+    },
+    {
+      "id": "varq",
+      "object": "varq",
+      "parent": "vsm",
+      "point": [
+        4.262113600969315,
+        37.96999979019165,
+        0.26751982886344194
+      ],
+      "label": "Arqueada posterior con safena mayor"
+    },
+    {
+      "id": "obt",
+      "object": "obt",
+      "parent": "vii",
+      "point": [
+        6.402571002642311,
+        95.00000000000001,
+        2.0388928850491848
+      ],
+      "label": "Obturatriz con ilíaca interna"
+    },
+    {
+      "id": "pdodd",
+      "object": "pdodd",
+      "parent": "vsm",
+      "point": [
+        5.213809132575989,
+        64.19999980926514,
+        5.392706722021103
+      ],
+      "label": "Perforante del canal femoral superficial"
+    },
+    {
+      "id": "pdodd",
+      "object": "pdodd",
+      "parent": "vf",
+      "point": [
+        3.2544472217559814,
+        63.89999985694885,
+        5.149212032556534
+      ],
+      "label": "Perforante del canal femoral profunda"
+    },
+    {
+      "id": "pboyd",
+      "object": "pboyd",
+      "parent": "vsm",
+      "point": [
+        3.77488349378109,
+        36,
+        0.45942748337984085
+      ],
+      "label": "Perforante paratibial superficial"
+    },
+    {
+      "id": "pboyd",
+      "object": "pboyd",
+      "parent": "vpt",
+      "point": [
+        0.1369961341843009,
+        35.700000524520874,
+        -1.0724900364875793
+      ],
+      "label": "Perforante paratibial profunda"
+    },
+    {
+      "id": "pcock",
+      "object": "pcock",
+      "parent": "varq",
+      "point": [
+        3.332375168800354,
+        11.894114315509796,
+        -3.6392173916101456
+      ],
+      "label": "Perforante tibial posterior superficial"
+    },
+    {
+      "id": "pcock",
+      "object": "pcock",
+      "parent": "vpt",
+      "point": [
+        3.0093552470207214,
+        11.600000023841858,
+        -3.1247814893722534
+      ],
+      "label": "Perforante tibial posterior profunda"
+    },
+    {
+      "id": "pcock",
+      "object": "pcock_1",
+      "parent": "varq",
+      "point": [
+        2.679971680045128,
+        17.306124687194824,
+        -4.948649495840073
+      ],
+      "label": "Perforante tibial posterior superficial"
+    },
+    {
+      "id": "pcock",
+      "object": "pcock_1",
+      "parent": "vpt",
+      "point": [
+        2.4567588418722153,
+        17,
+        -2.5226967334747314
+      ],
+      "label": "Perforante tibial posterior profunda"
+    },
+    {
+      "id": "pcock",
+      "object": "pcock_2",
+      "parent": "varq",
+      "point": [
+        3.018551394343376,
+        22.718229293823242,
+        -5.582759857177734
+      ],
+      "label": "Perforante tibial posterior superficial"
+    },
+    {
+      "id": "pcock",
+      "object": "pcock_2",
+      "parent": "vpt",
+      "point": [
+        2.1886199563741684,
+        22.399999856948853,
+        -1.7323180958628654
+      ],
+      "label": "Perforante tibial posterior profunda"
+    }
+  ],
+  "overlaps": [
+    {
+      "a": "Internal_iliac_veinr",
+      "b": "obt",
+      "volume": 0.038466706344912414,
+      "centroid": [
+        6.324507181970825,
+        94.79242784628123,
+        2.0452128766381925
+      ],
+      "distanceToIntended": 0.22185603753553895
+    },
+    {
+      "a": "Great_saphenous_veinr",
+      "b": "vsaa",
+      "volume": 0.024232622216655363,
+      "centroid": [
+        4.960593128851105,
+        84.89404421199598,
+        8.050269717239448
+      ],
+      "distanceToIntended": 0.13643264568200014
+    },
+    {
+      "a": "Great_saphenous_veinr",
+      "b": "giac",
+      "volume": 0.004604923437060983,
+      "centroid": [
+        5.398468635913227,
+        72.61439937754744,
+        6.572069046353333
+      ],
+      "distanceToIntended": 0.12449170487424628
+    },
+    {
+      "a": "Great_saphenous_veinr",
+      "b": "varq",
+      "volume": 0.002680092029966258,
+      "centroid": [
+        4.263354024438872,
+        37.944427743222306,
+        0.20320827011859635
+      ],
+      "distanceToIntended": 0.06922026310826844
+    },
+    {
+      "a": "Great_saphenous_veinr",
+      "b": "pdodd",
+      "volume": 0.008300837795883288,
+      "centroid": [
+        5.111764265067283,
+        64.1839520852102,
+        5.399018247604918
+      ],
+      "distanceToIntended": 0.10349164114752503
+    },
+    {
+      "a": "Great_saphenous_veinr",
+      "b": "pboyd",
+      "volume": 0.00555516996128468,
+      "centroid": [
+        3.7256329951225107,
+        35.99324404372297,
+        0.43185629641969936
+      ],
+      "distanceToIntended": 0.05684562352307306
+    },
+    {
+      "a": "Small_saphenous_veinr",
+      "b": "giac",
+      "volume": 0.008777124233235518,
+      "centroid": [
+        1.2209689969106121,
+        48.78672710147606,
+        -1.8568222894185573
+      ],
+      "distanceToIntended": 0.09308144145662836
+    },
+    {
+      "a": "Posterior_tibial_veinsr",
+      "b": "pboyd",
+      "volume": 0.0041687968535792175,
+      "centroid": [
+        0.29013210444097937,
+        35.70898554955886,
+        -1.0470341989847893
+      ],
+      "distanceToIntended": 0.15549712448902717
+    },
+    {
+      "a": "Posterior_tibial_veinsr",
+      "b": "pcock",
+      "volume": 0.0028236416346169215,
+      "centroid": [
+        3.059637642059434,
+        11.678486004608011,
+        -3.1496718331972198
+      ],
+      "distanceToIntended": 0.09647744629383168
+    },
+    {
+      "a": "Posterior_tibial_veinsr",
+      "b": "pcock_1",
+      "volume": 0.0028168956548929613,
+      "centroid": [
+        2.467068161962577,
+        17.014728826797494,
+        -2.6220835256332116
+      ],
+      "distanceToIntended": 0.10099977660920369
+    },
+    {
+      "a": "Posterior_tibial_veinsr",
+      "b": "pcock_2",
+      "volume": 0.003106565931112808,
+      "centroid": [
+        2.212842944313813,
+        22.40982962829686,
+        -1.8344879923955348
+      ],
+      "distanceToIntended": 0.10546120285192379
+    },
+    {
+      "a": "Femoral_distal_segment",
+      "b": "pdodd",
+      "volume": 0.007642650396623279,
+      "centroid": [
+        3.485498549693526,
+        63.93985739511625,
+        5.233342573255284
+      ],
+      "distanceToIntended": 0.24910095818509456
+    },
+    {
+      "a": "varq",
+      "b": "pcock",
+      "volume": 0.005075630197233724,
+      "centroid": [
+        3.3233707982414966,
+        11.871704708190897,
+        -3.576524525286886
+      ],
+      "distanceToIntended": 0.06718381261267146
+    },
+    {
+      "a": "varq",
+      "b": "pcock_1",
+      "volume": 0.0043778545458871485,
+      "centroid": [
+        2.678683548038178,
+        17.29806522079276,
+        -4.884824115328067
+      ],
+      "distanceToIntended": 0.06434511232607805
+    },
+    {
+      "a": "varq",
+      "b": "pcock_2",
+      "volume": 0.00372476479738634,
+      "centroid": [
+        3.015869720844825,
+        22.713377569496856,
+        -5.532842592685904
+      ],
+      "distanceToIntended": 0.05022413658829175
+    }
+  ],
+  "outputParts": 14,
+  "capTrianglesRemoved": 510,
+  "components": [
+    {
+      "triangles": 38198,
+      "genus": 3
+    },
+    {
+      "triangles": 808,
+      "genus": 0
+    },
+    {
+      "triangles": 3892,
+      "genus": 0
+    }
+  ],
+  "refinedTriangles": 133976,
+  "smoothingRadiusCm": 0.65,
+  "surfaceToleranceCm": 0.002,
+  "bytes": 3618576,
+  "valvesAdded": false,
+  "topology": {
+    "boundaryLoops": 15,
+    "nonManifold": 0,
+    "orientationDefects": 0
+  },
+  "coincidentFacesRemoved": 0
+}
