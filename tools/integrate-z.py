@@ -3,6 +3,7 @@ import re
 ROOT=Path(__file__).resolve().parent.parent
 source=(ROOT/'tools/atlas-base.txt').read_text(encoding='utf-8')
 s=source
+s=re.sub(r'/assets/beta-feedback\.css(?:\?[^"\s]*)?', '/assets/beta-feedback.css?v=20261029-beta-discreta', s)
 s=s.replace('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js','assets/vendor/three.min.js').replace('https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js','assets/vendor/OrbitControls.js')
 s=s.replace('<script src="assets/vendor/OrbitControls.js"></script>','<script src="assets/vendor/OrbitControls.js"></script>\n<script src="assets/vendor/GLTFLoader.js"></script>\n<script src="assets/z-runtime.js"></script>')
 s=s.replace('(function(){\nconst T=THREE, DEG=Math.PI/180;','''(async function(){
