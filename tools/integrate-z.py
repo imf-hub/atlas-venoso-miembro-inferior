@@ -133,6 +133,8 @@ s=s.replace('assets/z-runtime.js"','assets/z-runtime.js?v=20261029-z1"')
 # Distinguish adapted receptor geometry from untouched Z-Anatomy meshes.
 s=s.replace("'Geometría original de Z-Anatomy.'", "(v.geometrySource?.includes('uniones adaptadas')?'Geometría Z-Anatomy con uniones adaptadas por el IMF.':'Geometría original de Z-Anatomy.')")
 s=s.replace('assets/z-runtime.js?v=20261029-z1','assets/z-runtime.js?v=20261029-uniones2')
+from revisar_ecografia import apply_ultrasound_review
+s=apply_ultrasound_review(s)
 (ROOT/'index.html').write_text(s, encoding='utf-8')
 
 print('Atlas completo integrado:',len(s.encode('utf-8')),'bytes HTML')

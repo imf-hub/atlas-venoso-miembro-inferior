@@ -86,3 +86,9 @@ Aparecen en la barra lateral y el pie de página de la herramienta, en la guía,
 - Las 17 equivalencias de la tabla VI se comparten con la guía desde `mapping2023` en `tools/guia-fuentes.json`.
 - `tools/actualizar_aprendizaje.py` sincroniza estos datos en `index.html`; también se ejecuta al generar páginas.
 - La evaluación ofrece rondas mixtas de reconocimiento y nomenclatura, o solo nomenclatura. Filtra por sistemas activos, explica respuestas correctas e incorrectas y enlaza a guía y módulos. El resultado es una práctica sin acreditación.
+
+## Revisión documental de orientación ecográfica · 29 de octubre de 2026
+
+El panel se presenta como corte anatómico esquemático, no como una imagen clínica ni un simulador Doppler. Se retiraron el ruido y los efectos acústicos inventados, el arco fascial que producía un ojo safeno artificial y el supuesto trombo siempre brillante. Color anatómico diferencia tipos de vaso; no representa flujo. La compresión y el ejemplo sin colapso son deformaciones docentes, no pruebas diagnósticas.
+
+Las nueve ventanas y seis textos de ficha se revisaron documentalmente con AIUM (revisión 2024, publicada en 2026), UIP, SRU, ESVS y SVS/AVF/AVLS. Fuentes y cambios: `revision-ecografia.html`. No se afirma validación clínica por especialistas. Los textos revisados se mantienen en `tools/ecografia-revisada.json`; `tools/revisar_ecografia.py` se aplica durante la integración. Regenerar también `python tools/generar_revision_ecografia.py` y las páginas estáticas tras cambios editoriales.

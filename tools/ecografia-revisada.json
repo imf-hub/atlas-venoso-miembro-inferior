@@ -1,0 +1,124 @@
+{
+  "reviewDate": "2026-10-29",
+  "scope": "Revisión documental y del código; no validación clínica del simulador",
+  "sources": [
+    {
+      "id": "aium",
+      "label": "AIUM · revisión 2024 (publicada en 2026)",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jum.70049"
+    },
+    {
+      "id": "svs",
+      "label": "SVS/AVF/AVLS · guía 2023, parte II",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11523430/"
+    },
+    {
+      "id": "uip",
+      "label": "UIP · anatomía ecográfica, 2006",
+      "url": "https://doi.org/10.1016/j.ejvs.2005.07.020"
+    },
+    {
+      "id": "esvs",
+      "label": "ESVS · enfermedad venosa crónica, 2022",
+      "url": "https://esvs.org/wp-content/uploads/2023/03/ESVS-2022-CVD-Guidelines.pdf"
+    },
+    {
+      "id": "sru",
+      "label": "SRU · estudio de TVP, 2018",
+      "url": "https://doi.org/10.1161/CIRCULATIONAHA.117.030687"
+    },
+    {
+      "id": "sbc",
+      "label": "Sociedad Brasileña de Cardiología · ecografía vascular, 2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6636370/"
+    },
+    {
+      "id": "acr",
+      "label": "ACR/RSNA · qué mide el Doppler",
+      "url": "https://www.radiologyinfo.org/en/info/genus"
+    }
+  ],
+  "presets": {
+    "usf": {
+      "s": "Relaciones en la región inguinal",
+      "tip": "En una ecografía real se identifica la confluencia de la safena mayor con la femoral común y la arteria vecina. El signo de Mickey Mouse es una referencia de reconocimiento; esta sección del modelo no demuestra por sí sola la confluencia ni reproduce necesariamente ese signo. El reflujo requiere Doppler espectral y maniobras: >0.5 s en troncos safenos y >1 s en femoral común, femoral y poplítea. Aquí no se mide flujo.",
+      "evidence": [
+        "uip",
+        "svs"
+      ]
+    },
+    "ojo": {
+      "s": "Safena y planos fasciales",
+      "tip": "El ojo safeno corresponde a la vena dentro del compartimento entre fascia safena y fascia muscular. Este modelo no tiene una fascia safena validada ni reproduce ese signo: se ha retirado el arco que se dibujaba artificialmente. La línea fascial mostrada es una envolvente aproximada del modelo.",
+      "evidence": [
+        "uip"
+      ]
+    },
+    "alin": {
+      "s": "Safena anterior: orientación",
+      "tip": "La alineación con los vasos femorales ayuda a reconocer la safena anterior en ecografía real. Aquí su trayecto es complementario del IMF; no se afirma que reproduzca el signo de alineación. Confirmar continuidad y relaciones en la exploración, sin identificar un vaso solo por su posición en una imagen.",
+      "evidence": [
+        "uip",
+        "esvs"
+      ]
+    },
+    "canal": {
+      "s": "Compresión: concepto ilustrado",
+      "tip": "En el examen real, una vena accesible normal debe alcanzar coaptación de sus paredes con presión adecuada. Los controles de aquí solo deforman el dibujo: no simulan la presión ni diagnostican trombosis. El trombo puede ser poco visible; no debe enseñarse como contenido siempre brillante. Un segmento no compresible exige valoración clínica y ecográfica completa.",
+      "evidence": [
+        "aium",
+        "sru",
+        "sbc"
+      ]
+    },
+    "dodd": {
+      "s": "Conexión superficial-profunda",
+      "tip": "La perforante comunica los territorios superficial y profundo atravesando la fascia muscular. El corte transversal puede interceptar varias partes de un trayecto oblicuo; hay que seguirlo en planos consecutivos. El ejemplo es una adaptación del IMF; no mide diámetro clínico ni demuestra reflujo.",
+      "evidence": [
+        "uip",
+        "esvs"
+      ]
+    },
+    "pop": {
+      "s": "Región poplítea: orientación",
+      "tip": "Desde un acceso posterior, la vena poplítea suele ser superficial a la arteria. La terminación de la safena menor y su extensión craneal varían: deben seguirse en la exploración. Este corte muestra una configuración del atlas; no prueba la existencia, altura o competencia de una unión en un paciente.",
+      "evidence": [
+        "uip",
+        "esvs"
+      ]
+    },
+    "giac": {
+      "s": "Conexión intersafena ilustrada",
+      "tip": "Este trayecto complementario representa una conexión intersafena. No toda extensión craneal de la safena menor corresponde a Giacomini. La anatomía visible no determina la dirección ni la competencia del flujo: se estudian con Doppler.",
+      "evidence": [
+        "uip",
+        "esvs"
+      ]
+    },
+    "panto": {
+      "s": "Venas acompañantes: límite del modelo",
+      "tip": "Las tibiales posteriores suelen acompañar a su arteria en pares, con variaciones. La malla de este atlas representa el grupo y no reproduce todos sus canales individuales. Azul y rojo aquí solo identifican vena y arteria: no son señales Doppler. El estudio real combina compresión seriada y evaluación Doppler según el protocolo.",
+      "evidence": [
+        "aium",
+        "uip",
+        "acr"
+      ]
+    },
+    "cock": {
+      "s": "Perforantes: anatomía y función",
+      "tip": "El dibujo de una perforante no demuestra que sea patológica. La guía SVS/AVF/AVLS 2023 define, para pacientes C2, flujo hacia fuera >500 ms y diámetro >3.5 mm. No debe mezclarse este contexto con los criterios para enfermedad ulcerosa. Este atlas no mide duración de flujo ni calibre diagnóstico.",
+      "evidence": [
+        "svs",
+        "esvs"
+      ]
+    }
+  },
+  "fichaUltrasoundUpdates": {
+    "vie": "Comparar los registros espectrales de ambas femorales comunes o ilíacas externas. La asimetría o pérdida de fasicidad respiratoria puede sugerir alteración proximal, pero un patrón fásico no excluye por sí solo una obstrucción ilíaca.",
+    "vfc": "Valorar compresibilidad y comparar la fasicidad respiratoria bilateral. Para reflujo: Valsalva o aumento distal en femoral común y unión safenofemoral; aumento distal en segmentos más distales. Umbral >1 s en femoral común, femoral y poplítea, medido con Doppler espectral.",
+    "vsaa": "En ecografía real, su alineación con los vasos femorales ayuda a reconocer la safena anterior. Confirmar su continuidad y relaciones fasciales; el trayecto complementario del atlas no reproduce un signo ecográfico validado.",
+    "vpt": "Las venas tibiales posteriores suelen ser pares alrededor de su arteria; existen variaciones. Evaluar todos los canales accesibles mediante compresión seriada (cada 2 cm o menos según AIUM). La malla del atlas no reproduce individualmente todas las venas acompañantes.",
+    "pdodd": "Seguir el trayecto que cruza la fascia muscular. Evaluar la dirección y duración del flujo mediante Doppler espectral con maniobras de provocación; la mera conexión anatómica no demuestra insuficiencia.",
+    "pcock": "Distinguir el criterio y el contexto: SVS/AVF/AVLS 2023, en C2, define perforante patológica por flujo hacia fuera >500 ms y diámetro >3.5 mm. Los criterios para enfermedad ulcerosa y las definiciones históricas no son intercambiables. No se determinan con la imagen del atlas."
+  }
+}

@@ -6,7 +6,8 @@ const meta=JSON.parse(fs.readFileSync(new URL('assets/z-anatomy/metadata.json',r
 const load=async f=>{const b=fs.readFileSync(new URL('assets/z-anatomy/'+f+'.glb',root));assert.equal(b.readUInt32LE(8),b.length);return await new Promise((ok,bad)=>new GLTFLoader().parse(b.buffer.slice(b.byteOffset,b.byteOffset+b.length),'',ok,bad))};
 const records=[];for(const layer of ['vascular','bones','surface','muscles']){const m=await load(layer);m.scene.traverse(o=>{if(!o.isMesh)return;for(const v of o.geometry.attributes.position.array)assert(Number.isFinite(v));records.push(window.ZAtlas.prepare({...o.userData,mesh:o,layer}))})}
 const data=JSON.parse(execFileSync('node',['tools/extraer-datos.js','index.html'],{cwd:new URL('.',root),encoding:'utf8'}));const old=JSON.parse(execFileSync('node',['tools/extraer-datos.js','tools/atlas-base.txt'],{cwd:new URL('.',root),encoding:'utf8'}));
-for(const original of old.V){const now=data.V.find(v=>v.id===original.id);assert(now,'Ficha perdida: '+original.id);for(const field of ['n','en','ta','ab','curso','drena','us','clin'])assert.equal(now[field],original[field],original.id+' '+field)}
+const ecoReview=JSON.parse(fs.readFileSync(new URL('tools/ecografia-revisada.json',root))).fichaUltrasoundUpdates;
+for(const original of old.V){const now=data.V.find(v=>v.id===original.id);assert(now,'Ficha perdida: '+original.id);for(const field of ['n','en','ta','ab','curso','drena','us','clin'])assert.equal(now[field],field==='us'&&ecoReview[original.id]?ecoReview[original.id]:original[field],original.id+' '+field)}
 for(const v of data.V){assert(records.some(r=>r.id===v.id));assert(meta.anchors[v.id]?.every(Number.isFinite))}
 assert.equal(meta.manifest.valvesAdded,false);assert.equal(meta.manifest.junctionUpdates.length,15);
 const Z={body:(kind,y)=>window.ZAtlas.hull(records.filter(r=>r.kind===kind).flatMap(r=>window.ZAtlas.cut(r,y).flatMap(c=>c.points)))};
