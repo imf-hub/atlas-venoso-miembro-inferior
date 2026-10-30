@@ -19,6 +19,11 @@
     window.addEventListener('resize', measure);
   }
   minimize.hidden = false;
+  // En teléfonos, empezar con el botón compacto para dejar libre el visor.
+  if (window.matchMedia('(max-width:600px)').matches) {
+    panel.hidden = true;
+    restore.hidden = false;
+  }
   minimize.addEventListener('click', () => {
     panel.hidden = true;
     restore.hidden = false;
