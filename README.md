@@ -1,12 +1,12 @@
 ﻿# Anatomía venosa del miembro inferior
 
-Modelo interactivo 3D de la anatomía venosa del miembro inferior del Instituto Mexicano de Flebología (IMF): modelo 3D, ficha por estructura, simulador de ecografía en modo B, evaluación y ruta de aprendizaje.
+Modelo interactivo 3D de la anatomía venosa del miembro inferior del Instituto Mexicano de Flebología (IMF): modelo 3D, ficha por estructura, orientación ecográfica esquemática, evaluación y ruta de aprendizaje.
 
 Sitio en producción: https://anatomia.flebologiamexico.com (GitHub Pages, rama `main`).
 
 ## Actualización 2026.10.29-uniones2 · Uniones continuas
 
-El modelo utiliza 143 mallas basadas en Z-Anatomy y complementos del IMF exportadas en cuatro GLB por capa, con 30 fichas seleccionables. Se conservan las 27 fichas originales, las capas, el simulador ecográfico, los ocho módulos de aprendizaje y la evaluación. Los cortes ecográficos se obtienen de las mismas mallas que se ven en 3D. El botón **Cayado** acerca a la unión safenofemoral.
+El modelo utiliza 143 mallas basadas en Z-Anatomy y complementos del IMF exportadas en cuatro GLB por capa, con 30 fichas seleccionables. Se conservan las 27 fichas originales, las capas, la orientación ecográfica, las veinte lecciones de aprendizaje y la evaluación. Los cortes ecográficos se obtienen de las mismas mallas que se ven en 3D. El botón **Cayado** acerca a la unión safenofemoral.
 
 Las siete estructuras complementarias del IMF conservan sus fichas y ahora tienen 15 inserciones con una pared continua: unión booleana, eliminación de paredes internas y suavizado local sin alterar el resto del trayecto. Las normales se comparten entre etiquetas anatómicas para evitar costuras de iluminación. La ecografía enlaza los contornos de los vasos fusionados antes de dibujar el lumen. Las superficies receptoras adaptadas se identifican en sus fichas.
 
@@ -66,7 +66,7 @@ Aparecen en la barra lateral y el pie de página de la herramienta, en la guía,
 
 ## Notas
 
-- «Aprender» es una ruta de lectura de 8 módulos (datos en `ROUTE` dentro de `index.html`). No hay chat con IA ni se guarda el avance de nadie.
+- «Aprender» tiene 20 lecciones en cinco niveles. Lecturas y mejores resultados se guardan localmente en el navegador, sin registro ni datos de pacientes.
 - Huesos y músculos: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón. Mantener la atribución.
 
 
@@ -82,13 +82,17 @@ Aparecen en la barra lateral y el pie de página de la herramienta, en la guía,
 
 ## Aprender y evaluación
 
-- `tools/aprendizaje.json` mantiene los ocho módulos y el banco de preguntas de nomenclatura con explicación, referencias, sistemas relacionados y módulo de repaso.
+- `tools/aprendizaje.json` mantiene las 20 lecciones y las 63 preguntas de conceptos, casos y nomenclatura con explicación, referencias, sistemas relacionados y módulo de repaso.
 - Las 17 equivalencias de la tabla VI se comparten con la guía desde `mapping2023` en `tools/guia-fuentes.json`.
 - `tools/actualizar_aprendizaje.py` sincroniza estos datos en `index.html`; también se ejecuta al generar páginas.
-- La evaluación ofrece rondas mixtas de reconocimiento y nomenclatura, o solo nomenclatura. Filtra por sistemas activos, explica respuestas correctas e incorrectas y enlaza a guía y módulos. El resultado es una práctica sin acreditación.
+- La evaluación ofrece cinco dificultades: Principiante, Básico, Medio, Avanzado y Leyenda. Por nivel ignora los sistemas visibles; Con 3D agrega reconocimiento general no graduado; Siglas aplica filtros de sistema. Hay práctica por lección y repetición de errores. La dificultad es editorial, no validada psicométricamente; no acredita competencias.
 
 ## Revisión documental de orientación ecográfica · 29 de octubre de 2026
 
 El panel se presenta como corte anatómico esquemático, no como una imagen clínica ni un simulador Doppler. Se retiraron el ruido y los efectos acústicos inventados, el arco fascial que producía un ojo safeno artificial y el supuesto trombo siempre brillante. Color anatómico diferencia tipos de vaso; no representa flujo. La compresión y el ejemplo sin colapso son deformaciones docentes, no pruebas diagnósticas.
 
-Las nueve ventanas y seis textos de ficha se revisaron documentalmente con AIUM (revisión 2024, publicada en 2026), UIP, SRU, ESVS y SVS/AVF/AVLS. Fuentes y cambios: `revision-ecografia.html`. No se afirma validación clínica por especialistas. Los textos revisados se mantienen en `tools/ecografia-revisada.json`; `tools/revisar_ecografia.py` se aplica durante la integración. Regenerar también `python tools/generar_revision_ecografia.py` y las páginas estáticas tras cambios editoriales.
+Las nueve ventanas y seis textos de ficha se revisaron documentalmente con AIUM (revisión 2024, online 2025, volumen 2026), UIP, SRU, ESVS y SVS/AVF/AVLS. Fuentes y cambios: `revision-ecografia.html`. No se afirma validación clínica por especialistas. Los textos revisados se mantienen en `tools/ecografia-revisada.json`; `tools/revisar_ecografia.py` se aplica durante la integración. Regenerar también `python tools/generar_revision_ecografia.py` y las páginas estáticas tras cambios editoriales.
+
+## Ruta progresiva · 29 de octubre de 2026
+
+`assets/aprendizaje-ui.js` mantiene la interfaz docente y se integra en el HTML mediante `tools/actualizar_aprendizaje.py`; `assets/aprendizaje.css` mantiene sus estilos. Editar estas fuentes, no solo el bloque generado. Ejecutar `python tools/actualizar_aprendizaje.py`, `python tools/generar_revision_aprendizaje.py` y `npm test`. El informe público `revision-aprendizaje.html` identifica hallazgos, fuentes, limitaciones de acceso y validación médica pendiente. Se incluye SCAI 2025. No se afirma revisión sistemática ni acreditación del IMF.

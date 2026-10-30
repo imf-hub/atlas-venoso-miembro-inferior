@@ -1,6 +1,169 @@
 {
   "modules": [
     {
+      "id": "f1",
+      "level": "principiante",
+      "t": "Antes de las siglas: orientarse en una pierna",
+      "obj": "Ubicar profundidad, lado y dirección antes de interpretar una imagen.",
+      "prob": "En tu primera consulta ves una pierna hinchada y un dibujo azul. Antes de nombrar venas necesitas saber qué estás mirando.",
+      "concepts": [
+        [
+          "Orientación primero",
+          "Proximal significa hacia el tronco; distal, hacia el pie. Medial mira hacia la línea media; lateral se aleja de ella. Anterior y posterior no cambian cuando giras el modelo. Practica girándolo y localiza la rodilla, la tibia y la ingle."
+        ],
+        [
+          "Profundidad relativa",
+          "La fascia muscular es la referencia para distinguir sistema superficial y profundo. Una safena puede estar en un compartimento fascial y seguir perteneciendo al sistema superficial. Superficial no significa necesariamente visible a simple vista."
+        ],
+        [
+          "Cómo usar este atlas",
+          "El azul es una convención gráfica. La geometría muestra una representación anatómica, no el flujo ni la presencia de trombosis de una persona. Cambiar una capa modifica la vista, no la fisiología. Primero observa el trayecto completo y después acerca una unión."
+        ]
+      ],
+      "q": "¿Una vena azul y próxima al fémur es necesariamente superficial?",
+      "a": "No. El color no clasifica la profundidad; debes identificar su relación con la fascia muscular y su trayecto.",
+      "perla": "Empieza por orientación y planos; después aprende los nombres.",
+      "error": "Confundir el lado derecho de la pantalla con el lado anatómico del paciente.",
+      "sourceRefs": [],
+      "refs": [
+        1,
+        2
+      ],
+      "terms": [
+        "vf",
+        "vsm"
+      ],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [
+        {
+          "v": "vf",
+          "l": "Explorar estructura en 3D"
+        },
+        {
+          "v": "vsm",
+          "l": "Explorar estructura en 3D"
+        }
+      ],
+      "minutes": 8
+    },
+    {
+      "id": "f2",
+      "level": "principiante",
+      "t": "Cómo regresa la sangre: función y fallos",
+      "obj": "Separar anatomía, retorno venoso, reflujo y obstrucción.",
+      "prob": "Una persona pregunta si todas las venas dilatadas están tapadas. Necesitas explicar dos mecanismos diferentes con palabras sencillas.",
+      "concepts": [
+        [
+          "Una red de retorno",
+          "Las venas conducen la sangre de regreso al corazón. El movimiento de la musculatura de la pantorrilla participa en ese retorno; la función valvular limita el retroceso. El atlas no añade válvulas ni representa su funcionamiento."
+        ],
+        [
+          "Dos mecanismos distintos",
+          "Reflujo describe flujo retrógrado anormal documentado en un segmento. Obstrucción describe dificultad para el drenaje. Pueden coexistir; una vena grande por sí sola no demuestra ninguno."
+        ],
+        [
+          "Del dibujo al paciente",
+          "Sigue la safena mayor desde la pierna hasta la ingle y reconoce su conexión con la femoral común. Esta continuidad te ayuda a orientarte, pero la dirección y duración del flujo se estudian con un examen real."
+        ]
+      ],
+      "q": "¿Dilatación significa obstrucción?",
+      "a": "No. El tamaño no basta para definir el mecanismo. Se integran síntomas, exploración y estudio vascular.",
+      "perla": "Pregunta qué estructura es y qué función se ha medido.",
+      "error": "Llamar trombosis a cualquier várice.",
+      "sourceRefs": [
+        "scai"
+      ],
+      "refs": [],
+      "terms": [
+        "vsm",
+        "vfc"
+      ],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [
+        {
+          "v": "vsm",
+          "l": "Explorar estructura en 3D"
+        },
+        {
+          "v": "vfc",
+          "l": "Explorar estructura en 3D"
+        }
+      ],
+      "minutes": 8
+    },
+    {
+      "id": "f3",
+      "level": "principiante",
+      "t": "Primera consulta: no todo edema es venoso",
+      "obj": "Ordenar la historia y reconocer cuándo ampliar el diagnóstico diferencial.",
+      "prob": "Un paciente consulta por pesadez vespertina y otro por edema unilateral aparecido hoy. No deben seguir automáticamente la misma ruta.",
+      "concepts": [
+        [
+          "Historia dirigida",
+          "Registra inicio, lateralidad, evolución, dolor, limitación funcional y cambios cutáneos. Pregunta por trombosis previa, procedimientos y factores de riesgo relevantes. No conviertas un síntoma inespecífico en un diagnóstico."
+        ],
+        [
+          "Exploración contextual",
+          "Compara ambas piernas, observa piel y distribución del edema, examina pulsos y busca signos de otras causas. Considera enfermedad arterial, linfática, cardíaca, renal, medicamentos y causas musculoesqueléticas según la historia."
+        ],
+        [
+          "Separar lo crónico de lo urgente",
+          "La hinchazón unilateral reciente requiere valorar trombosis dentro de una estrategia diagnóstica. Disnea o dolor torácico de aparición aguda requieren evaluación urgente; el atlas no permite excluir embolia pulmonar."
+        ]
+      ],
+      "q": "¿Pesadez más várices confirma que todo el dolor es venoso?",
+      "a": "No. La asociación orienta, pero debes evaluar otras causas y correlacionar los hallazgos.",
+      "perla": "Primero formula el problema clínico; después pide la prueba que lo responde.",
+      "error": "Usar la apariencia del modelo para tranquilizar a un paciente con síntomas agudos.",
+      "sourceRefs": [
+        "ash",
+        "nice"
+      ],
+      "refs": [],
+      "terms": [],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [],
+      "minutes": 8
+    },
+    {
+      "id": "f4",
+      "level": "principiante",
+      "t": "Cuándo derivar y cómo comunicarlo",
+      "obj": "Identificar problemas que requieren valoración vascular o atención urgente.",
+      "prob": "Una persona con várices sangrantes solicita una cita rutinaria y otra tiene una úlcera ya cerrada.",
+      "concepts": [
+        [
+          "Prioridad de atención",
+          "El sangrado por várices requiere atención inmediata y derivación vascular. Los síntomas cardiopulmonares agudos o una sospecha de trombosis siguen rutas urgentes específicas. No esperes a terminar una clasificación para activar la atención necesaria."
+        ],
+        [
+          "Derivación programada pertinente",
+          "Las várices sintomáticas, cambios cutáneos atribuibles a enfermedad venosa y una úlcera venosa activa o cicatrizada justifican valoración especializada. Las vías locales determinan logística y tiempos; aquí se enseñan criterios clínicos internacionales."
+        ],
+        [
+          "Una referencia útil",
+          "Incluye lado, tiempo de evolución, síntomas, antecedentes, hallazgos cutáneos y vasculares y estudios disponibles. Evita enviar únicamente “insuficiencia venosa” sin explicar qué observaste y qué necesitas resolver."
+        ]
+      ],
+      "q": "¿Una úlcera cicatrizada elimina la necesidad de valoración vascular?",
+      "a": "No. El cierre no elimina la enfermedad subyacente ni el riesgo de recurrencia.",
+      "perla": "Explica la prioridad y la pregunta clínica de la derivación.",
+      "error": "Tratar un sangrado por várices como un asunto exclusivamente estético.",
+      "sourceRefs": [
+        "nice",
+        "ash"
+      ],
+      "refs": [],
+      "terms": [],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [],
+      "minutes": 8
+    },
+    {
       "id": "m1",
       "t": "Sistemas venosos: nombres y siglas",
       "refs": [
@@ -43,7 +206,9 @@
         "vsm",
         "vsp"
       ],
-      "codes": []
+      "codes": [],
+      "level": "basico",
+      "minutes": 8
     },
     {
       "id": "m2",
@@ -84,7 +249,9 @@
       ],
       "codes": [
         "SFJ"
-      ]
+      ],
+      "level": "basico",
+      "minutes": 8
     },
     {
       "id": "m3",
@@ -98,7 +265,7 @@
       "act": [
         {
           "p": "ojo",
-          "l": "GSV en su compartimento"
+          "l": "Trayecto de GSV · esquema sin fascia safena"
         },
         {
           "p": "alin",
@@ -119,6 +286,10 @@
         [
           "Dos fechas, una correspondencia",
           "Anterior accessory saphenous vein aparece como AAGSV en el mapa de 2023 y como AASV en otras publicaciones. La recomendación específica de 2024 es ASV."
+        ],
+        [
+          "Límite del modelo",
+          "La fascia safena y el ojo safeno clínico no se reproducen en el atlas. Este panel sirve para orientación; no para validar ese signo ecográfico."
         ]
       ],
       "guide": "consenso-2023",
@@ -126,7 +297,9 @@
         "vsaa",
         "vsm"
       ],
-      "codes": []
+      "codes": [],
+      "level": "basico",
+      "minutes": 8
     },
     {
       "id": "m4",
@@ -171,7 +344,9 @@
         "SPJ",
         "CE SSV",
         "IV"
-      ]
+      ],
+      "level": "basico",
+      "minutes": 8
     },
     {
       "id": "m5",
@@ -218,7 +393,9 @@
         "vfib",
         "vpop"
       ],
-      "codes": []
+      "codes": [],
+      "level": "medio",
+      "minutes": 8
     },
     {
       "id": "m6",
@@ -269,7 +446,89 @@
       "codes": [
         "PV",
         "PAGSV"
-      ]
+      ],
+      "level": "medio",
+      "minutes": 8
+    },
+    {
+      "id": "c1",
+      "level": "medio",
+      "t": "CEAP: describir sin inventar el mecanismo",
+      "obj": "Usar la clasificación clínica sin atribuir etiología o reflujo no estudiados.",
+      "prob": "El informe dice C3 y el paciente pregunta si eso significa que tiene una vena tapada.",
+      "concepts": [
+        [
+          "Qué describe CEAP",
+          "CEAP organiza clínica, etiología, anatomía y fisiopatología. La C describe hallazgos clínicos; no determina por sí sola si existe reflujo, obstrucción o una causa postrombótica. Documenta por extremidad y fecha."
+        ],
+        [
+          "Escala clínica",
+          "C0: sin signos visibles o palpables; C1: telangiectasias o reticulares; C2: várices; C3: edema; C4: cambios cutáneos; C5: úlcera venosa cicatrizada; C6: úlcera venosa activa. La atribución venosa exige contexto."
+        ],
+        [
+          "Detalles que cambian el informe",
+          "C4a incluye pigmentación o eczema; C4b, lipodermatoesclerosis o atrofia blanca; C4c, corona flebectásica. El modificador r identifica recurrencia en C2r y C6r. CEAP describe; una medición de severidad o de evolución requiere instrumentos apropiados adicionales."
+        ]
+      ],
+      "q": "¿C3 demuestra obstrucción?",
+      "a": "No. Describe edema dentro de la clasificación clínica, pero no identifica su mecanismo.",
+      "perla": "No completes E, A o P con suposiciones.",
+      "error": "Confundir C5 con úlcera activa o presentar CEAP como puntuación de mejoría.",
+      "sourceRefs": [
+        "ceap"
+      ],
+      "refs": [],
+      "terms": [],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [],
+      "minutes": 8
+    },
+    {
+      "id": "c2",
+      "level": "medio",
+      "t": "Qué puede decir un dúplex y qué no",
+      "obj": "Diferenciar compresión, color y Doppler espectral de un esquema 3D.",
+      "prob": "Ves una vena azul en el atlas y una vena roja en una pantalla de ultrasonido. ¿Existe una contradicción?",
+      "concepts": [
+        [
+          "Tres herramientas",
+          "La imagen en escala de grises muestra estructura; la compresión evalúa el colapso del segmento accesible; el Doppler aporta información de flujo. Una captura aislada no reemplaza un examen completo."
+        ],
+        [
+          "Color no significa tipo de vaso",
+          "La interpretación del color depende del mapa configurado, la dirección respecto al transductor y los ajustes. Rojo no equivale siempre a arteria ni azul a vena. El color anatómico del atlas no es Doppler."
+        ],
+        [
+          "Documentación",
+          "Identifica lado y segmento, posición, maniobra, calidad del examen y hallazgos. No uses el aspecto de un supuesto trombo para fecharlo con certeza. Si faltan segmentos o hay limitaciones, el informe debe decirlo."
+        ]
+      ],
+      "q": "¿Una vena que colapsa en el esquema descarta TVP?",
+      "a": "No. La compresión ilustrativa no examina a un paciente ni descarta trombosis venosa profunda.",
+      "perla": "Una imagen docente puede orientar; una conclusión clínica exige datos clínicos.",
+      "error": "Diagnosticar reflujo por color azul o trombosis por brillo.",
+      "sourceRefs": [
+        "aium"
+      ],
+      "refs": [],
+      "terms": [
+        "vfc",
+        "vf"
+      ],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [
+        {
+          "v": "vfc",
+          "l": "Explorar estructura en 3D"
+        },
+        {
+          "v": "vf",
+          "l": "Explorar estructura en 3D"
+        }
+      ],
+      "minutes": 8
     },
     {
       "id": "m7",
@@ -318,7 +577,9 @@
       "codes": [
         "EPV",
         "GPV"
-      ]
+      ],
+      "level": "avanzado",
+      "minutes": 8
     },
     {
       "id": "m8",
@@ -355,6 +616,10 @@
         [
           "El mapa acompaña al informe",
           "Una leyenda explica siglas y símbolos. El nombre identifica el vaso; el informe funcional añade permeabilidad, flujo y otros hallazgos. El color del atlas no demuestra competencia valvular."
+        ],
+        [
+          "Qué evidencia falta",
+          "Un nombre correcto no acredita una prueba diagnóstica ni una decisión terapéutica. Documenta datos, incertidumbre y fuente antes de concluir."
         ]
       ],
       "guide": "historia",
@@ -377,7 +642,253 @@
         "IV",
         "LMV",
         "CiV"
-      ]
+      ],
+      "level": "avanzado",
+      "minutes": 8
+    },
+    {
+      "id": "c3",
+      "level": "avanzado",
+      "t": "Sospecha de TVP: probabilidad y pruebas",
+      "obj": "Evitar conclusiones basadas solo en un dímero D o una imagen limitada.",
+      "prob": "Una persona con edema unilateral tiene dímero D positivo. Otra tiene alta sospecha clínica y un estudio proximal inicial negativo.",
+      "concepts": [
+        [
+          "Probabilidad antes de la prueba",
+          "Integra una regla validada y juicio clínico en la población apropiada. La utilidad de un resultado depende de la probabilidad preprueba y del protocolo usado. No extrapoles un algoritmo a todas las poblaciones."
+        ],
+        [
+          "Qué no confirma el dímero D",
+          "Un resultado positivo no demuestra trombosis. Un resultado negativo puede ayudar a excluirla dentro de una estrategia validada de baja probabilidad y con una prueba adecuada. La ecografía compresiva ocupa un papel central cuando está indicada."
+        ],
+        [
+          "Un negativo no siempre cierra el caso",
+          "Distingue estudio proximal de estudio de toda la pierna y comprueba su calidad. La persistencia de sospecha puede exigir evaluación seriada o complementaria según el protocolo. Embarazo, recurrencia y otros contextos requieren rutas específicas."
+        ]
+      ],
+      "q": "¿Dímero D positivo equivale a TVP confirmada?",
+      "a": "No. Debes continuar la estrategia diagnóstica apropiada; no diagnosticar ni indicar un tratamiento solo por ese resultado.",
+      "perla": "Escribe qué probabilidad y qué protocolo sustentan la conclusión.",
+      "error": "Interpretar un estudio limitado como evaluación negativa de todo el sistema.",
+      "sourceRefs": [
+        "ash",
+        "aium"
+      ],
+      "refs": [],
+      "terms": [],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [],
+      "minutes": 8
+    },
+    {
+      "id": "c4",
+      "level": "avanzado",
+      "t": "Úlcera y compresión: seguridad antes de intensidad",
+      "obj": "Reconocer la necesidad de evaluación arterial y valoración integral.",
+      "prob": "Una úlcera en la región maleolar parece venosa, pero el paciente tiene pulsos débiles y dolor al caminar.",
+      "concepts": [
+        [
+          "La localización no basta",
+          "Una úlcera puede tener causas venosas, arteriales, mixtas u otras. Valora piel, pulsos, dolor, evolución y antecedentes; el aspecto o la localización no sustituyen la evaluación etiológica."
+        ],
+        [
+          "Antes de comprimir",
+          "La elección de compresión requiere comprobar la perfusión arterial, incluyendo pruebas apropiadas como índice tobillo-brazo y, cuando corresponda, presión de dedo. El índice puede ser poco fiable con calcificación arterial."
+        ],
+        [
+          "Un plan compartido",
+          "Tipo de compresión, intensidad, tolerancia, movilidad y cuidados de la herida requieren un plan clínico. Si existe enfermedad arterial, neuropatía importante o hallazgos discordantes, evita aplicar una receta universal y solicita valoración especializada."
+        ]
+      ],
+      "q": "¿Una úlcera aparentemente venosa autoriza compresión fuerte sin evaluar arterias?",
+      "a": "No. Puede existir enfermedad mixta; primero se comprueba perfusión y se individualiza el manejo.",
+      "perla": "Identifica el mecanismo y las limitaciones antes de elegir intensidad.",
+      "error": "Usar la etiqueta “venosa” para omitir evaluación arterial.",
+      "sourceRefs": [
+        "esvs",
+        "nice"
+      ],
+      "refs": [],
+      "terms": [],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [],
+      "minutes": 8
+    },
+    {
+      "id": "r1",
+      "level": "leyenda",
+      "t": "Caso integrado: el número no decide la ablación",
+      "obj": "Interpretar reflujo junto con síntomas, segmento y calidad del estudio.",
+      "prob": "Un informe describe flujo retrógrado de 0.7 s en safena mayor y 0.7 s en vena femoral, con maniobras documentadas. Propone ablación porque la safena mide 6 mm.",
+      "concepts": [
+        [
+          "Comprueba el segmento",
+          "Los umbrales no son idénticos para todo el sistema: >0.5 s en troncos superficiales; >1 s en femoral común, femoral y poplítea. Los valores se interpretan con técnica y contexto, no como un diagnóstico automático obtenido del dibujo."
+        ],
+        [
+          "Localiza el patrón",
+          "Diferencia reflujo segmentario, de unión y axial. Después correlaciona síntomas y mapa antes de discutir intervención. El calibre aislado no decide una ablación."
+        ],
+        [
+          "Pregunta que falta",
+          "¿La conclusión se sostiene en mediciones reproducibles, síntomas y anatomía completa? Si el informe no identifica maniobra o posición, solicita aclaración antes de basar una decisión en él."
+        ]
+      ],
+      "q": "¿Los dos segmentos cumplen el mismo criterio de reflujo?",
+      "a": "No. El umbral de la femoral es diferente al de la safena. Además, el diámetro no constituye por sí solo indicación de ablación.",
+      "perla": "Un umbral clasifica una medición; no reemplaza una decisión clínica.",
+      "error": "Aplicar 0.5 s a todas las venas y tratar por diámetro.",
+      "sourceRefs": [
+        "svs"
+      ],
+      "refs": [],
+      "terms": [],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [],
+      "minutes": 8
+    },
+    {
+      "id": "r2",
+      "level": "leyenda",
+      "t": "Caso integrado: perforante visible no es indicación",
+      "obj": "Distinguir definición ecográfica de una decisión terapéutica.",
+      "prob": "Paciente C2 con várices sintomáticas, reflujo troncular y una perforante de 4 mm con flujo saliente de 0.7 s. Se propone tratar todo lo visible.",
+      "concepts": [
+        [
+          "Define primero",
+          "En C2, la definición utilizada por SVS combina flujo saliente >0.5 s y diámetro >3.5 mm. Una perforante es una conexión anatómica normal; la presencia o el diámetro por separado no bastan."
+        ],
+        [
+          "Decide después",
+          "Cumplir una definición no obliga a tratar esa estructura. En C2 con reflujo axial safeno, no se recomienda tratar rutinariamente perforantes al mismo tiempo que la ablación troncular inicial."
+        ],
+        [
+          "No extrapoles",
+          "Una úlcera, recurrencia o anatomía distinta cambia la pregunta clínica. En esos contextos revisa la recomendación específica y la evidencia aplicable. El epónimo no sustituye localización y función."
+        ],
+        [
+          "Leer la fuerza de la evidencia",
+          "SCAI 2025 sugiere ablación más manejo conservador para reflujo perforante asociado a úlcera, con recomendación condicional y baja certeza. Sin úlcera, no formula recomendación por falta de evidencia. No es una contradicción con el escenario C2 inicial: cambian población y pregunta."
+        ]
+      ],
+      "q": "¿Debe tratarse automáticamente esta perforante durante el procedimiento inicial?",
+      "a": "No. Primero debe justificarse la estrategia; la definición ecográfica no es una indicación automática.",
+      "perla": "Separa hallazgo, clasificación e indicación.",
+      "error": "Convertir “patológica” en sinónimo de “hay que tratar hoy”.",
+      "sourceRefs": [
+        "svs",
+        "scai"
+      ],
+      "refs": [],
+      "terms": [
+        "pcock"
+      ],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [
+        {
+          "v": "pcock",
+          "l": "Explorar estructura en 3D"
+        }
+      ],
+      "minutes": 8
+    },
+    {
+      "id": "r3",
+      "level": "leyenda",
+      "t": "Caso integrado: discordancia y drenaje proximal",
+      "obj": "Reconocer cuándo un hallazgo indirecto necesita comprobación.",
+      "prob": "Persisten edema unilateral y limitación al caminar. El informe registra asimetría de ondas femorales, pero no visualiza bien las venas ilíacas.",
+      "concepts": [
+        [
+          "Observación frente a conclusión",
+          "Una alteración de las ondas puede motivar estudio del drenaje proximal. No demuestra por sí sola la localización, causa o severidad de una obstrucción. Una onda conservada tampoco garantiza que todo el territorio proximal sea normal."
+        ],
+        [
+          "Completa el razonamiento",
+          "Revisa técnica, comparación bilateral, síntomas, antecedentes y extensión del estudio. Formula la pregunta para valoración vascular: ¿hay una causa proximal que el estudio inicial no resolvió?"
+        ],
+        [
+          "Evita una falsa precisión",
+          "No diagnostiques un síndrome compresivo solo porque el modelo muestre vasos que se cruzan. Tampoco elijas una intervención por ese dibujo. La selección de pruebas y manejo corresponde al equipo clínico según el caso."
+        ],
+        [
+          "Decisión especializada",
+          "SCAI 2025 plantea stent más manejo conservador para obstrucción iliocava crónica sintomática seleccionada mediante una recomendación condicional de baja certeza. Un signo indirecto aislado no define esa selección."
+        ]
+      ],
+      "q": "¿La asimetría confirma una obstrucción ilíaca específica?",
+      "a": "No. Es un dato que debe integrarse y, si procede, investigarse con una evaluación adecuada.",
+      "perla": "Un signo indirecto abre una hipótesis; no la confirma por sí solo.",
+      "error": "Confundir una variante o cruce anatómico con enfermedad sintomática.",
+      "sourceRefs": [
+        "aium",
+        "scai"
+      ],
+      "refs": [],
+      "terms": [
+        "vie"
+      ],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [
+        {
+          "v": "vie",
+          "l": "Explorar estructura en 3D"
+        }
+      ],
+      "minutes": 8
+    },
+    {
+      "id": "r4",
+      "level": "leyenda",
+      "t": "Caso integrado: auditar un informe antes de aceptarlo",
+      "obj": "Detectar errores de lenguaje, alcance y evidencia en un mismo caso.",
+      "prob": "Un reporte dice: “TVP de femoral superficial descartada por vena azul; ASV es una tributaria; CEAP C5 con úlcera abierta”.",
+      "concepts": [
+        [
+          "Corrige el nombre",
+          "La femoral pertenece al sistema profundo. Evita “femoral superficial”. ASV designa safena anterior, reconocida como tronco; una convención anterior puede usar AAGSV si se declara la fuente."
+        ],
+        [
+          "Corrige la inferencia",
+          "El color no descarta trombosis. Pide información del examen realizado y sus limitaciones. Una imagen o una etiqueta no reemplazan los criterios diagnósticos."
+        ],
+        [
+          "Corrige la clasificación",
+          "Si la úlcera es venosa y está activa, corresponde C6; C5 describe cicatrización. Primero verifica etiología. Reescribe el informe separando lo observado de lo inferido y de lo pendiente."
+        ]
+      ],
+      "q": "¿Qué debes corregir primero?",
+      "a": "Identifica todos los errores: nombre profundo, conclusión diagnóstica por color, naturaleza troncular de ASV y C5/C6. No basta cambiar una sigla.",
+      "perla": "La calidad clínica incluye precisión del lenguaje y límites explícitos.",
+      "error": "Aceptar un informe porque contiene terminología especializada.",
+      "sourceRefs": [
+        "ceap",
+        "asv",
+        "aium"
+      ],
+      "refs": [],
+      "terms": [
+        "vf",
+        "vsaa"
+      ],
+      "codes": [],
+      "guide": "anatomia-regional",
+      "act": [
+        {
+          "v": "vf",
+          "l": "Explorar estructura en 3D"
+        },
+        {
+          "v": "vsaa",
+          "l": "Explorar estructura en 3D"
+        }
+      ],
+      "minutes": 8
     }
   ],
   "questions": [
@@ -399,7 +910,9 @@
       "module": "m1",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "ssv",
@@ -420,7 +933,9 @@
       "module": "m4",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "aagsv",
@@ -441,7 +956,9 @@
       "module": "m3",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "asv",
@@ -462,7 +979,9 @@
       "module": "m3",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "sfj",
@@ -484,7 +1003,9 @@
       "sys": [
         "sup",
         "deep"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "spj",
@@ -506,7 +1027,9 @@
       "sys": [
         "sup",
         "deep"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "pv",
@@ -528,7 +1051,9 @@
       "sys": [
         "perf",
         "deep"
-      ]
+      ],
+      "level": "medio",
+      "kind": "names"
     },
     {
       "id": "ppv",
@@ -550,7 +1075,9 @@
       "sys": [
         "perf",
         "deep"
-      ]
+      ],
+      "level": "medio",
+      "kind": "names"
     },
     {
       "id": "gpv",
@@ -572,7 +1099,9 @@
       "sys": [
         "perf",
         "pel"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "epv",
@@ -594,7 +1123,9 @@
       "sys": [
         "pel",
         "sup"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "sci",
@@ -615,7 +1146,9 @@
       "module": "m8",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "sepi",
@@ -635,7 +1168,9 @@
       "module": "m8",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "cessv",
@@ -656,7 +1191,9 @@
       "module": "m4",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "assv",
@@ -676,7 +1213,9 @@
       "module": "m8",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "iv",
@@ -697,7 +1236,9 @@
       "module": "m4",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "lmv",
@@ -717,7 +1258,9 @@
       "module": "m8",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "civ-sciatic",
@@ -739,7 +1282,9 @@
       "sys": [
         "pel",
         "deep"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "pagsv",
@@ -760,7 +1305,9 @@
       "module": "m6",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "medio",
+      "kind": "names"
     },
     {
       "id": "femoral",
@@ -783,7 +1330,9 @@
       "module": "m1",
       "sys": [
         "deep"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "ptv",
@@ -806,7 +1355,9 @@
       "sys": [
         "deep",
         "perf"
-      ]
+      ],
+      "level": "medio",
+      "kind": "names"
     },
     {
       "id": "prv",
@@ -826,7 +1377,9 @@
       "module": "m5",
       "sys": [
         "deep"
-      ]
+      ],
+      "level": "medio",
+      "kind": "names"
     },
     {
       "id": "boyd",
@@ -847,7 +1400,9 @@
       "module": "m6",
       "sys": [
         "perf"
-      ]
+      ],
+      "level": "medio",
+      "kind": "names"
     },
     {
       "id": "perforante",
@@ -867,7 +1422,9 @@
       ],
       "guide": "anatomia",
       "module": "m1",
-      "sys": []
+      "sys": [],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "hipogastrica",
@@ -888,7 +1445,9 @@
       "module": "m7",
       "sys": [
         "pel"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "ipvf",
@@ -909,7 +1468,9 @@
       "module": "m7",
       "sys": [
         "pel"
-      ]
+      ],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "scope",
@@ -927,7 +1488,9 @@
       ],
       "guide": "historia",
       "module": "m8",
-      "sys": []
+      "sys": [],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "sinonimo",
@@ -947,7 +1510,9 @@
       ],
       "guide": "lectura",
       "module": "m1",
-      "sys": []
+      "sys": [],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "variante",
@@ -966,7 +1531,9 @@
       ],
       "guide": "anatomia-regional",
       "module": "m3",
-      "sys": []
+      "sys": [],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "fascia",
@@ -986,7 +1553,9 @@
       "module": "m3",
       "sys": [
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "cfv",
@@ -1008,7 +1577,9 @@
       "sys": [
         "deep",
         "sup"
-      ]
+      ],
+      "level": "basico",
+      "kind": "names"
     },
     {
       "id": "function",
@@ -1027,7 +1598,9 @@
       ],
       "guide": "anatomia",
       "module": "m8",
-      "sys": []
+      "sys": [],
+      "level": "avanzado",
+      "kind": "names"
     },
     {
       "id": "popv",
@@ -1049,7 +1622,757 @@
       "sys": [
         "deep",
         "perf"
-      ]
+      ],
+      "level": "medio",
+      "kind": "names"
+    },
+    {
+      "id": "case-1",
+      "module": "f1",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "¿Qué referencia separa sistemas superficial y profundo?",
+      "options": [
+        "Fascia muscular",
+        "Color azul del dibujo",
+        "Tamaño de la vena",
+        "Visibilidad desde la piel"
+      ],
+      "correct": 0,
+      "explain": "La relación con la fascia define el plano; color, tamaño y visibilidad no lo sustituyen.",
+      "refs": [
+        1,
+        2
+      ],
+      "sourceRefs": [],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-2",
+      "module": "f1",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "Al girar el modelo 180°, ¿qué ocurre con el lado medial?",
+      "options": [
+        "Sigue orientado hacia la línea media anatómica",
+        "Pasa a ser lateral",
+        "Se convierte en anterior",
+        "Depende del color"
+      ],
+      "correct": 0,
+      "explain": "La orientación anatómica no cambia cuando cambia la cámara.",
+      "refs": [
+        1,
+        2
+      ],
+      "sourceRefs": [],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-3",
+      "module": "f2",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "¿Qué significa reflujo venoso en un estudio apropiado?",
+      "options": [
+        "Flujo retrógrado anormal documentado",
+        "Cualquier vena azul",
+        "Ausencia total de flujo",
+        "Diámetro mayor de cualquier vaso"
+      ],
+      "correct": 0,
+      "explain": "Reflujo y obstrucción describen mecanismos diferentes; el color del atlas no mide ninguno.",
+      "refs": [],
+      "sourceRefs": [
+        "scai"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-4",
+      "module": "f2",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "¿Qué contribuye al retorno venoso de la pierna?",
+      "options": [
+        "Actividad de la musculatura de la pantorrilla",
+        "El color de las paredes",
+        "Una unión dibujada en rojo",
+        "Solo el calibre de la safena"
+      ],
+      "correct": 0,
+      "explain": "La bomba muscular participa en el retorno; un esquema estático no mide su eficacia.",
+      "refs": [],
+      "sourceRefs": [
+        "scai"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-5",
+      "module": "f3",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "Edema unilateral reciente: ¿cuál es el enfoque más apropiado?",
+      "options": [
+        "Valorar causas agudas, incluida TVP, según probabilidad clínica",
+        "Atribuirlo siempre a várices",
+        "Descartar TVP con el atlas",
+        "Esperar a que cambie el color de la piel"
+      ],
+      "correct": 0,
+      "explain": "El inicio reciente cambia la prioridad; el dibujo no es una prueba diagnóstica.",
+      "refs": [],
+      "sourceRefs": [
+        "ash",
+        "nice"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-6",
+      "module": "f3",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "¿La pesadez con várices demuestra que todo el dolor es venoso?",
+      "options": [
+        "No; exige correlación y diagnóstico diferencial",
+        "Sí, por definición",
+        "Solo si el modelo es azul",
+        "Sí, si el paciente es joven"
+      ],
+      "correct": 0,
+      "explain": "Un síntoma inespecífico no establece por sí solo etiología.",
+      "refs": [],
+      "sourceRefs": [
+        "ash",
+        "nice"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-7",
+      "module": "f4",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "¿Qué situación exige atención inmediata?",
+      "options": [
+        "Sangrado activo por várices",
+        "Sigla desconocida en un mapa",
+        "Vena superficial visible sin síntomas",
+        "Consulta para traducir GSV"
+      ],
+      "correct": 0,
+      "explain": "El sangrado requiere atención inmediata; no se maneja como un trámite estético rutinario.",
+      "refs": [],
+      "sourceRefs": [
+        "nice",
+        "ash"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-8",
+      "module": "f4",
+      "level": "principiante",
+      "kind": "clinical",
+      "prompt": "Una úlcera venosa cicatrizada…",
+      "options": [
+        "Sigue justificando valoración vascular",
+        "Elimina cualquier necesidad de seguimiento",
+        "Equivale a úlcera activa C6",
+        "Demuestra curación de todo reflujo"
+      ],
+      "correct": 0,
+      "explain": "Cicatrización no equivale a desaparición de la causa ni del riesgo de recurrencia.",
+      "refs": [],
+      "sourceRefs": [
+        "nice",
+        "ash"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-9",
+      "module": "m1",
+      "level": "basico",
+      "kind": "clinical",
+      "prompt": "Un reporte menciona trombosis de la femoral. ¿A qué sistema pertenece?",
+      "options": [
+        "Profundo",
+        "Superficial",
+        "Solo cutáneo",
+        "Linfático"
+      ],
+      "correct": 0,
+      "explain": "La femoral es profunda; evitar “femoral superficial” reduce una ambigüedad potencialmente peligrosa.",
+      "refs": [
+        1,
+        2,
+        4,
+        21,
+        22
+      ],
+      "sourceRefs": [],
+      "guide": "lectura",
+      "sys": []
+    },
+    {
+      "id": "case-10",
+      "module": "m2",
+      "level": "basico",
+      "kind": "clinical",
+      "prompt": "¿La unión safenofemoral es una vena independiente?",
+      "options": [
+        "No, es la conexión de GSV con femoral común",
+        "Sí, otra safena",
+        "Sí, una arteria",
+        "No, es un ganglio"
+      ],
+      "correct": 0,
+      "explain": "El nombre de la unión no es intercambiable con el del vaso.",
+      "refs": [
+        3,
+        4,
+        5,
+        21,
+        22
+      ],
+      "sourceRefs": [],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-11",
+      "module": "m3",
+      "level": "basico",
+      "kind": "clinical",
+      "prompt": "¿Puede este atlas demostrar el ojo safeno clínico?",
+      "options": [
+        "No; no reproduce la fascia safena",
+        "Sí, cualquier óvalo es el ojo",
+        "Sí, activando color anatómico",
+        "Sí, al ocultar huesos"
+      ],
+      "correct": 0,
+      "explain": "El signo depende de relaciones fasciales reales, no de un contorno inventado.",
+      "refs": [
+        4,
+        7,
+        21,
+        23
+      ],
+      "sourceRefs": [],
+      "guide": "consenso-2023",
+      "sys": []
+    },
+    {
+      "id": "case-12",
+      "module": "m4",
+      "level": "basico",
+      "kind": "clinical",
+      "prompt": "Una SSV no termina donde esperabas. ¿Qué haces?",
+      "options": [
+        "Seguir su trayecto y describir conexiones",
+        "Declarar enfermedad por la variante",
+        "Asumir siempre SPJ fija",
+        "Renombrarla como arteria"
+      ],
+      "correct": 0,
+      "explain": "La terminación es variable; anatomía diferente no equivale por sí sola a patología.",
+      "refs": [
+        4,
+        7,
+        21
+      ],
+      "sourceRefs": [],
+      "guide": "diferencias",
+      "sys": []
+    },
+    {
+      "id": "case-13",
+      "module": "c1",
+      "level": "medio",
+      "kind": "clinical",
+      "prompt": "Una úlcera venosa cicatrizada corresponde a…",
+      "options": [
+        "C5",
+        "C6",
+        "C0 necesariamente",
+        "C2r siempre"
+      ],
+      "correct": 0,
+      "explain": "C5 describe úlcera cicatrizada; C6, activa. No son intercambiables.",
+      "refs": [],
+      "sourceRefs": [
+        "ceap"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-14",
+      "module": "c1",
+      "level": "medio",
+      "kind": "clinical",
+      "prompt": "¿C3 permite afirmar obstrucción ilíaca?",
+      "options": [
+        "No; la C describe hallazgos clínicos",
+        "Sí, siempre",
+        "Solo en el lado izquierdo",
+        "Sí, sin examen adicional"
+      ],
+      "correct": 0,
+      "explain": "La clasificación clínica no establece el mecanismo ni el territorio de obstrucción.",
+      "refs": [],
+      "sourceRefs": [
+        "ceap"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-15",
+      "module": "c1",
+      "level": "medio",
+      "kind": "clinical",
+      "prompt": "Corona flebectásica en CEAP 2020 corresponde a…",
+      "options": [
+        "C4c",
+        "C6r",
+        "C5",
+        "C2r"
+      ],
+      "correct": 0,
+      "explain": "C4c fue incorporada para corona flebectásica; r identifica recurrencia en categorías específicas.",
+      "refs": [],
+      "sourceRefs": [
+        "ceap"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-16",
+      "module": "c2",
+      "level": "medio",
+      "kind": "clinical",
+      "prompt": "En Doppler color, rojo significa…",
+      "options": [
+        "Debe interpretarse con mapa y dirección respecto al transductor",
+        "Arteria en todos los casos",
+        "Sangre oxigenada siempre",
+        "Trombosis aguda"
+      ],
+      "correct": 0,
+      "explain": "No se interpreta el tipo de vaso solo por el color.",
+      "refs": [],
+      "sourceRefs": [
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-17",
+      "module": "c2",
+      "level": "medio",
+      "kind": "clinical",
+      "prompt": "¿Qué mide la compresión ilustrativa del atlas?",
+      "options": [
+        "Ninguna propiedad de un paciente real",
+        "Velocidad máxima venosa",
+        "Tiempo de reflujo",
+        "Probabilidad clínica de TVP"
+      ],
+      "correct": 0,
+      "explain": "Es una deformación docente; no sustituye examen compresivo clínico.",
+      "refs": [],
+      "sourceRefs": [
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-18",
+      "module": "c3",
+      "level": "avanzado",
+      "kind": "clinical",
+      "prompt": "Dímero D positivo sin imagen confirmatoria: ¿conclusión?",
+      "options": [
+        "No confirma por sí solo TVP",
+        "Confirma toda TVP",
+        "Localiza el trombo en la femoral",
+        "Indica siempre trombólisis"
+      ],
+      "correct": 0,
+      "explain": "El resultado se integra en una estrategia basada en probabilidad; muchas situaciones elevan el dímero D.",
+      "refs": [],
+      "sourceRefs": [
+        "ash",
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-19",
+      "module": "c3",
+      "level": "avanzado",
+      "kind": "clinical",
+      "prompt": "Alta sospecha y ecografía proximal negativa: ¿qué revisar?",
+      "options": [
+        "Alcance, calidad y necesidad de evaluación adicional según protocolo",
+        "Solo el color del informe",
+        "Nada: todo el sistema está descartado",
+        "Solo el diámetro safeno"
+      ],
+      "correct": 0,
+      "explain": "Un estudio proximal no equivale a estudio completo; la sospecha persistente puede exigir otra evaluación.",
+      "refs": [],
+      "sourceRefs": [
+        "ash",
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-20",
+      "module": "c4",
+      "level": "avanzado",
+      "kind": "clinical",
+      "prompt": "Antes de elegir compresión para una úlcera, ¿qué debes comprobar?",
+      "options": [
+        "Perfusión arterial y contexto clínico",
+        "Solo el color de la herida",
+        "Únicamente el diámetro de GSV",
+        "Solo que exista una várice"
+      ],
+      "correct": 0,
+      "explain": "La enfermedad mixta cambia el manejo; no debe indicarse intensidad universal sin evaluación.",
+      "refs": [],
+      "sourceRefs": [
+        "esvs",
+        "nice"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-21",
+      "module": "c4",
+      "level": "avanzado",
+      "kind": "clinical",
+      "prompt": "¿Un índice tobillo-brazo alto siempre excluye enfermedad arterial?",
+      "options": [
+        "No; la calcificación puede limitar su fiabilidad",
+        "Sí, en cualquier persona",
+        "Sí, si hay edema",
+        "Sí, con úlcera maleolar"
+      ],
+      "correct": 0,
+      "explain": "Pueden requerirse otras medidas de perfusión, como presión de dedo, según el contexto.",
+      "refs": [],
+      "sourceRefs": [
+        "esvs",
+        "nice"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-22",
+      "module": "r1",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "0.7 s en GSV y 0.7 s en femoral con técnica adecuada: ¿qué afirmación es correcta?",
+      "options": [
+        "Los umbrales aplicables a esos segmentos son distintos",
+        "Ambos cumplen siempre el umbral de femoral",
+        "Ninguno puede tener reflujo",
+        "El calibre decide el resultado"
+      ],
+      "correct": 0,
+      "explain": "GSV se interpreta con >0.5 s y femoral con >1 s; no traslades un único umbral a todo el sistema.",
+      "refs": [],
+      "sourceRefs": [
+        "svs"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-23",
+      "module": "r1",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "¿Un diámetro safeno de 6 mm obliga a ablación?",
+      "options": [
+        "No; se necesita integrar síntomas, mapa y función",
+        "Sí, por encima de 5 mm siempre",
+        "Sí, si el modelo se ve azul",
+        "Solo si la vena es izquierda"
+      ],
+      "correct": 0,
+      "explain": "El diámetro aislado no establece una indicación terapéutica.",
+      "refs": [],
+      "sourceRefs": [
+        "svs"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-24",
+      "module": "r2",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "En C2, perforante de 4 mm y flujo saliente 0.7 s: ¿qué se puede concluir?",
+      "options": [
+        "Cumple la definición citada, no una obligación automática de tratamiento",
+        "Obliga a intervención inmediata",
+        "Descarta reflujo troncular",
+        "Demuestra úlcera activa"
+      ],
+      "correct": 0,
+      "explain": "Definición ecográfica e indicación son decisiones distintas y dependen del contexto.",
+      "refs": [],
+      "sourceRefs": [
+        "svs"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-25",
+      "module": "r2",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "C2 con reflujo axial safeno: ¿tratar todas las perforantes durante la ablación inicial?",
+      "options": [
+        "No se recomienda hacerlo rutinariamente",
+        "Sí, toda perforante visible",
+        "Solo si el epónimo es Cockett",
+        "Sí, para prevenir cualquier úlcera"
+      ],
+      "correct": 0,
+      "explain": "La guía desaconseja el tratamiento rutinario concomitante de perforantes en ese escenario; no extrapoles a úlcera o recurrencia.",
+      "refs": [],
+      "sourceRefs": [
+        "svs"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-26",
+      "module": "r3",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "Asimetría de ondas femorales con ilíacas mal visualizadas: ¿qué significa?",
+      "options": [
+        "Hallazgo indirecto que requiere correlación y posible ampliación",
+        "Diagnóstico definitivo de una compresión específica",
+        "Normalidad garantizada",
+        "Indicación automática de stent"
+      ],
+      "correct": 0,
+      "explain": "La onda aporta una pista; no define por sí sola causa, localización ni tratamiento.",
+      "refs": [],
+      "sourceRefs": [
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-27",
+      "module": "r3",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "Un cruce vascular en el modelo confirma…",
+      "options": [
+        "Solo una relación anatómica representada",
+        "Un síndrome sintomático en cualquier paciente",
+        "Necesidad de intervención",
+        "Obstrucción hemodinámica significativa"
+      ],
+      "correct": 0,
+      "explain": "No atribuyas enfermedad a una relación anatómica sin datos del paciente.",
+      "refs": [],
+      "sourceRefs": [
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-28",
+      "module": "r4",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "¿Qué combinación contiene dos errores?",
+      "options": [
+        "“Femoral superficial” y “C5 con úlcera venosa activa”",
+        "“Vena femoral (sistema profundo)” y “C6 con úlcera venosa activa”",
+        "“GSV” y “safena mayor”",
+        "“C5” y “úlcera venosa cicatrizada”"
+      ],
+      "correct": 0,
+      "explain": "La vena femoral es profunda y una úlcera venosa activa se clasifica C6; una sigla correcta no corrige un razonamiento erróneo.",
+      "refs": [],
+      "sourceRefs": [
+        "ceap",
+        "asv",
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-29",
+      "module": "r4",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "Un informe descarta TVP porque la vena se ve azul. ¿Lo aceptas?",
+      "options": [
+        "No; falta evidencia de un examen diagnóstico apropiado",
+        "Sí, azul significa permeable",
+        "Sí, si el texto dice Doppler",
+        "Sí, si hay una captura estática"
+      ],
+      "correct": 0,
+      "explain": "El color aislado no descarta TVP. Deben revisarse técnica, segmentos y hallazgos.",
+      "refs": [],
+      "sourceRefs": [
+        "ceap",
+        "asv",
+        "aium"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-30",
+      "module": "r2",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "SCAI 2025 no formula una recomendación sobre perforantes sintomáticas sin úlcera. ¿Cómo lo interpretas?",
+      "options": [
+        "Existe un vacío de evidencia; no equivale a recomendar ni prohibir universalmente el procedimiento",
+        "Es prueba definitiva de ineficacia en todos los pacientes",
+        "Obliga a ablación preventiva",
+        "Autoriza extrapolar sin límites los ensayos de úlcera"
+      ],
+      "correct": 0,
+      "explain": "La ausencia de recomendación señala incertidumbre. No convierte resultados de una población en conclusiones válidas para otra.",
+      "refs": [],
+      "sourceRefs": [
+        "scai"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
+    },
+    {
+      "id": "case-31",
+      "module": "r3",
+      "level": "leyenda",
+      "kind": "clinical",
+      "prompt": "Una recomendación condicional de baja certeza para intervención iliocava implica…",
+      "options": [
+        "Selección clínica y anatómica, preferencias del paciente y discusión de incertidumbre",
+        "Intervenir toda estenosis encontrada incidentalmente",
+        "Equivalencia con una obligación universal",
+        "Beneficio garantizado en cada paciente"
+      ],
+      "correct": 0,
+      "explain": "La recomendación contempla balance individual de beneficios, daños y preferencias; no garantiza respuesta ni justifica tratar hallazgos aislados.",
+      "refs": [],
+      "sourceRefs": [
+        "scai"
+      ],
+      "guide": "anatomia-regional",
+      "sys": []
     }
-  ]
+  ],
+  "levels": [
+    {
+      "id": "principiante",
+      "label": "Principiante",
+      "description": "Empieza aquí: orientación, retorno venoso y primera consulta."
+    },
+    {
+      "id": "basico",
+      "label": "Básico",
+      "description": "Reconoce las safenas, sus uniones y las variantes."
+    },
+    {
+      "id": "medio",
+      "label": "Medio",
+      "description": "Integra ejes profundos, perforantes, CEAP y dúplex."
+    },
+    {
+      "id": "avanzado",
+      "label": "Avanzado",
+      "description": "Interpreta mapas, sospecha trombosis y deriva con criterio."
+    },
+    {
+      "id": "leyenda",
+      "label": "Leyenda",
+      "description": "Resuelve casos con datos incompletos y decisiones que requieren contexto."
+    }
+  ],
+  "reviewed": "2026-10-29",
+  "sources": {
+    "svs": {
+      "title": "SVS/AVF/AVLS · Guía de várices, parte II (2023; edición 2024)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11523430/",
+      "section": "§1.3–1.5: reflujo y estudio dúplex; §5: decisiones; §10: perforantes."
+    },
+    "aium": {
+      "title": "AIUM · Ecografía venosa periférica, revisión 2024 (online 2025; volumen 2026)",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/jum.70049",
+      "section": "Specifications of the Examination: compresión, Doppler y documentación."
+    },
+    "ceap": {
+      "title": "Lurie et al. · Actualización CEAP 2020",
+      "url": "https://doi.org/10.1016/j.jvsv.2019.12.075",
+      "section": "Tablas de clasificación clínica y alcance descriptivo; PDF primario consultado."
+    },
+    "nice": {
+      "title": "NICE CG168 / QS67 · Derivación por enfermedad venosa",
+      "url": "https://www.nice.org.uk/guidance/qs67/chapter/quality-statement-1-referral-to-a-vascular-service",
+      "section": "Criterios de derivación; CG168 §1.2. No es una norma administrativa mexicana."
+    },
+    "ash": {
+      "title": "ASH y sociedades latinoamericanas · Diagnóstico de TEV (2023)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10320207/",
+      "section": "Probabilidad preprueba, dímero D y ultrasonido compresivo. Texto indexado; acceso directo restringido durante la revisión."
+    },
+    "esvs": {
+      "title": "ESVS · Enfermedad venosa crónica (2022)",
+      "url": "https://doi.org/10.1016/j.ejvs.2021.12.024",
+      "section": "§3.2 y §6.3: evaluación arterial antes de compresión. Extractos indexados; el enlace al PDF oficial redirige a acceso de miembros."
+    },
+    "asv": {
+      "title": "AVLS/AVF/UIP · Safena anterior, posicionamiento (2024)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11129512/",
+      "section": "Recomendación de ASV y distinción de tronco frente a tributaria."
+    },
+    "scai": {
+      "title": "SCAI / SVM · Enfermedad venosa crónica (2025)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12462076/",
+      "section": "Recomendaciones 6.1–6.2 y 7.1: perforantes, úlcera y obstrucción; certeza y vacíos de evidencia."
+    }
+  }
 }
