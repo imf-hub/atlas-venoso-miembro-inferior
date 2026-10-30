@@ -69,6 +69,19 @@ Aparecen en la barra lateral y el pie de página de la herramienta, en la guía,
 - «Aprender» tiene 20 lecciones en cinco niveles. Lecturas y mejores resultados se guardan localmente en el navegador, sin registro ni datos de pacientes.
 - Huesos y músculos: BodyParts3D, © DBCLS, CC BY-SA 2.1 Japón. Mantener la atribución.
 
+## Opiniones de los usuarios · 30 de octubre de 2026
+
+`assets/beta-feedback.html`, `.css` y `.js` comparten la tarjeta «¿Te está sirviendo el atlas?» en el modelo, la guía y las fichas. Se abre desde «Valorar el atlas» o después de 60 segundos visibles. El recordatorio se pospone siete días al cerrar y treinta al guardar. Las selecciones se guardan automáticamente, sin WhatsApp, mediante el servicio del proyecto en `servicio-opiniones/`.
+
+Resumen público de likes, media, cantidad y distribución de estrellas: https://opiniones-atlas-venoso-imf.ferver.chatgpt.site/ . El servicio conserva el archivo privado `atlas/valoraciones-v1.json` en el almacenamiento R2 de Sites; no requiere una base de datos ni cuentas para los visitantes. El archivo no se sirve públicamente. Los datos son persistentes entre despliegues, separados del código de GitHub. El código y la configuración se conservan en este proyecto. El resumen JSON está en `/api/summary`.
+
+Un identificador aleatorio por navegador permite actualizar el voto en vez de sumarlo otra vez. Se guarda su hash en el servicio con like, estrellas y revisión. No se solicitan nombres, correos ni comentarios. Borrar datos o cambiar de navegador puede permitir otra valoración: estos números no son personas únicas ni visitas verificadas. Los servicios de alojamiento pueden conservar sus registros técnicos habituales. Si falla la conexión, la interfaz indica que el voto no se guardó y permite reintentar; conserva el voto pendiente localmente para otro intento. El backend comprueba rangos, origen y evita pérdidas entre escrituras concurrentes mediante condiciones ETag; no ofrece protección exhaustiva contra votos automatizados.
+
+El servicio es un Worker de Sites con el binding R2 `BUCKET`, identidad en `servicio-opiniones/.openai/hosting.json`. Pruebas: `node servicio-opiniones/scripts/test.mjs`. Para publicar cambios, usar el flujo de Sites con `scripts/build.mjs` y `scripts/validate-artifact.mjs`. No copiar la carpeta `.git`, `dist` o credenciales a GitHub. El archivo de votos no se reinicia al publicar código.
+
+Después de cambiar la plantilla, sincronizar el bloque de `index.html` y ejecutar `python tools/generar-paginas.py`. `tools/integrate-z.py` también utiliza la plantilla compartida al reconstruir el modelo.
+
+
 
 
 ## Nomenclatura bilingüe y guía ampliada

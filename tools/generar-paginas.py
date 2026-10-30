@@ -221,8 +221,8 @@ def shell(title, desc, path, og_type, graph_nodes, main, og_title=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap">
 <style>{STYLE}</style>
-<link rel="stylesheet" href="/assets/beta-feedback.css?v=20261029-beta-discreta">
-<script src="/assets/beta-feedback.js" defer></script>
+<link rel="stylesheet" href="/assets/beta-feedback.css?v=20261030-votos">
+<script src="/assets/beta-feedback.js?v=20261030-votos" defer></script>
 </head>
 <body>
 {BETA_FEEDBACK}

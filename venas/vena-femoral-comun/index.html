@@ -130,8 +130,8 @@ footer ul{list-style:none;margin:0;padding:0}
 @media(max-width:600px){html{scroll-padding-top:150px}.guide-hero{grid-template-columns:1fr;padding:24px 20px;gap:24px}.guide-hero h1{font-size:34px;max-width:20ch}.guide-hero .lead{font-size:16px}.name-example{padding:21px}.name-example h2{font-size:22px}.name-example .name-badge{font-size:22px;margin:6px 0 10px}.guide-cards{grid-template-columns:1fr}.guide-main{padding-top:20px}.guide-main h2{font-size:27px}.guide-section{padding-bottom:28px}.guide-toc a{font-size:12px}.table-wrap{border-radius:7px}.guide-table{font-size:13px}.guide-table td{padding:13px}.guide-main .vein{padding:17px}.guide-main .top-in{gap:6px}.guide-meta{gap:6px 16px}.reading summary{font-size:15px;padding:17px}.reading .reading-body{padding:0 18px 12px}.guide-main .cta{gap:8px}.guide-main .btn{padding:12px 14px}}
 @media print{.top,.guide-toc,.table-tools,.quick-links,.cta,footer,.skip{display:none!important}.guide-main{max-width:none;padding:0}.guide-layout,.guide-hero{display:block}.guide-hero{padding:18px;border:0}.name-example{margin:20px 0}.guide-table{min-width:0;font-size:10px}.table-wrap{overflow:visible}.reading:not([open])>.reading-body{display:block!important}.reading summary{list-style:none}.guide-main .guide-section{break-inside:auto}a{color:inherit}.guide-main [data-row][hidden]{display:table-row!important}.guide-main .table-empty{display:none}}
 </style>
-<link rel="stylesheet" href="/assets/beta-feedback.css?v=20261029-beta-discreta">
-<script src="/assets/beta-feedback.js" defer></script>
+<link rel="stylesheet" href="/assets/beta-feedback.css?v=20261030-votos">
+<script src="/assets/beta-feedback.js?v=20261030-votos" defer></script>
 </head>
 <body>
 <section class="beta-notice" aria-labelledby="beta-title">
@@ -145,16 +145,33 @@ footer ul{list-style:none;margin:0;padding:0}
   </div>
 </section>
 <div class="beta-feedback" aria-label="Comentarios sobre el atlas">
-  <div class="beta-feedback__panel" id="beta-feedback-panel">
+  <div class="beta-feedback__panel" id="beta-feedback-panel" role="region" aria-labelledby="feedback-title" hidden>
     <button class="beta-feedback__minimize" type="button" aria-label="Minimizar aviso de comentarios" aria-controls="beta-feedback-panel" hidden>×</button>
-    <a class="beta-feedback__link" href="https://wa.me/525560932330?text=Hola%2C%20IMF.%20Tengo%20un%20comentario%20o%20sugerencia%20sobre%20el%20Atlas%20Anat%C3%B3mico%20Flebol%C3%B3gico.%20Quisiera%20compartir%20lo%20siguiente%3A%20" target="_blank" rel="noopener noreferrer">
-      <span class="beta-feedback__eyebrow">ESTAMOS EN FASE BETA</span>
-      <strong>¿Comentarios, sugerencias o errores?</strong>
-      <span>Haz clic y repórtalos al IMF.</span>
-      <span class="beta-feedback__cta">Ayúdanos a mejorar <span aria-hidden="true">↗</span></span>
-    </a>
+    <div class="beta-feedback__content">
+      <span class="beta-feedback__eyebrow">TU OPINIÓN NOS AYUDA</span>
+      <h2 id="feedback-title">¿Te está sirviendo el atlas?</h2>
+      <p>Si este proyecto te resulta útil, dale un me gusta o valóralo con estrellas. Al equipo del IMF le encantará saberlo.</p>
+      <button class="beta-feedback__like" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Me gusta el proyecto</button>
+      <fieldset class="beta-feedback__rating">
+        <legend>¿Cómo valorarías tu experiencia?</legend>
+        <div class="beta-feedback__stars">
+          <label><input type="radio" name="atlas-rating" value="1" aria-label="1 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="2" aria-label="2 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="3" aria-label="3 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="4" aria-label="4 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="5" aria-label="5 de 5 estrellas"><span aria-hidden="true">★</span></label>
+        </div>
+        <span class="beta-feedback__rating-text" aria-live="polite">Elige de 1 a 5 estrellas</span>
+        <button class="beta-feedback__clear" type="button" hidden>Quitar estrellas</button>
+      </fieldset>
+      <p class="beta-feedback__help" role="status" aria-live="polite">Tu selección se guarda automáticamente. Gracias por ayudarnos a mejorar.</p>
+      <button class="beta-feedback__send" type="button" hidden>Reintentar guardado</button>
+      <p class="beta-feedback__privacy">Sin registro. Guardamos tu valoración y un identificador aleatorio de este navegador.</p>
+      <button class="beta-feedback__later" type="button">Ahora no, seguir explorando</button>
+    </div>
   </div>
-  <button class="beta-feedback__restore" type="button" aria-controls="beta-feedback-panel" aria-expanded="false" hidden>Reportar · Beta <span aria-hidden="true">↗</span></button>
+  <button class="beta-feedback__restore" type="button" aria-controls="beta-feedback-panel" aria-expanded="false" hidden><span aria-hidden="true">♡</span> Valorar el atlas</button>
+  <noscript>Para valorar el atlas, activa JavaScript en tu navegador.</noscript>
 </div>
 
 <a class="skip" href="#contenido">Saltar al contenido</a>

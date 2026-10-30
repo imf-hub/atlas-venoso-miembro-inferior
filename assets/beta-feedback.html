@@ -9,14 +9,31 @@
   </div>
 </section>
 <div class="beta-feedback" aria-label="Comentarios sobre el atlas">
-  <div class="beta-feedback__panel" id="beta-feedback-panel">
+  <div class="beta-feedback__panel" id="beta-feedback-panel" role="region" aria-labelledby="feedback-title" hidden>
     <button class="beta-feedback__minimize" type="button" aria-label="Minimizar aviso de comentarios" aria-controls="beta-feedback-panel" hidden>×</button>
-    <a class="beta-feedback__link" href="https://wa.me/525560932330?text=Hola%2C%20IMF.%20Tengo%20un%20comentario%20o%20sugerencia%20sobre%20el%20Atlas%20Anat%C3%B3mico%20Flebol%C3%B3gico.%20Quisiera%20compartir%20lo%20siguiente%3A%20" target="_blank" rel="noopener noreferrer">
-      <span class="beta-feedback__eyebrow">ESTAMOS EN FASE BETA</span>
-      <strong>¿Comentarios, sugerencias o errores?</strong>
-      <span>Haz clic y repórtalos al IMF.</span>
-      <span class="beta-feedback__cta">Ayúdanos a mejorar <span aria-hidden="true">↗</span></span>
-    </a>
+    <div class="beta-feedback__content">
+      <span class="beta-feedback__eyebrow">TU OPINIÓN NOS AYUDA</span>
+      <h2 id="feedback-title">¿Te está sirviendo el atlas?</h2>
+      <p>Si este proyecto te resulta útil, dale un me gusta o valóralo con estrellas. Al equipo del IMF le encantará saberlo.</p>
+      <button class="beta-feedback__like" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Me gusta el proyecto</button>
+      <fieldset class="beta-feedback__rating">
+        <legend>¿Cómo valorarías tu experiencia?</legend>
+        <div class="beta-feedback__stars">
+          <label><input type="radio" name="atlas-rating" value="1" aria-label="1 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="2" aria-label="2 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="3" aria-label="3 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="4" aria-label="4 de 5 estrellas"><span aria-hidden="true">★</span></label>
+          <label><input type="radio" name="atlas-rating" value="5" aria-label="5 de 5 estrellas"><span aria-hidden="true">★</span></label>
+        </div>
+        <span class="beta-feedback__rating-text" aria-live="polite">Elige de 1 a 5 estrellas</span>
+        <button class="beta-feedback__clear" type="button" hidden>Quitar estrellas</button>
+      </fieldset>
+      <p class="beta-feedback__help" role="status" aria-live="polite">Tu selección se guarda automáticamente. Gracias por ayudarnos a mejorar.</p>
+      <button class="beta-feedback__send" type="button" hidden>Reintentar guardado</button>
+      <p class="beta-feedback__privacy">Sin registro. Guardamos tu valoración y un identificador aleatorio de este navegador.</p>
+      <button class="beta-feedback__later" type="button">Ahora no, seguir explorando</button>
+    </div>
   </div>
-  <button class="beta-feedback__restore" type="button" aria-controls="beta-feedback-panel" aria-expanded="false" hidden>Reportar · Beta <span aria-hidden="true">↗</span></button>
+  <button class="beta-feedback__restore" type="button" aria-controls="beta-feedback-panel" aria-expanded="false" hidden><span aria-hidden="true">♡</span> Valorar el atlas</button>
+  <noscript>Para valorar el atlas, activa JavaScript en tu navegador.</noscript>
 </div>
